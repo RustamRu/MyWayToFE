@@ -1,0 +1,328 @@
+/*Отладочные*/
+div,
+section {
+  border: solid 1px red;
+}
+
+/*ОБЩИЕ*/
+* {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+div,
+section {
+  box-sizing: border-box;
+}
+
+p, q {
+  font-size: 53%;
+  color: #333333;
+}
+
+h3 {
+  font-size: 230%;
+  font-weight: 500;
+  color: #a3cc40;
+}
+
+.main,
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1124px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/*HEADER*/
+.logo {
+  /*Логотип*/
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  float: left;
+  margin: 10px;
+}
+
+header nav {
+  position: absolute;
+  top: 6%;
+  left: 26%;
+  width: 62%;
+  float: right;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav li {
+  display: inline-block;
+}
+header nav a {
+  color: white;
+}
+.header-title {
+  /*Контейнер заголовка страницы*/
+  position: absolute;
+  margin: auto;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+}
+.header-title h1 {
+  /*Заголовок страницы*/
+  font-size: 325%;
+  font-weight: 100;
+  color: white;
+}
+.header-title p {
+  /*Подзаголовок страницы*/
+  font-size: 196%;
+  font-weight: 400;
+  color: white;
+}
+
+.dobro-pozhalovat {
+  position: absolute;
+  width: 38%;
+  left: 50%;
+  top: 75%;
+  padding: 30px 47px;
+  background: #ffffff;
+  box-shadow: 0px 27px 39px rgba(163, 204, 64, 0.18);
+  border-radius: 10px;
+}
+.dobro-pozhalovat h3 {
+  margin-top: 0;
+  font-size: 158%;
+  font-weight: 600;
+  color: #333333;
+}
+
+/*MAIN*/
+.main-div {
+  position: relative;
+  width: 80%;
+  margin: 0 10%;
+  clear: both;
+}
+.main-div h3 {
+  margin: 3%;
+}
+
+#pochemu-my {
+  overflow: hidden;
+}
+.pochemu-my-unit-div {
+  width: 27%;
+  float: left;
+  margin: 3%;
+  padding: 5px;
+  text-align: center;
+}
+.pochemu-my-unit-div img {
+  width: 100%;
+}
+
+#podarok-kazhdomu {
+  position: relative;
+}
+#podarok-kazhdomu div {
+  width: 45%;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  color: white;
+  margin: 0% 5%;
+}
+#podarok-kazhdomu p {
+  text-align: right;
+  color: white;
+}
+#podarok-kazhdomu button {
+  position: absolute;
+  right: 0;
+  background-color: #a3cc40;
+  color: white;
+  width: 190px;
+  height: 30px;
+}
+
+#filmy h4 {
+  font-size: larger;
+}
+
+#vyberite-film table {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  margin: 0;
+  padding: 0px;
+  color: #ffffff;
+}
+#vyberite-film th {
+  height: 45px;
+  padding: 0 25px;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 600;
+  background: #a3cc40;
+  border-radius: 10px 10px 0px 0px;
+}
+#vyberite-film td {
+  height: 45px;
+  padding: 0 25px;
+  font-size: 14px;
+  font-weight: 400;
+  background: #4c4d4f;
+}
+
+#tovary {
+  overflow: hidden;
+}
+.tovary-unit-div {
+  width: 23%;
+  float: left;
+  margin: 5%;
+  padding: 5px;
+  text-align: center;
+}
+.tovary-unit-div img {
+  width: 100%;
+}
+
+#otzyvy{  
+  position: relative;
+  overflow: hidden;
+}
+#otzyvy .otzyvy-content {
+  width: 80%;
+  position: absolute;
+  top: 12%;
+  left: 0%;
+  margin: 0 10%;
+  clear: both;
+  color: white;
+}
+#otzyvy .otzyvy-content h3{
+  margin: 0 3%;
+}
+.otzyvy-unit-div {
+  width: 23%;
+  float: left;
+  margin: 5%;
+  padding: 5px;
+  text-align: left;
+  background-color: #a3cc40;
+}
+.otzyvy-unit-div img {
+  width: 100%;
+}
+.otzyvy-unit-div h4{
+  color: #ffffff;
+}
+.otzyvy-unit-div q{
+  color: #ffffff;
+}
+.otzyvy-unit-div .date {
+  text-align: right;
+  color: #ffffff;
+}
+
+#obratnaya-svyaz{ 
+  position: relative;
+  width: 80%;
+  margin: 0 10%;
+  clear: both;
+}
+.obratnaya-svyaz-content{
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.obratnaya-svyaz-content h3{
+  text-align: center;
+  font-size: 158%;
+}
+.obratnaya-svyaz-content input[type="text"] {
+  width: 80%;
+  margin: 16px 5%;
+  max-width: 344px;
+  height: 40px;
+  color: #A1A1A1;
+  background-color: #DEDEDE;
+  border: 0;
+  border-radius: 5px;
+}
+.obratnaya-svyaz-content select {
+  width: 80%;
+  margin: 16px 5%;
+  max-width: 344px;
+  height: 40px;
+  color: #A1A1A1;
+  background-color: #DEDEDE;
+  border: 0;
+  border-radius: 5px;
+}
+.obratnaya-svyaz-content textarea {
+  width: 80%;
+  margin: 16px 5%;
+  max-width: 344px;
+  height: 120px;
+  color: #A1A1A1;
+  background-color: #DEDEDE;
+  border: 0;
+  border-radius: 5px;
+}
+.obratnaya-svyaz-content input[type="checkbox"] {
+  margin: auto 5px auto 5%;
+  height: 18px;
+  color: #A1A1A1;
+  background-color: #DEDEDE;
+  border: 0;
+  border-radius: 5px;
+}
+.obratnaya-svyaz-content label {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.obratnaya-svyaz-content button {
+  background-color: #a3cc40;
+  color: white;
+  width: 344px;
+  height: 57px;
+  border: 0;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#map{
+  margin: 5% 6% -22px;
+  clear: both;
+}
+
+/*FOOTER*/
+footer .container {
+  background-color: #a3cc40;
+  color: white;
+}
+
+footer p {
+  color: white;
+}
+
+footer nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer nav a {
+  color: white;
+}
