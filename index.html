@@ -1,6 +1,6 @@
 <!--index.html html-структура документа-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <title>Продажа билетов в кино в Иннополисе</title>
     <link rel="stylesheet" href="style.css" />
@@ -9,40 +9,54 @@
   <body>
     <header>
       <div class="container">
-        <img
-          src="/images/header-bg.png"
-          alt="Кинозал"
-          style="width: 100%; max-width: 1124px"
-        />
+        <a href="#main"><div class="skip-btn">Перейти к контенту</div></a>
+        <div class="header-title-div">
+          <h1>
+            <span class="header-title">Закажите билет в кино</span><br />
+            <span class="header-subtitle">Всем покупателям подарок!</span>
+          </h1>
+        </div>
         <div class="logo">
-          <a href="https://innopolis.university/" target="_blank">
+          <a
+            href="https://innopolis.university/"
+            title="Перейти на сайт innopolis.university"
+            target="_blank"
+          >
             <img
               src="/images/Logo Innopolis University.svg"
               alt="Логотип Innopolis University"
             />
           </a>
         </div>
-        <nav>
+        <nav aria-label="Верхнее меню">
           <ul>
-            <li><a href="tel:+7 (800) 355 12-56">+7 (800) 355 12-56</a>|</li>
-            <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a>|</li>
-            <li><a href="">ул.Спортивная д.1</a></li>
+            <li>
+              <a href="tel:+78003551256">+7 (800) 355 12-56</a>
+            </li>
+            <li>
+              <a
+                aria-label="Написать электронное письмо на адрес kino@innopolis.ru"
+                href="mailto:kino@innopolis.ru"
+                >kino@innopolis.ru</a
+              >
+            </li>
+            <li>
+              <a href="#kak-dobratsya">ул. Спортивная, д. 1</a>
+            </li>
             <br />
-            <li><a href="#pochemu-my">Почему мы?</a>|</li>
-            <li><a href="#vyberite-film">Выберите фильм</a>|</li>
-            <li><a href="#filmy">Фильмы</a>|</li>
-            <li><a href="#tovary">Товары</a>|</li>
-            <li><a href="#otzyvy">Отзывы</a>|</li>
+            <li>
+              <a href="#pochemu-my">Почему мы?</a>
+            </li>
+            <li><a href="#vyberite-film">Выберите фильм</a></li>
+            <li><a href="#filmy">Фильмы</a></li>
+            <li><a href="#tovary">Товары</a></li>
+            <li><a href="#otzyvy">Отзывы</a></li>
             <li><a href="#obratnaya-svyaz">Обратная связь</a></li>
           </ul>
         </nav>
 
-        <div class="header-title">
-          <h1>Закажите билет в кино</h1>
-          <p>Всем покупателям подарок!</p>
-        </div>
         <section class="dobro-pozhalovat">
-          <h3>Добро пожаловать!</h3>
+          <h2>Добро пожаловать!</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
             dolor distinctio neque commodi pariatur voluptatem odio eligendi.
@@ -58,16 +72,16 @@
         </section>
       </div>
     </header>
-    <div class="main">
+    <main id="main">
       <div class="container">
         <section id="pochemu-my" class="main-div">
-          <h3>Почему мы?</h3>
+          <h2>Почему мы?</h2>
           <div class="pochemu-my-unit-div">
             <img
               src="/images/pochemu-my-bolshiye-ekrany.png"
-              alt="Большие экраны"
+              alt="Большой киноэкран"
             />
-            <h4>Большие экраны</h4>
+            <h3>Большие экраны</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
               excepturi molestias consectetur, omnis accusantium atque nulla
@@ -78,9 +92,9 @@
           <div class="pochemu-my-unit-div">
             <img
               src="/images/pochemu-my-obemniy_zvuk.png"
-              alt="Объёмный звук"
+              alt="Колонки по периметру кинозала, создающие объёмное звучание"
             />
-            <h4>Объёмный звук</h4>
+            <h3>Объёмный звук</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
               excepturi molestias consectetur, omnis accusantium atque nulla
@@ -91,9 +105,9 @@
           <div class="pochemu-my-unit-div">
             <img
               src="/images/pochemu-my-udobnye-kresla.png"
-              alt="Удобные кресла"
+              alt="Пустой кинозал с большими мягкими креслами"
             />
-            <h4>Удобные кресла</h4>
+            <h3>Удобные кресла</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
               excepturi molestias consectetur, omnis accusantium atque nulla
@@ -104,9 +118,9 @@
           <div class="pochemu-my-unit-div">
             <img
               src="/images/pochemu-my-uyutnaya-atmosfera.png"
-              alt="Уютная атмосфера"
+              alt="Небольшой кинозал с мягкими диваном, ковром, игрушками и подушками и светильником"
             />
-            <h4>Уютная атмосфера</h4>
+            <h3>Уютная атмосфера</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
               excepturi molestias consectetur, omnis accusantium atque nulla
@@ -117,9 +131,9 @@
           <div class="pochemu-my-unit-div">
             <img
               src="/images/pochemu-my-polnoe-pogruzhenie.png"
-              alt="Полное погружение"
+              alt="Люди в специальных очках вскинули руки от радости"
             />
-            <h4>Полное погружение</h4>
+            <h3>Полное погружение</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
               excepturi molestias consectetur, omnis accusantium atque nulla
@@ -130,9 +144,9 @@
           <div class="pochemu-my-unit-div">
             <img
               src="/images/pochemu-my-potselui-na-zadnem-ryadu.png"
-              alt="Поцелуи на заднем ряду"
+              alt="Парень целует девушку"
             />
-            <h4>Поцелуи на заднем ряду</h4>
+            <h3>Поцелуи на заднем ряду</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
               excepturi molestias consectetur, omnis accusantium atque nulla
@@ -142,10 +156,10 @@
           </div>
         </section>
         <section id="vyberite-film" class="main-div">
-          <h3>Выберите фильм</h3>
+          <h2>Выберите фильм</h2>
           <table>
             <tr>
-              <th></th>
+              <th>Отметка</th>
               <th>Начало сеанса</th>
               <th>Название фильма</th>
               <th>Жанр</th>
@@ -184,17 +198,12 @@
         </section>
         <section id="podarok-kazhdomu">
           <img
-            src="/images/podarok-bg.png"
-            alt="Кинолента"
-            style="width: 100%; max-width: 1124px"
-          />
-          <img
             src="/images/podarok.png"
             alt="Подарок"
             style="position: absolute; top: 0; left: 10%"
           />
           <div>
-            <h3>Подарок каждому!</h3>
+            <h2>Подарок каждому!</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Blanditiis expedita nemo numquam, sed doloribus nisi dicta!
@@ -218,7 +227,7 @@
           </div>
         </section>
         <section id="filmy" class="main-div">
-          <h3>Фильмы</h3>
+          <h2>Фильмы</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
@@ -226,102 +235,209 @@
             pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam
             maecenas.
           </p>
-          <!--Здесь будет мозаика фильмов-->
           <div>
-            <div>
+            <div class="film-tile">
               <a
                 href="https://www.kinopoisk.ru/film/522941/"
                 target="_blank"
                 title="Выживший"
               >
-                <h4>Выживший</h4>
+                <img
+                  src="/images/films/poster-vyzhevshiy.png"
+                  alt='Постер фильма "Выживший"'
+                />
+                <div class="film-desc">
+                  <h3>Выживший</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p id="info">Описание фильма</p>
             </div>
-            <div>
+            <div class="film-tile">
               <a
-                href="https://www.kinopoisk.ru/film/522941/"
+                href="https://www.kinopoisk.ru/film/900052/"
                 target="_blank"
                 title="Лёд"
               >
-                <h4>Лёд</h4>
+                <img
+                  src="/images/films/poster-lyod.png"
+                  alt='Постер фильма "Лёд"'
+                />
+                <div class="film-desc">
+                  <h3>Лёд</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p>Описание фильма</p>
             </div>
-            <div>
+            <div class="film-tile">
               <a
-                href="https://www.kinopoisk.ru/film/522941/"
+                href="https://www.kinopoisk.ru/film/841700/"
                 target="_blank"
                 title="Марсианин"
               >
-                <h4>Марсианин</h4>
+                <img
+                  src="/images/films/poster-marsianin.png"
+                  alt='Постер фильма "Марсианин"'
+                />
+                <div class="film-desc">
+                  <h3>Марсианин</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p>Описание фильма</p>
             </div>
-            <div>
+            <div class="film-tile">
               <a
                 href="https://www.kinopoisk.ru/film/1162604/"
                 target="_blank"
                 title="Спутник"
               >
-                <h4>Спутник</h4>
+                <img
+                  src="/images/films/poster-sputnik.png"
+                  alt='Постер фильма "Спутник"'
+                />
+                <div class="film-desc">
+                  <h3>Спутник</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p>Описание фильма</p>
             </div>
-            <div>
+            <div class="film-tile">
               <a
                 href="https://www.kinopoisk.ru/film/1188248/"
                 target="_blank"
                 title="Калашников"
               >
-                <h4>Калашников</h4>
+                <img
+                  src="/images/films/poster-kalashnikov.png"
+                  alt='Постер фильма "Калашников"'
+                />
+                <div class="film-desc">
+                  <h3>Калашников</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p>Описание фильма</p>
             </div>
-            <div>
+            <div class="film-tile">
               <a
                 href="https://www.kinopoisk.ru/film/522941/"
                 target="_blank"
                 title="Территория"
               >
-                <h4>Территория</h4>
+                <img
+                  src="/images/films/poster-territoriya.png"
+                  alt='Постер фильма "Территория"'
+                />
+                <div class="film-desc">
+                  <h3>Территория</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p>Описание фильма</p>
             </div>
-            <div>
+            <div class="film-tile">
               <a
                 href="https://www.kinopoisk.ru/film/447301/"
                 target="_blank"
                 title="Начало"
               >
-                <h4>Начало</h4>
+                <img
+                  src="/images/films/poster-nachalo.png"
+                  alt='Постер фильма "Начало"'
+                />
+                <div class="film-desc">
+                  <h3>Начало</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p>Описание фильма</p>
             </div>
-            <div>
+            <div class="film-tile">
               <a
                 href="https://www.kinopoisk.ru/film/939981/"
                 target="_blank"
                 title="Лунный свет"
               >
-                <h4>Лунный свет</h4>
+                <img
+                  src="/images/films/poster-lunniy svet.png"
+                  alt='Постер фильма "Лунный свет"'
+                />
+                <div class="film-desc">
+                  <h3>Лунный свет</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p>Описание фильма</p>
             </div>
-            <div>
+            <div class="film-tile">
               <a
                 href="https://www.kinopoisk.ru/film/966995/"
                 target="_blank"
                 title="Живое"
               >
-                <h4>Живое</h4>
+                <img
+                  src="/images/films/poster-zhivoe.png"
+                  alt='Постер фильма "Живое"'
+                />
+                <div class="film-desc">
+                  <h3>Живое</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quibusdam inventore quo mollitia reiciendis doloribus
+                    labore architecto blanditiis excepturi id dolore, provident
+                    recusandae voluptas. Corrupti aspernatur sit quae quam
+                    atque.
+                  </p>
+                </div>
               </a>
-              <p>Описание фильма</p>
             </div>
           </div>
         </section>
         <section id="tovary" class="main-div">
-          <h3>Товары</h3>
+          <h2>Товары</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe,
             molestias recusandae amet laudantium quisquam non quo dolorem
@@ -329,20 +445,20 @@
             magnam omnis quidem ullam.
           </p>
           <div class="tovary-unit-div">
-            <img src="/images/tovary-cocacola.png" alt="Coca-cola" />
+            <img src="/images/tovary-cocacola.png" alt="Напиток Coca-cola" />
             <b>Coca-cola</b>
           </div>
           <div class="tovary-unit-div">
             <img
               src="/images/tovary-brelok-zheleznyi-chelovek.png"
-              alt='Брелок "Железный человек"'
+              alt="3 брелка в виде головы Железного человека"
             />
             <b>Брелок<br />"Железный<br />человек"</b>
           </div>
           <div class="tovary-unit-div">
             <img
               src="/images/tovary-poster-mstiteli.png"
-              alt='Постер "Мстители"'
+              alt="Постер с изображением мстителей"
             />
             <b>Постер<br />"Мстители"</b>
           </div>
@@ -354,7 +470,7 @@
             style="width: 100%; max-width: 1124px"
           />
           <div class="otzyvy-content">
-            <h3>Отзывы</h3>
+            <h2>Отзывы</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
               omnis esse dolor similique harum officiis repudiandae porro ut,
@@ -363,7 +479,7 @@
             </p>
             <div class="otzyvy-unit-div">
               <img src="/images/otzyvy-elenova-elena.png" alt="Елена Еленова" />
-              <h4>Елена Еленова</h4>
+              <h3>Елена Еленова</h3>
               <q
                 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -372,7 +488,7 @@
             </div>
             <div class="otzyvy-unit-div">
               <img src="/images/otzyvy-borisov-boris.png" alt="Борис Борисов" />
-              <h4>Борис Борисов</h4>
+              <h3>Борис Борисов</h3>
               <q
                 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -384,7 +500,7 @@
                 src="/images/otzyvy-dikaprio-leonardo.png"
                 alt="Леонардо ДиКаприо"
               />
-              <h4>Леонардо ДиКаприо</h4>
+              <h3>Леонардо ДиКаприо</h3>
               <q
                 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -394,21 +510,43 @@
           </div>
         </section>
         <section id="obratnaya-svyaz">
-          <img
-            src="/images/obratnaya-svyaz.png"
-            alt="Обратная связь"
-            style="width: 100%; max-width: 414px; float: left"
-          />
-          <div class="obratnaya-svyaz-content">
-            <h3>Обратная связь</h3>
-            <form action="">
-              <p><input type="text" placeholder="Полное имя" /></p>
+          <div class="obratnaya-svyaz-form">
+            <h2>Обратная связь</h2>
+            <form action="/order">
               <p>
-                <select name="nomer-mesta" id="">
+                <input
+                  type="text"
+                  placeholder="Полное имя"
+                  aria-label="Ввести полное имя"
+                  required
+                />
+              </p>
+              <p>
+                <input
+                  type="email"
+                  placeholder="Электронный адрес"
+                  aria-label="Ввести электронный адрес"
+                  required
+                />
+              </p>
+              <p>
+                <select
+                  name="nomer-mesta"
+                  id=""
+                  aria-label="Выбрать из списка номер места"
+                  required
+                >
                   <option label="Номер места" disabled selected></option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
                 </select>
               </p>
               <p>
@@ -418,18 +556,67 @@
                   cols="30"
                   rows="10"
                   placeholder="Напишите свой отзыв"
+                  aria-label="Ввести свой отзыв"
                 ></textarea>
               </p>
               <p>
-                <label for=""
-                  ><input type="checkbox" />Я согласен на обработку своих персональных данных</label
+                <input
+                  type="file"
+                  name="obratnaya-svyaz-file"
+                  aria-label="Прикрепите файл"
+                />
+              </p>
+              <p>
+                <input
+                  type="checkbox"
+                  name="pers_data_proc_agree"
+                  id="pers_data_proc_agree"
+                  required
+                />
+                <label for="pers_data_proc_agree"
+                  >Я согласен на обработку своих персональных данных</label
                 >
               </p>
-              <p><button>ОТПРАВИТЬ</button></p>
+              <p>
+                <button
+                  type="submit"
+                  name="obratnaya-svyaz-form-submit-btn1"
+                  title="исходный вариант - внутри формы"
+                  aria-label="Отправить форму обратной связи"
+                >
+                  ЗАКАЗАТЬ
+                </button>
+                <input
+                  type="button"
+                  value="ЗАКАЗАТЬ"
+                  name="obratnaya-svyaz-form-submit-btn2"
+                  title="тег input, type=”submit”, атрибут value - внутри формы"
+                  aria-label="Отправить форму обратной связи"
+                />
+              </p>
             </form>
+            <br>
+            <p>
+              <button
+                type="submit"
+                name="obratnaya-svyaz-form-submit-btn1"
+                title="исходный вариант - вне формы"
+                aria-label="Отправить форму обратной связи"
+              >
+                ЗАКАЗАТЬ
+              </button>
+              <input
+                type="button"
+                value="ЗАКАЗАТЬ"
+                name="obratnaya-svyaz-form-submit-btn2"
+                title="тег input, type=”submit”, атрибут value - вне формы"
+                aria-label="Отправить форму обратной связи"
+              />
+            </p>
           </div>
         </section>
-        <section id="map">
+        <section id="kak-dobratsya">
+          <h2>Как добраться</h2>
           <img
             src="/images/karta.png"
             alt="Карта"
@@ -437,7 +624,7 @@
           />
         </section>
       </div>
-    </div>
+    </main>
     <footer>
       <div class="container" style="overflow: hidden">
         <div style="float: left; padding: 10px; width: 50%">
@@ -454,9 +641,9 @@
             perspiciatis odit architecto?
           </p>
         </div>
-        <div style="float: left; padding: 10px; width: 25%">
-          <h4>МЕНЮ</h4>
-          <nav>
+        <div class="footer-nav-div">
+          <nav aria-label="Нижнее меню">
+            <h3>МЕНЮ</h3>
             <ul>
               <li><a href="#pochemu-my">Почему мы?</a></li>
               <li><a href="#vyberite-film">Выберите фильм</a></li>
@@ -467,9 +654,9 @@
             </ul>
           </nav>
         </div>
-        <div style="float: left; padding: 10px; width: 25%">
-          <h4>КОНТАКТЫ</h4>
-          <nav>
+        <div class="footer-nav-div">
+          <nav aria-label="Контакты">
+            <h3>КОНТАКТЫ</h3>
             <ul>
               <li><a href="tel:+7 (800) 355 12-56">+7 (800) 355 12-56</a></li>
               <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
@@ -478,7 +665,7 @@
                   >420500, г. Иннополис<br />ул. Университетская, д. 1</a
                 >
               </li>
-              <li><a href="">Как добраться</a></li>
+              <li><a href="kak-dobratsya">Как добраться</a></li>
               <li><a href="">Все контакты</a></li>
             </ul>
           </nav>
