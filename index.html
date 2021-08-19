@@ -1,172 +1,205 @@
-<!--index.html html-структура документа-->
 <!DOCTYPE html>
 <html lang="ru">
   <head>
     <title>Продажа билетов в кино в Иннополисе</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-
-  <body>
+  <body class="body">
     <header>
-      <div class="container">
-        <a href="#main"><div class="skip-btn">Перейти к контенту</div></a>
-        <div class="logo">
+      <div class="container header__container">
+        <a href="#main"
+          ><div class="header-skip header__header-skip">
+            Перейти к контенту
+          </div></a
+        >
+        <div class="header-iu-logo header__header-iu-logo">
           <a
             href="https://innopolis.university/"
             title="Перейти на сайт innopolis.university"
             target="_blank"
           >
-            <svg>
+            <svg class="svg_inherit-size svg_white">
               <use xlink:href="#ico-logo"></use>
             </svg>
           </a>
         </div>
-        <nav aria-label="Верхнее меню">
-          <ul class="contacts">
-            <li>
-              <a href="tel:+78003551256">+7 (800) 355 12-56</a>
+        <nav class="header__header-nav-contacts" aria-label="Контакты">
+          <ul class="nav__ul">
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
+              <a href="tel:+78003551256" class="header__link"
+                >+7 (800) 355 12-56</a
+              >
             </li>
-            <li>
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
               <a
                 aria-label="Написать электронное письмо на адрес kino@innopolis.ru"
                 href="mailto:kino@innopolis.ru"
+                class="header__link"
                 >kino@innopolis.ru</a
               >
             </li>
-            <li>
-              <a href="#kak-dobratsya">ул. Спортивная, д. 1</a>
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
+              <a href="#how-to-get" class="header__link"
+                >ул. Спортивная, д. 1</a
+              >
             </li>
-            <li class="zakazat-zvonok">
-              <button>
-                <svg class="ico-phone">
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
+              <button class="reguest-call header-nav-contacts__reguest-call">
+                <svg class="ico-phone reguest-call__ico-phone">
                   <use xlink:href="#ico-phone" />
                 </svg>
-                <span>Заказать звонок</span>
+                <span
+                  class="reguest-call-label reguest-call__reguest-call-label"
+                  >Заказать звонок</span
+                >
               </button>
             </li>
-            <li class="lang">
-              <select name="lang" id="lang" aria-label="Выберите язык страницы">
+            <li class="nav-li header-nav-li header-nav__header-nav-li lang">
+              <select
+                name="lang"
+                id="lang"
+                class="lang header-nav-contacts__lang"
+                aria-label="Выберите язык страницы"
+              >
                 <option value="RU" selected>RU</option>
                 <option value="EN">EN</option>
               </select>
             </li>
           </ul>
-          <ul class="menu">
-            <li>
-              <a href="#pochemu-my">Почему мы?</a>
+        </nav>
+        <nav
+          class="header-nav-menu header__header-nav-menu"
+          aria-label="Верхнее меню"
+        >
+          <ul class="nav__ul">
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
+              <a href="#why-we" class="header__link">Почему мы?</a>
             </li>
-            <li>
-              <a href="#vyberite-film">Выберите фильм</a>
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
+              <a href="#choose-movie" class="header__link">Выберите фильм</a>
             </li>
-            <li>
-              <a href="#filmy">Фильмы</a>
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
+              <a href="#movies" class="header__link">Фильмы</a>
             </li>
-            <li>
-              <a href="#tovary">Товары</a>
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
+              <a href="#goods" class="header__link">Товары</a>
             </li>
-            <li>
-              <a href="#otzyvy">Отзывы</a>
+            <li class="nav-li header-nav-li header-nav__header-nav-li">
+              <a href="#reviews" class="header__link">Отзывы</a>
             </li>
           </ul>
         </nav>
-        <div class="header-title-div">
-          <h1>
-            <span class="header-title">Закажите билет в кино</span>
-            <span class="header-subtitle">Всем покупателям подарок!</span>
+        <div class="header__header-title">
+          <h1 class="header-title__h">
+            <span class="header-title header-title__header-title"
+              >Закажите билет в кино</span
+            >
+            <span class="header-subtitle header-title__header-subtitle"
+              >Всем покупателям подарок!</span
+            >
           </h1>
         </div>
-
-        <section class="dobro-pozhalovat">
-          <h2>Добро пожаловать!</h2>
-          <p>
+        <div class="triangle-upward triangle_bottom_right"></div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="section welcome main-container__welcome">
+          <h2 class="main-container-h2 main-container__main-container-h2">
+            Добро пожаловать!
+          </h2>
+          <p class="main-container-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </p>
-          <p>
+          <p class="main-container-text">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt.
           </p>
         </section>
-        <div class="triangle-white"></div>
-      </div>
-    </header>
-    <main id="main">
-      <div class="container">
-        <section id="pochemu-my">
-          <h2>Почему мы?</h2>
-          <div class="pochemu-my-table-div">
-            <div class="pochemu-my-row-div">
-              <div class="pochemu-my-col-div">
+        <section class="section why-we main-container__why-we" id="why-we">
+          <h2 class="h2 why-we__why-we-h2">Почему мы?</h2>
+          <div>
+            <div class="why-we__why-we-row">
+              <div class="why-we-col why-we__why-we-col">
                 <img
-                  src="/images/pochemu-my-bolshiye-ekrany.png"
+                  src="/images/why-we-large-screens.png"
                   alt="Большой киноэкран"
+                  class="why-we-img why-we__why-we-img"
                 />
-                <h3>Большие экраны</h3>
-                <p>
+                <h3 class="why-we-h3 why-we__why-we-h3">Большие экраны</h3>
+                <p class="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div class="pochemu-my-col-div">
+              <div class="why-we-col why-we__why-we-col">
                 <img
-                  src="/images/pochemu-my-obemniy_zvuk.png"
+                  src="/images/why-we-surround-sound.png"
                   alt="Колонки по периметру кинозала, создающие объёмное звучание"
+                  class="why-we-img why-we__why-we-img"
                 />
-                <h3>Объёмный звук</h3>
-                <p>
+                <h3 class="why-we-h3 why-we__why-we-h3">Объёмный звук</h3>
+                <p class="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div class="pochemu-my-col-div">
+              <div class="why-we-col why-we__why-we-col">
                 <img
-                  src="/images/pochemu-my-udobnye-kresla.png"
+                  src="/images/why-we-comfortable-chairs.png"
                   alt="Пустой кинозал с большими мягкими креслами"
+                  class="why-we-img why-we__why-we-img"
                 />
-                <h3>Удобные кресла</h3>
-                <p>
+                <h3 class="why-we-h3 why-we__why-we-h3">Удобные кресла</h3>
+                <p class="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
                 </p>
               </div>
             </div>
-            <div class="pochemu-my-row-div">
-              <div class="pochemu-my-col-div">
+            <div class="why-we__why-we-row">
+              <div class="why-we-col why-we__why-we-col">
                 <img
-                  src="/images/pochemu-my-uyutnaya-atmosfera.png"
+                  src="/images/why-we-cozy-atmosphere.png"
                   alt="Небольшой кинозал с мягкими диваном, ковром, игрушками и подушками и светильником"
+                  class="why-we-img why-we__why-we-img"
                 />
-                <h3>Уютная атмосфера</h3>
-                <p>
+                <h3 class="why-we-h3 why-we__why-we-h3">Уютная атмосфера</h3>
+                <p class="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div class="pochemu-my-col-div">
+              <div class="why-we-col why-we__why-we-col">
                 <img
-                  src="/images/pochemu-my-polnoe-pogruzhenie.png"
+                  src="/images/why-we-full-immersion.png"
                   alt="Люди в специальных очках вскинули руки от радости"
+                  class="why-we-img why-we__why-we-img"
                 />
-                <h3>Полное погружение</h3>
-                <p>
+                <h3 class="why-we-h3 why-we__why-we-h3">Полное погружение</h3>
+                <p class="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div class="pochemu-my-col-div">
+              <div class="why-we-col why-we__why-we-col">
                 <img
-                  src="/images/pochemu-my-potselui-na-zadnem-ryadu.png"
+                  src="/images/why-we-back-row-kisses.png"
                   alt="Парень целует девушку"
+                  class="why-we-img why-we__why-we-img"
                 />
-                <h3>Поцелуи на заднем ряду</h3>
-                <p>
+                <h3 class="why-we-h3 why-we__why-we-h3">
+                  Поцелуи на заднем ряду
+                </h3>
+                <p class="text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
@@ -175,81 +208,187 @@
             </div>
           </div>
         </section>
-        <section id="vyberite-film">
-          <h2>Выберите фильм</h2>
-          <table>
+        <section class="section choose-movie main-container__choose-movie">
+          <h2 class="h2 choose-movies__choose-movie-h2">Выберите фильм</h2>
+          <table class="choose-movie-table choose-movies__choose-movie-table">
             <thead>
               <tr>
-                <th style="width: 76px"></th>
-                <th style="width: 240px">
-                  <a href="#"
+                <th
+                  class="
+                    choose-movie-th
+                    choose-movies__choose-movie-th
+                    choose-movie-th_narrow choose-movie-th_rounded-top-left
+                  "
+                ></th>
+                <th
+                  class="
+                    choose-movie-th
+                    choose-movies__choose-movie-th
+                    choose-movie-th_wide
+                  "
+                >
+                  <a href="#" class="choose-movies__link"
                     >Начало сеанса
-                    <svg style="width: 9px; height: 5px; margin: auto 6px;">
+                    <svg style="width: 9px; height: 5px; margin: auto 6px">
                       <use xlink:href="#ico-arrow-up"></use>
                     </svg>
                   </a>
                 </th>
-                <th style="width: 240px"><a href="#">Название фильма
-                  <svg style="width: 9px; height: 5px; margin: auto 6px;">
-                    <use xlink:href="#ico-arrow-down"></use>
-                  </svg></a></th>
-                <th><a href="#">Жанр</a></th>
+                <th
+                  class="
+                    choose-movie-th
+                    choose-movies__choose-movie-th
+                    choose-movie-th_wide
+                  "
+                >
+                  <a href="#" class="choose-movies__link"
+                    >Название фильма
+                    <svg style="width: 9px; height: 5px; margin: auto 6px">
+                      <use xlink:href="#ico-arrow-down"></use>
+                    </svg>
+                  </a>
+                </th>
+                <th
+                  class="
+                    choose-movie-th
+                    choose-movies__choose-movie-th
+                    choose-movie-th_rounded-top-right
+                  "
+                >
+                  Жанр
+                </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>v</td>
-                <td>10:00</td>
-                <td>Человек-паук</td>
-                <td>Фантастика, боевик, приключения</td>
+              <tr class="choose-movie-tr_dark">
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  v
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  10:00
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  Человек-паук
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  Фантастика, боевик, приключения
+                </td>
               </tr>
-              <tr>
-                <td>v</td>
-                <td>12:00</td>
-                <td>Собачья жизнь 2</td>
-                <td>Фэнтэзи, драма, комедия</td>
+              <tr class="choose-movie-tr_light">
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  v
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  12:00
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  Собачья жизнь 2
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  Фэнтэзи, драма, комедия
+                </td>
               </tr>
-              <tr>
-                <td>v</td>
-                <td>14:00</td>
-                <td>История игрушек 4</td>
-                <td>Мультфильм, фэнтэзи, комедия</td>
+              <tr class="choose-movie-tr_dark">
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  v
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  14:00
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  История игрушек 4
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  Мультфильм, фэнтэзи, комедия
+                </td>
               </tr>
-              <tr>
-                <td>v</td>
-                <td>16:00</td>
-                <td>Люди в чёрном: Интэрнэшнл</td>
-                <td>Фантастика, боевик, комедия</td>
+              <tr class="choose-movie-tr_light">
+                <td
+                  class="
+                    choose-movie-td
+                    choose-movies__choose-movie-td
+                    choose-movie-td_rounded-bottom-left
+                  "
+                >
+                  v
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  16:00
+                </td>
+                <td class="choose-movie-td choose-movies__choose-movie-td">
+                  Люди в чёрном: Интэрнэшнл
+                </td>
+                <td
+                  class="
+                    choose-movie-td
+                    choose-movies__choose-movie-td
+                    choose-movie-td_rounded-bottom-right
+                  "
+                >
+                  Фантастика, боевик, комедия
+                </td>
               </tr>
             </tbody>
           </table>
-          <div class="vyberite-film-text">
-            <p>
+          <div class="choose-movie-text choose-movies__choose-movie-text">
+            <p class="text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.
             </p>
           </div>
         </section>
-        <section id="podarok-kazhdomu">
-          <div class="triangle-white-upside"></div>
-          <img src="/images/podarok.png" alt="Подарок" class="podarok" />
-          <div class="podarok-kazhdomu-content">
-            <h2>Подарок каждому!</h2>
-            <p>
+        <section
+          class="section gift-to-everyone main-container__gift-to-everyone"
+        >
+          <div class="triangle-downward triangle_top_left"></div>
+          <img
+            src="/images/present.png"
+            alt="Подарок"
+            class="gift-to-everyone__present"
+          />
+          <div class="gift-to-everyone__inner">
+            <h2
+              class="
+                h2
+                gift-to-everyone-h2
+                gift-to-everyone__gift-to-everyone-h2
+              "
+            >
+              Подарок каждому!
+            </h2>
+            <p
+              class="
+                text
+                gift-to-everyone-text
+                gift-to-everyone__gift-to-everyone-text
+              "
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
               mauris cursus mattis molestie a iaculis at. Vel quam elementum
               pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam
               maecenas.&nbsp;
             </p>
-            <p>
+            <p
+              class="
+                text
+                gift-to-everyone-text
+                gift-to-everyone__gift-to-everyone-text
+              "
+            >
               Nunc vel risus commodo viverra maecenas accumsan. Morbi enim nunc
               faucibus a. Mauris commodo quis imperdiet massa.Sed elementum
               tempus egestas sed sed risus pretium quam vulputate. Aliquam
               vestibulum morbi blandit cursus risus at ultrices mi tempus.&nbsp;
             </p>
-            <p>
+            <p
+              class="
+                text
+                gift-to-everyone-text
+                gift-to-everyone__gift-to-everyone-text
+              "
+            >
               Nibh mauris cursus mattis molestie a iaculis at. Vel quam
               elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id
               diam maecenas. Sed elementum tempus egestas sed sed risus pretium
@@ -258,35 +397,45 @@
               pretium nibh. Eu nisl nunc mi ipsum. Nibh sit amet commodo nulla
               facilisi nullam vehicula ipsum.
             </p>
-            <button>Получить подарок</button>
+            <button
+              class="
+                gift-to-everyone-button
+                gift-to-everyone__gift-to-everyone-button
+              "
+            >
+              Получить подарок
+            </button>
           </div>
-          <div class="triangle-white"></div>
+          <div class="triangle-upward triangle_bottom_right"></div>
         </section>
-        <section id="filmy">
-          <h2>Фильмы</h2>
-          <div class="filmy-text">
-            <p>
+        <section class="section main-container__movies">
+          <h2 class="h2 movies__movies-h2">Фильмы</h2>
+          <div class="movies-text movies__movies-text">
+            <p class="text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
               mauris cursus mattis molestie a iaculis at. Vel quam elementum
               pulvinar etiam non quam.
             </p>
           </div>
-          <div class="film-table-div">
-            <div class="film-row-div">
-              <div class="film-col-div">
+          <div class="movies-table movies__movies-table">
+            <div class="movies-row movies__movies-row">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/522941/"
+                  href="https://www.kinopoisk.ru/movie/522941/"
                   target="_blank"
                   title="Выживший"
                 >
                   <img
-                    src="/images/films/poster-vyzhevshiy.png"
+                    src="/images/movies/poster-vyzhevshiy.png"
                     alt='Постер фильма "Выживший"'
+                    class="movies__movies-img"
                   />
-                  <div class="film-desc">
-                    <h3>Выживший</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Выживший
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -296,19 +445,22 @@
                   </div>
                 </a>
               </div>
-              <div class="film-col-div">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/900052/"
+                  href="https://www.kinopoisk.ru/movie/900052/"
                   target="_blank"
                   title="Лёд"
                 >
                   <img
-                    src="/images/films/poster-lyod.png"
+                    src="/images/movies/poster-lyod.png"
                     alt='Постер фильма "Лёд"'
+                    class="movies__movies-img"
                   />
-                  <div class="film-desc">
-                    <h3>Лёд</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Лёд
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -318,19 +470,22 @@
                   </div>
                 </a>
               </div>
-              <div class="film-col-div">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/841700/"
+                  href="https://www.kinopoisk.ru/movie/841700/"
                   target="_blank"
                   title="Марсианин"
                 >
                   <img
-                    src="/images/films/poster-marsianin.png"
+                    src="/images/movies/poster-marsianin.png"
                     alt='Постер фильма "Марсианин"'
+                    class="movies__movies-img"
                   />
-                  <div class="film-desc">
-                    <h3>Марсианин</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Марсианин
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -341,20 +496,23 @@
                 </a>
               </div>
             </div>
-            <div class="film-row-div">
-              <div class="film-col-div">
+            <div class="movies-row movies__movies-row">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/1162604/"
+                  href="https://www.kinopoisk.ru/movie/1162604/"
                   target="_blank"
                   title="Спутник"
                 >
                   <img
-                    src="/images/films/poster-sputnik.png"
+                    src="/images/movies/poster-sputnik.png"
                     alt='Постер фильма "Спутник"'
+                    class="movies__movies-img"
                   />
-                  <div class="film-desc">
-                    <h3>Спутник</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Спутник
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -364,19 +522,21 @@
                   </div>
                 </a>
               </div>
-              <div class="film-col-div">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/1188248/"
+                  href="https://www.kinopoisk.ru/movie/1188248/"
                   target="_blank"
                   title="Калашников"
                 >
                   <img
-                    src="/images/films/poster-kalashnikov.png"
+                    src="/images/movies/poster-kalashnikov.png"
                     alt='Постер фильма "Калашников"'
                   />
-                  <div class="film-desc">
-                    <h3>Калашников</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Калашников
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -386,19 +546,21 @@
                   </div>
                 </a>
               </div>
-              <div class="film-col-div">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/522941/"
+                  href="https://www.kinopoisk.ru/movie/522941/"
                   target="_blank"
                   title="Территория"
                 >
                   <img
-                    src="/images/films/poster-territoriya.png"
+                    src="/images/movies/poster-territoriya.png"
                     alt='Постер фильма "Территория"'
                   />
-                  <div class="film-desc">
-                    <h3>Территория</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Территория
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -409,20 +571,23 @@
                 </a>
               </div>
             </div>
-            <div class="film-row-div">
-              <div class="film-col-div">
+            <div class="movies-row movies__movies-row">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/447301/"
+                  href="https://www.kinopoisk.ru/movie/447301/"
                   target="_blank"
                   title="Начало"
                 >
                   <img
-                    src="/images/films/poster-nachalo.png"
+                    src="/images/movies/poster-nachalo.png"
                     alt='Постер фильма "Начало"'
+                    class="movies__movies-img"
                   />
-                  <div class="film-desc">
-                    <h3>Начало</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Начало
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -432,19 +597,22 @@
                   </div>
                 </a>
               </div>
-              <div class="film-col-div">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/939981/"
+                  href="https://www.kinopoisk.ru/movie/939981/"
                   target="_blank"
                   title="Лунный свет"
                 >
                   <img
-                    src="/images/films/poster-lunniy svet.png"
+                    src="/images/movies/poster-lunniy svet.png"
                     alt='Постер фильма "Лунный свет"'
+                    class="movies__movies-img"
                   />
-                  <div class="film-desc">
-                    <h3>Лунный свет</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Лунный свет
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -454,19 +622,22 @@
                   </div>
                 </a>
               </div>
-              <div class="film-col-div">
+              <div class="movies-col movies__movies-col">
                 <a
-                  href="https://www.kinopoisk.ru/film/966995/"
+                  href="https://www.kinopoisk.ru/movie/966995/"
                   target="_blank"
                   title="Живое"
                 >
                   <img
-                    src="/images/films/poster-zhivoe.png"
+                    src="/images/movies/poster-zhivoe.png"
                     alt='Постер фильма "Живое"'
+                    class="movies__movies-img"
                   />
-                  <div class="film-desc">
-                    <h3>Живое</h3>
-                    <p>
+                  <div class="movies-item-desc movies__movies-item-desc">
+                    <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                      Живое
+                    </h3>
+                    <p class="text movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -479,144 +650,186 @@
             </div>
           </div>
         </section>
-        <section id="tovary">
-          <h2>Товары</h2>
-          <div class="tovary-text">
-            <p>
+        <section class="section main-container__goods">
+          <h2 class="h2 goods__goods-h2">Товары</h2>
+          <div class="goods-text goods__goods-text">
+            <p class="text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
               mauris cursus mattis molestie a iaculis at. Vel quam elementum
               pulvinar etiam non quam.
             </p>
           </div>
-          <div class="tovary-table-div">
-            <div class="tovary-row-div">
-              <div class="tovary-col-div">
+          <div class="goods-table goods__goods-table">
+            <div class="goods-row goods__goods-row">
+              <div class="goods-col goods__goods-col">
                 <img
-                  src="/images/tovary-cocacola.png"
+                  src="/images/goods-cocacola.png"
                   alt="Напиток Coca-cola"
+                  class="goods-item-img goods__goods-item-img"
                 />
-                <svg class="cover-tovar-svg">
-                  <use xlink:href="#cover-tovar"></use>
-                </svg>
-                <div class="tovary-desc">
-                  <div class="tovary-desc-text">
-                    <p>Coca-cola</p>
-                  </div>
+                <div class="goods-cover"></div>
+                <div class="goods-item-desc goods__goods-item-desc">
+                  <p class="text goods-item-desc-text goods-item-desc-text">
+                    Coca-cola
+                  </p>
                 </div>
               </div>
-              <div class="tovary-col-div">
+              <div class="goods-col goods__goods-col">
                 <img
-                  src="/images/tovary-brelok-zheleznyi-chelovek.png"
+                  src="/images/goods-keychain-iron-man.png"
                   alt="3 брелка в виде головы Железного человека"
+                  class="goods-item-img goods__goods-item-img"
                 />
-                <svg class="cover-tovar-svg">
-                  <use xlink:href="#cover-tovar"></use>
-                </svg>
-                <div class="tovary-desc">
-                  <div class="tovary-desc-text">
-                    <p>Брелок</p>
-                    <p>"Железный<br />человек"</p>
-                  </div>
+                <div class="goods-cover"></div>
+                <div class="goods-item-desc goods__goods-item-desc">
+                  <p class="text goods-item-desc-text goods-item-desc-text">
+                    Брелок
+                  </p>
+                  <p class="text goods-item-desc-text goods-item-desc-text">
+                    "Железный<br />человек"
+                  </p>
                 </div>
               </div>
-              <div class="tovary-col-div">
+              <div class="goods-col goods__goods-col">
                 <img
-                  src="/images/tovary-poster-mstiteli.png"
+                  src="/images/goods-poster-avengers.png"
                   alt="Постер с изображением мстителей"
+                  class="goods-item-img goods__goods-item-img"
                 />
-                <svg class="cover-tovar-svg">
-                  <use xlink:href="#cover-tovar"></use>
-                </svg>
-                <div class="tovary-desc">
-                  <div class="tovary-desc-text">
-                    <p>Постер</p>
-                    <p>"Мстители"</p>
-                  </div>
+                <div class="goods-cover"></div>
+                <div class="goods-item-desc goods__goods-item-desc">
+                  <p class="text goods-item-desc-text goods-item-desc-text">
+                    Постер
+                  </p>
+                  <p class="text goods-item-desc-text goods-item-desc-text">
+                    "Мстители"
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section id="otzyvy">
-          <div class="triangle-white-upside"></div>
-          <div class="otzyvy-content">
-            <h2>Отзывы</h2>
-            <div class="otzyvy-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
-                mauris cursus mattis molestie a iaculis at. Vel quam elementum
-                pulvinar etiam non quam.
-              </p>
+        <section class="section reviews main-container__reviews">
+          <div class="triangle-downward triangle_top_left"></div>
+          <h2 class="h2 reviews__reviews-h2">Отзывы</h2>
+          <div class="reviews-text reviews__reviews-text">
+            <p class="text reviews-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
+              mauris cursus mattis molestie a iaculis at. Vel quam elementum
+              pulvinar etiam non quam.
+            </p>
+          </div>
+          <div class="reviews__reviews-table">
+            <div
+              class="reviews-item reviews__reviews-item1 reviews-item_default"
+            >
+              <img
+                src="/images/reviews-elenova-elena.png"
+                alt="Елена Еленова"
+                class="reviews-item-img"
+              />
+              <div class="reviews__reviews-item1-text">
+                <h3 class="reviews-item-h3">Елена Еленова</h3>
+                <p class="text reviews-item-p reviews__reviews-item1-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="reviews-item-date reviews__reviews-item-date">
+                  13.12.2020
+                </p>
+              </div>
             </div>
-            <div class="otzyvy-table-div">
-              <div class="otzyvy-unit1-div">
-                <img
-                  src="/images/otzyvy-elenova-elena.png"
-                  alt="Елена Еленова"
-                />
-                <div class="otzyvy-unit1-text-div">
-                  <h3>Елена Еленова</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <p class="date">13.12.2020</p>
-                </div>
+            <div
+              class="reviews-item reviews__reviews-item2 reviews-item_active"
+            >
+              <img
+                src="/images/reviews-borisov-boris.png"
+                alt="Борис Борисов"
+                class="reviews-item-img"
+              />
+              <div class="reviews__reviews-item2-text">
+                <h3 class="reviews-item-h3 reviews-item-h3_active">
+                  Борис Борисов
+                </h3>
+                <p
+                  class="
+                    text
+                    reviews-item-p reviews__reviews-item2-p
+                    reviews-item-p_active
+                  "
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p
+                  class="
+                    reviews-item-date reviews__reviews-item-date
+                    reviews-item-date_active
+                    reviews__reviews-item-date_active
+                  "
+                >
+                  13.12.2020
+                </p>
               </div>
-              <div class="otzyvy-unit2-div">
-                <img
-                  src="/images/otzyvy-borisov-boris.png"
-                  alt="Борис Борисов"
-                />
-                <div class="otzyvy-unit2-text-div">
-                  <h3>Борис Борисов</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <p class="date">13.12.2020</p>
-                </div>
-              </div>
-              <div class="otzyvy-unit3-div">
-                <img
-                  src="/images/otzyvy-dikaprio-leonardo.png"
-                  alt="Леонардо ДиКаприо"
-                />
-                <div class="otzyvy-unit3-text-div">
-                  <h3>Леонардо ДиКаприо</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <p class="date">13.12.2020</p>
-                </div>
+            </div>
+            <div
+              class="reviews-item reviews__reviews-item3 reviews-item_default"
+            >
+              <img
+                src="/images/reviews-dikaprio-leonardo.png"
+                alt="Леонардо ДиКаприо"
+                class="reviews-item-img"
+              />
+              <div class="reviews__reviews-item3-text">
+                <h3 class="reviews-item-h3">Леонардо ДиКаприо</h3>
+                <p class="text reviews-item-p reviews__reviews-item3-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="reviews-item-date reviews__reviews-item-date">
+                  13.12.2020
+                </p>
               </div>
             </div>
           </div>
-          <div class="triangle-white"></div>
+          <div class="triangle-upward triangle_bottom_right"></div>
         </section>
-        <section id="obratnaya-svyaz">
-          <div class="obratnaya-svyaz-form">
-            <h2>Обратная связь</h2>
+        <section class="section feedback main-container__feedback">
+          <div class="feedback-inner feedback__inner">
+            <h2 class="h2 feedback-h2 feedback__feedback-h2">Обратная связь</h2>
             <form action="/order">
-              <div class="input-text-div">
+              <div
+                class="
+                  feedback-form-item-outline
+                  feedback__feedback-form-item-outline
+                "
+              >
                 <input
                   type="text"
                   placeholder="Полное имя"
                   aria-label="Ввести полное имя"
                   required
+                  class="feedback-form-item feedback__feedback-form-item"
                 />
               </div>
-              <div class="input-text-div">
+              <div
+                class="
+                  feedback-form-item-outline
+                  feedback__feedback-form-item-outline
+                "
+              >
                 <select
                   name="nomer-mesta"
                   aria-label="Выбрать из списка номер места"
                   required
+                  class="
+                    feedback-form-item
+                    feedback__feedback-form-item
+                    feedback-form-select-seat
+                    feedback__feedback-form-select-seat
+                  "
                 >
                   <option label="Номер места" disabled selected></option>
                   <option value="1">1</option>
@@ -631,48 +844,75 @@
                   <option value="10">10</option>
                 </select>
               </div>
-              <!-- <div class="input-text-div">
+              <div
+                class="
+                  feedback-form-item-outline
+                  feedback__feedback-form-item-outline
+                "
+              >
                 <input
                   type="email"
                   placeholder="Электронный адрес"
                   aria-label="Ввести электронный адрес"
                   required
+                  class="feedback-form-item feedback__feedback-form-item"
                 />
-              </div> -->
-              <div class="input-text-div">
+              </div>
+              <div
+                class="
+                  feedback-form-item-outline
+                  feedback__feedback-form-item-outline
+                "
+              >
                 <textarea
                   name="otzyv"
-                  id=""
                   cols="30"
                   rows="10"
                   placeholder="Напишите свой отзыв"
                   aria-label="Ввести свой отзыв"
+                  class="
+                    feedback-form-item
+                    feedback__feedback-form-item
+                    feedback-form-textarea
+                    feedback__feedback-form-textarea
+                  "
                 ></textarea>
               </div>
-              <!--               <div>
+              <div>
                 <input
                   type="file"
-                  name="obratnaya-svyaz-file"
+                  name="feedback-file"
                   aria-label="Прикрепите файл"
                 />
-              </div> -->
-              <div class="input-text-div">
+              </div>
+              <div
+                class="
+                  feedback-form-item-outline
+                  feedback__feedback-form-item-outline
+                "
+              >
                 <input
                   type="checkbox"
                   name="pers_data_proc_agree"
                   id="pers_data_proc_agree"
                   required
                 />
-                <label for="pers_data_proc_agree"
+                <label
+                  for="pers_data_proc_agree"
+                  class="
+                    feedback-form-checkbox-label
+                    feedback__feedback-form-checkbox-label
+                  "
                   >Я согласен на обработку своих персональных данных</label
                 >
               </div>
               <div>
                 <button
                   type="submit"
-                  name="obratnaya-svyaz-form-submit-btn1"
+                  name="feedback-inner-submit-btn1"
                   title="исходный вариант - внутри формы"
                   aria-label="Отправить форму обратной связи"
+                  class="feedback-form-submit feedback__feedback-form-submit"
                 >
                   ЗАКАЗАТЬ
                 </button>
@@ -680,56 +920,89 @@
             </form>
           </div>
         </section>
-        <section id="kak-dobratsya">
-          <!-- <h2>Как добраться</h2> -->
-          <img src="/images/karta.png" alt="Карта" />
+        <section class="section how-to-get main-container__how-to-get">
+          <img src="/images/map.png" alt="Карта" />
         </section>
       </div>
     </main>
     <footer>
-      <div class="container">
-        <div class="logo">
+      <div class="container footer__container">
+        <div class="footer-iu-logo footer__footer-iu-logo">
           <a
             href="https://innopolis.university/"
             title="Перейти на сайт innopolis.university"
             target="_blank"
           >
-            <svg>
+            <svg class="svg_inherit-size svg_white">
               <use xlink:href="#ico-logo"></use>
             </svg>
           </a>
         </div>
-        <div class="footer-text">
-          <p>
+        <div class="footer-text footer__footer-text">
+          <p class="text footer-text-p">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam
           </p>
         </div>
-        <div class="copyright-text">
-          <p>Copyright @ 2020 Innopolis University . All Rights Reserved.</p>
+        <div class="footer-copyright-text footer__footer-copyright-text">
+          <p class="text footer-copyright-text-p">
+            Copyright @ 2020 Innopolis University . All Rights Reserved.
+          </p>
         </div>
-        <nav aria-label="Нижнее меню" class="footer-menu">
-          <h3>МЕНЮ</h3>
-          <ul>
-            <li><a href="#pochemu-my">Почему мы?</a></li>
-            <li><a href="#vyberite-film">Выберите фильм</a></li>
-            <li><a href="#filmy">Фильмы</a></li>
-            <li><a href="#tovary">Товары</a></li>
-            <li><a href="#otzyvy">Отзывы</a></li>
-            <li><a href="#obratnaya-svyaz">Обратная связь</a></li>
+        <nav
+          aria-label="Нижнее меню"
+          class="footer-nav-menu footer__footer-nav-menu"
+        >
+          <h3 class="footer-nav-h3 footer-nav-menu__footer-nav-h3">МЕНЮ</h3>
+          <ul class="nav__ul">
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="#why-we" class="footer__link">Почему мы?</a>
+            </li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="#choose-movie" class="footer__link">Выберите фильм</a>
+            </li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="#movies" class="footer__link">Фильмы</a>
+            </li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="#goods" class="footer__link">Товары</a>
+            </li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="#reviews" class="footer__link">Отзывы</a>
+            </li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="#feedback" class="footer__link">Обратная связь</a>
+            </li>
           </ul>
         </nav>
-        <nav aria-label="Контакты" class="footer-contacts">
-          <h3>КОНТАКТЫ</h3>
-          <ul>
-            <li><a href="tel:+7 (800) 355 12-56">+7 (800) 355 12-56</a></li>
-            <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
-            <li>
-              <a href="">420500, г. Иннополис<br />ул.Университетская, д.1</a>
+        <nav
+          aria-label="Контакты"
+          class="footer-nav-contacts footer__footer-nav-contacts"
+        >
+          <h3 class="footer-nav-h3 footer-nav-menu__footer-nav-h3">КОНТАКТЫ</h3>
+          <ul class="nav__ul">
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="tel:+7 (800) 355 12-56" class="footer__link"
+                >+7 (800) 355 12-56</a
+              >
             </li>
-            <li><a href="kak-dobratsya">Как добраться</a></li>
-            <li><a href="">Все контакты</a></li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="mailto:kino@innopolis.ru" class="footer__link"
+                >kino@innopolis.ru</a
+              >
+            </li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="" class="footer__link"
+                >420500, г. Иннополис<br />ул.Университетская, д.1</a
+              >
+            </li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="how-to-get" class="footer__link">Как добраться</a>
+            </li>
+            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+              <a href="" class="footer__link">Все контакты</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -738,7 +1011,6 @@
       <symbol
         id="ico-logo"
         viewBox="0 0 156 40"
-        fill="white"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -809,17 +1081,6 @@
         <path
           d="M5.67222 7.98889C4.1 7.18333 2.81111 5.9 2.01111 4.32778L3.12371 3.49804C3.44322 3.25977 3.59072 2.85451 3.49912 2.4666L3.09853 0.770184C2.99196 0.318844 2.58905 0 2.1253 0H0.555556C0.25 0 0 0.25 0 0.555556C0 5.77222 4.22778 10 9.44444 10C9.75 10 10 9.75 10 9.44444V7.87332C10 7.4102 9.68201 7.00767 9.23146 6.90048L7.53545 6.49696C7.14653 6.40442 6.73987 6.55242 6.50139 6.87328L5.67222 7.98889Z"
         />
-      </symbol>
-    </svg>
-    <svg style="display: none">
-      <symbol
-        id="cover-tovar"
-        viewBox="0 0 245 153"
-        fill="#A3CC40"
-        fill-opacity="0.8"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M0 65.0607L245 0V153H0V65.0607Z" />
       </symbol>
     </svg>
     <svg style="display: none">
