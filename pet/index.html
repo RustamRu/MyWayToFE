@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Требуется указать title -->
+    <title>Первый кинотеатр в Иннополис</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div .content {
+        background-color: lightcoral;
+      }
+      div .content:after {
+        content: "Specifity: 0 (linked), 0, 1, 2; 1st entry";
+        background-color: red;
+      }
+
+      div .content {
+        background-color: lightcoral;
+      }
+      div .content:after {
+        content: "Specifity: 0 (linked), 0, 1, 2; 2nd entry";
+        background-color: red;
+      }
+    </style>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <style>
+      div .content {
+        background-color: lightcoral;
+      }
+      div .content:after {
+        content: "Specifity: 0 (linked), 0, 1, 2; 3rd entry";
+        background-color: red;
+      }
+
+      div .content {
+        background-color: lightcoral;
+      }
+      div .content:after {
+        content: "Specifity: 0 (linked), 0, 1, 2; 4th entry";
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Заголовок</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis
+      nesciunt accusantium reiciendis? Provident neque doloribus corrupti sequi
+      saepe tenetur quae. Omnis tempora et debitis esse quas quaerat, tempore
+      cumque ab!
+    </p>
+    <h1>Проверка специфичности</h1>
+    <div id="pagewrapper">
+      <div class="content" style="background-color: lightgreen">
+        <p>
+          1) Чем ниже стилевое правило, тем оно важнее. Важность зависит от
+          способа подключения: inline, глобальные и связанные таблицы.<br /><i
+            >Этот div выделен светло-зеленым из-за inline-стиля, а псевдоэлемент
+            :after - темно-зеленым из-за последней записи во всех таблицах при
+            одинаковом числе специфичности.</i
+          >
+        </p>
+      </div>
+      <div class="secondary">
+        <p>
+          2) При разном числе специфичности будет применяться стиль с более
+          высоким числом, даже если он раньше в каскадной таблице:
+        </p>
+      </div>
+      <div class="third">
+        <p>
+          3) Используемый комбинатор (в составных селекторах) не влияет на число
+          специфичности и подчиняется правилу подключения в каскаде (выше/ниже):
+        </p>
+      </div>
+      <div class="fourth">
+        <p>
+          4) Атрибут !important увеличивает уровень спефичности и может быть
+          перекрыто только на своем уровне, т.е. повышением специфичности через
+          inline-стили, идентификаторы и т.д. при наличии атрибута !important:
+        </p>
+      </div>
+      <div class="fifth">
+        <p>
+          5) Псеводкласс :not не учитывается при подсчете числа специфичности, поэтому псевдоэлемент :after выделен зеленым несмотря на то, что у обоих стилей одинакоывое количество классов, элементов:
+        </p>
+        <ol>
+          <li><p class="item">пункт</p></li>
+          <li><p class="item">пункт</p></li>
+          <li><p class="item not">пункт</p></li>
+          <li><p class="item">пункт</p></li>
+          <li><p class="item">пункт</p></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
