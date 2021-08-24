@@ -1,0 +1,47 @@
+/* Служебные */
+div {
+    box-sizing: border-box;
+  }
+  * {
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  .example-row {
+    display: flex;
+  }
+  .example-code-row * {
+      color: unset;
+      margin: 5px 0;
+      color: white;
+  }
+  .example-col {
+    display: block;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: grey 5px 5px 5px 0px;
+  }
+  .html-col {
+    width: 60%;
+    background-color: rgb(30, 30, 30);
+  }
+  .css-col {
+    flex: 1;
+    background-color: rgb(50, 50, 50);
+  }
+  .front-col {
+    flex: 1;
+    background-color: whitesmoke;
+    font-family: "Times New Roman", Times, serif;
+    border: 1px solid lightgray;
+  }
+  .html-col-p_accent {
+      background: rgba(100, 255, 100, .3);
+  }
+  .html-tag {
+      font-weight: bold;
+      color: rgb(83, 153, 208);
+  }
+  .css-tag {
+      font-weight: bold;
+      color: rgb(251, 184, 22);
+  }
