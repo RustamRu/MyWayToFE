@@ -50,7 +50,6 @@
   /* Оформление */
   background-color: white;
   /* Разное */
-  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 .triangle-downward {
@@ -60,7 +59,6 @@
   /* Оформление */
   background-color: white;
   /* Разное */
-  shape-outside: polygon(0 0, 0 100%, 100% 0);
   clip-path: polygon(0 0, 0 100%, 100% 0);
 }
 .triangle_top_left {
@@ -93,7 +91,7 @@
   /* Оформление */
   background: rgba(22, 22, 22, 0.8);
 }
-.header__container:after {
+.header__container::after {
   /* Позиционирование */
   position: absolute;
   top: 0;
@@ -507,7 +505,7 @@
   /* Оформление */
   background: rgba(22, 22, 22, 0.8);
 }
-.gift-to-everyone:after {
+.gift-to-everyone::after {
   /* Позиционирование */
   position: absolute;
   top: 0;
@@ -779,7 +777,6 @@
   /* Оформление */
   background: rgba(163, 204, 64, 0.8);
   /* Разное */
-  shape-outside: polygon(245px 0, 245px 153px, 0 153px, 0 65px);
   clip-path: polygon(245px 0, 245px 153px, 0 153px, 0 65px);
 }
 .goods-item-desc {
@@ -818,7 +815,7 @@
   /* Оформление */
   background: rgba(22, 22, 22, 0.8);
 }
-.reviews:after {
+.reviews::after {
   /* Позиционирование */
   position: absolute;
   top: 0;
@@ -987,7 +984,7 @@
   width: 767px;
   height: 527px;
 }
-.feedback:after {
+.feedback::after {
   /* Позиционирование */
   position: absolute;
   top: 0;
