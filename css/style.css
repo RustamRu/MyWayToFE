@@ -802,7 +802,7 @@
   text-align: center;
   color: white;
 }
-.goods-item-desc-text {
+.goods__item-desc-text {
   /* Блочная модель */
   margin: 8px 0;
 }
