@@ -403,7 +403,7 @@
   /* Блочная модель */
   padding-top: 115px;
 }
-.choose-movies__choose-movie-h2 {
+.choose-movie__choose-movie-h2 {
   /* Блочная модель */
   margin-top: 0px;
   margin-bottom: 84px;
@@ -417,7 +417,7 @@
   border: none;
   border-collapse: collapse;
 }
-.choose-movies__choose-movie-table {
+.choose-movie__choose-movie-table {
   /* Блочная модель */
   margin: 0 0 30px 3px;
   padding: 0;
@@ -439,19 +439,20 @@
 .choose-movie-wide {
   width: 240px;
 }
-.choose-movies__choose-movie-th {
+.choose-movie__choose-movie-th {
   /* Позиционирование */
   vertical-align: top;
   /* Блочная модель */
   padding: 2px 1px;
 }
-.choose-movies__link {
+.choose-movie__link {
   /* Блочная модель */
   display: block;
   /* Типографика */
   text-decoration: none;
   color: white;
 }
+
 .choose-movie-tr_light {
   /* Оформление */
   background: #6c6c6c;
@@ -468,7 +469,7 @@
   line-height: 18px;
   font-weight: 400;
 }
-.choose-movies__choose-movie-td {
+.choose-movie__choose-movie-td {
   /* Позиционирование */
   vertical-align: top;
   /* Блочная модель */
@@ -492,7 +493,7 @@
   /* Типографика */
   text-align: center;
 }
-.choose-movies__choose-movie-text {
+.choose-movie__choose-movie-text {
   /* Блочная модель */
   margin: 0 auto;
 }
@@ -775,7 +776,7 @@
   width: 100%;
   height: 153px;
   /* Оформление */
-  background: rgba(163, 204, 64, 0.8);
+  background: rgba(97, 125, 33, 0.8);
   /* Разное */
   clip-path: polygon(245px 0, 245px 153px, 0 153px, 0 65px);
 }
