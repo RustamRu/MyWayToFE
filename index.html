@@ -20,22 +20,32 @@
             title="Перейти на сайт innopolis.university"
             target="_blank"
           >
-            <svg class="svg_inherit-size svg_white">
+            <svg class="svg svg_white">
               <use xlink:href="#ico-logo"></use>
             </svg>
           </a>
         </div>
         <nav
-          class="header__header-nav-contacts"
+          class="header-nav-contacts header__header-nav-contacts"
           aria-label="Контакты, верхнее меню"
         >
-          <ul class="nav__ul">
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+          <ul class="header-nav-contacts__ul">
+            <li
+              class="
+                header-nav-contacts-li
+                header-nav-contacts__header-nav-contacts-li
+              "
+            >
               <a href="tel:+78003551256" class="header__link"
                 >+7 (800) 355 12-56</a
               >
             </li>
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+            <li
+              class="
+                header-nav-contacts-li
+                header-nav-contacts__header-nav-contacts-li
+              "
+            >
               <a
                 aria-label="Написать электронное письмо на адрес kino@innopolis.ru"
                 href="mailto:kino@innopolis.ru"
@@ -43,12 +53,22 @@
                 >kino@innopolis.ru</a
               >
             </li>
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+            <li
+              class="
+                header-nav-contacts-li
+                header-nav-contacts__header-nav-contacts-li
+              "
+            >
               <a href="#how-to-get" class="header__link"
                 >ул. Спортивная, д. 1</a
               >
             </li>
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+            <li
+              class="
+                header-nav-contacts-li
+                header-nav-contacts__header-nav-contacts-li
+              "
+            >
               <button class="reguest-call header-nav-contacts__reguest-call">
                 <svg class="ico-phone reguest-call__ico-phone">
                   <use xlink:href="#ico-phone" />
@@ -59,7 +79,12 @@
                 >
               </button>
             </li>
-            <li class="nav-li header-nav-li header-nav__header-nav-li lang">
+            <li
+              class="
+                header-nav-contacts-li
+                header-nav-contacts__header-nav-contacts-li
+              "
+            >
               <select
                 name="lang"
                 id="lang"
@@ -76,39 +101,39 @@
           class="header-nav-menu header__header-nav-menu"
           aria-label="Верхнее меню"
         >
-          <ul class="nav__ul">
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+          <ul class="header-nav-menu__ul">
+            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
               <a href="#why-we" class="header__link">Почему мы?</a>
             </li>
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
               <a href="#choose-movie" class="header__link">Выберите фильм</a>
             </li>
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
               <a href="#movies" class="header__link">Фильмы</a>
             </li>
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
               <a href="#goods" class="header__link">Товары</a>
             </li>
-            <li class="nav-li header-nav-li header-nav__header-nav-li">
+            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
               <a href="#reviews" class="header__link">Отзывы</a>
             </li>
           </ul>
         </nav>
-        <div class="header__header-title">
-          <h1 class="header-title__h">
-            <span class="header-title header-title__header-title"
+        <div class="header-title-div header__header-title-div">
+          <h1 class="header-title-div__h">
+            <span class="header-title header-title-div__header-title"
               >Закажите билет в кино</span
             >
-            <span class="header-subtitle header-title__header-subtitle"
+            <span class="header-subtitle header-title-div__header-subtitle"
               >Всем покупателям подарок!</span
             >
           </h1>
         </div>
-        <div class="triangle-upward triangle_bottom_right"></div>
+        <div class="triangle triangle_upward triangle_bottom-right"></div>
       </div>
     </header>
     <main class="main">
-      <div class="container">
+      <div class="container main-container">
         <section class="section welcome main-container__welcome">
           <h2 class="main-container-h2 main-container__main-container-h2">
             Добро пожаловать!
@@ -217,15 +242,16 @@
           <h2 class="h2 choose-movie__choose-movie-h2">Выберите фильм</h2>
           <table class="choose-movie-table choose-movie__choose-movie-table">
             <thead>
-              <tr>
+              <tr class="choose-movie-tr">
                 <th
                   class="
                     choose-movie-th
                     choose-movie__choose-movie-th
                     choose-movie-th_narrow choose-movie-th_rounded-top-left
                   "
+                  aria-label="Столбец галочек"
                 >
-                  <span aria-hidden="true" aria-label="Галочка"></span>
+                  <span class="sr-only">Галочка</span>
                 </th>
                 <th
                   class="
@@ -267,7 +293,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="choose-movie-tr_dark">
+              <tr class="choose-movie-tr choose-movie-tr_dark">
                 <td class="choose-movie-td choose-movie__choose-movie-td">
                   &#10004;
                 </td>
@@ -281,7 +307,7 @@
                   Фантастика, боевик, приключения
                 </td>
               </tr>
-              <tr class="choose-movie-tr_light">
+              <tr class="choose-movie-tr choose-movie-tr_light">
                 <td class="choose-movie-td choose-movie__choose-movie-td">
                   &#10004;
                 </td>
@@ -295,7 +321,7 @@
                   Фэнтэзи, драма, комедия
                 </td>
               </tr>
-              <tr class="choose-movie-tr_dark">
+              <tr class="choose-movie-tr choose-movie-tr_dark">
                 <td class="choose-movie-td choose-movie__choose-movie-td">
                   &#10004;
                 </td>
@@ -309,7 +335,7 @@
                   Мультфильм, фэнтэзи, комедия
                 </td>
               </tr>
-              <tr class="choose-movie-tr_light">
+              <tr class="choose-movie-tr choose-movie-tr_light">
                 <td
                   class="
                     choose-movie-td
@@ -348,7 +374,7 @@
         <section
           class="section gift-to-everyone main-container__gift-to-everyone"
         >
-          <div class="triangle-downward triangle_top_left"></div>
+          <div class="triangle triangle_downward triangle_top-left"></div>
           <img
             src="/images/present.png"
             alt="Подарок"
@@ -413,9 +439,9 @@
               Получить подарок
             </button>
           </div>
-          <div class="triangle-upward triangle_bottom_right"></div>
+          <div class="triangle triangle_upward triangle_bottom-right"></div>
         </section>
-        <section class="section main-container__movies">
+        <section class="section movies main-container__movies">
           <h2 class="h2 movies__movies-h2">Фильмы</h2>
           <div class="movies-text movies__movies-text">
             <p class="text">
@@ -657,7 +683,7 @@
             </div>
           </div>
         </section>
-        <section class="section main-container__goods">
+        <section class="section goods main-container__goods">
           <h2 class="h2 goods__goods-h2">Товары</h2>
           <div class="goods-text goods__goods-text">
             <p class="text">
@@ -721,7 +747,7 @@
           </div>
         </section>
         <section class="section reviews main-container__reviews">
-          <div class="triangle-downward triangle_top_left"></div>
+          <div class="triangle triangle_downward triangle_top-left"></div>
           <h2 class="h2 reviews__reviews-h2">Отзывы</h2>
           <div class="reviews-text reviews__reviews-text">
             <p class="text reviews-p">
@@ -804,7 +830,7 @@
               </div>
             </div>
           </div>
-          <div class="triangle-upward triangle_bottom_right"></div>
+          <div class="triangle triangle_upward triangle_bottom-right"></div>
         </section>
         <section class="section feedback main-container__feedback">
           <div class="feedback-inner feedback__inner">
@@ -944,7 +970,7 @@
             title="Перейти на сайт innopolis.university"
             target="_blank"
           >
-            <svg class="svg_inherit-size svg_white">
+            <svg class="svg svg_white">
               <use xlink:href="#ico-logo"></use>
             </svg>
           </a>
@@ -965,24 +991,26 @@
           aria-label="Нижнее меню"
           class="footer-nav-menu footer__footer-nav-menu"
         >
-          <h3 class="footer-nav-h3 footer-nav-menu__footer-nav-h3">МЕНЮ</h3>
-          <ul class="nav__ul">
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+          <h3 class="footer-nav-h3 footer-nav-menu__footer-nav-menu-h3">
+            МЕНЮ
+          </h3>
+          <ul class="footer-nav-menu__ul">
+            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
               <a href="#why-we" class="footer__link">Почему мы?</a>
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
               <a href="#choose-movie" class="footer__link">Выберите фильм</a>
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
               <a href="#movies" class="footer__link">Фильмы</a>
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
               <a href="#goods" class="footer__link">Товары</a>
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
               <a href="#reviews" class="footer__link">Отзывы</a>
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
               <a href="#feedback" class="footer__link">Обратная связь</a>
             </li>
           </ul>
@@ -991,27 +1019,51 @@
           aria-label="Контакты, нижнее меню"
           class="footer-nav-contacts footer__footer-nav-contacts"
         >
-          <h3 class="footer-nav-h3 footer-nav-menu__footer-nav-h3">КОНТАКТЫ</h3>
-          <ul class="nav__ul">
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+          <h3 class="footer-nav-h3 footer-nav-contacts__footer-nav-contacts-h3">
+            КОНТАКТЫ
+          </h3>
+          <ul class="footer-nav-contacts__ul">
+            <li
+              class="
+                footer-nav-contacts-li
+                footer-nav-contacts__footer-nav-contacts-li
+              "
+            >
               <a href="tel:+78003551256" class="footer__link"
                 >+7 (800) 355 12-56</a
               >
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li
+              class="
+                footer-nav-contacts-li
+                footer-nav-contacts__footer-nav-contacts-li
+              "
+            >
               <a href="mailto:kino@innopolis.ru" class="footer__link"
                 >kino@innopolis.ru</a
               >
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li
+              class="
+                footer-nav-contacts-li
+                footer-nav-contacts__footer-nav-contacts-li
+              "
+            >
               <a href="" class="footer__link"
                 >420500, г. Иннополис<br />ул.Университетская, д.1</a
               >
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li
+              class="
+                footer-nav-contacts-li
+                footer-nav-contacts__footer-nav-contacts-li
+              "
+            >
               <a href="how-to-get" class="footer__link">Как добраться</a>
             </li>
-            <li class="nav-li footer-nav-li footer-nav__footer-nav-li">
+            <li
+              class="footer-nav-contacts-li footer-nav-contacts__footer-nav-li"
+            >
               <a href="" class="footer__link">Все контакты</a>
             </li>
           </ul>
