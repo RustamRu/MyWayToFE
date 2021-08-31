@@ -1,0 +1,226 @@
+/* Стили компонентов, используемых для сборки страниц (кнопки, формы, всяческие слайдеры, всплывающие окна, ...) */
+/* ==================== ФОРМА ==================== */
+.feedback-form-item {
+  /* Блочная модель */
+  width: 344px;
+  max-width: 346px;
+  height: 40px;
+  /* Типографика */
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 400;
+  color: var(--light-gray);
+  /* Оформление */
+  background-color: var(--light-light-gray);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+/* input,
+textarea,
+select { */
+  /* Блочная модель */
+  /* width: 100%;
+  padding: 15px 11px; */
+  /* Типографика */
+  /* font-size: 15px;
+  color: var(--light-gray); */
+  /* Оформление */
+  /* background-color: var(--light-light-gray);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: 0; */
+  /* Анимация */
+  /* transition: 0.2s; */
+/* } */
+.feedback__feedback-form-item {
+  /* Блочная модель */
+  margin: auto;
+  padding: 0 15px;
+}
+.feedback-form-item-outline {
+  /* Блочная модель */
+  width: fit-content;
+  max-width: 356px;
+}
+.feedback__feedback-form-item-outline {
+  /* Блочная модель */
+  margin: 0 auto 7px 0;
+  padding: 5px;
+}
+.feedback-form-item-outline:hover {
+  /* Оформление */
+  background-color: var(--transparent-green);
+  border-radius: 5px;
+}
+.feedback-form-item-outline:hover .feedback-form-item {
+  /* Блочная модель */
+  margin: 0;
+  /* Оформление */
+  background-color: var(--white);
+  border: 1px solid var(--light-light-gray);
+}
+
+/* ==================== ТЕКСТОВОЕ ПОЛЕ ==================== */
+.feedback-form-textarea {
+  /* Блочная модель */
+  height: 105px;
+  min-height: 40px;
+  resize: vertical;
+}
+.feedback__feedback-form-textarea {
+  /* Блочная модель */
+  padding-top: 13px;
+}
+
+/* ==================== ФЛАЖОК ==================== */
+.feedback-form-checkbox {
+  /* Блочная модель */
+  width: 18px;
+  height: 18px;
+  /* Оформление */
+  background-color: var(--light-light-gray);
+  border: 1px solid var(--basic-green);
+  border-radius: 5px;
+}
+.feedback__feedback-form-checkbox {
+  /* Блочная модель */
+  margin: auto 5px auto auto;
+}
+.feedback-form-checkbox-label {
+  /* Типографика */
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  color: var(--black);
+}
+.feedback__feedback-form-checkbox-label {
+  margin: auto 0px;
+}
+
+/* ==================== КНОПКИ ==================== */
+.reguest-call {
+  /* Блочная модель */
+  width: 130px;
+  height: 21px;
+  /* Оформление */
+  background-color: var(--white);
+  border: 0;
+  border-radius: 6px;
+}
+.header-nav-contacts__reguest-call {
+  /* Позиционирование */
+  position: relative;
+}
+.reguest-call:hover {
+  /* Типографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--basic-green);
+  fill: var(--white);
+}
+.reguest-call__ico-phone {
+  /* Позиционирование */
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  /* Блочная модель */
+  margin: 0;
+  padding: 1px;
+}
+.ico-phone {
+  /* Блочная модель */
+  width: 10px;
+  height: 10px;
+}
+.reguest-call-label {
+  /* Типографика */
+  font-size: 12px;
+  line-height: 16px;
+}
+.reguest-call__reguest-call-label {
+  /* Позиционирование */
+  position: absolute;
+  top: 3px;
+  left: 28px;
+  /* Блочная модель */
+  margin: 0;
+  padding: 0;
+}
+.gift-to-everyone-button {
+  /* Блочная модель */
+  width: 190px;
+  height: 30px;
+  /* Типографика */
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--basic-green);
+  border: 0;
+  border-radius: 6px;
+}
+.gift-to-everyone button:hover {
+  /* Типографика */
+  color: var(--basic-green);
+  /* Оформление */
+  background-color: var(--white);
+  border: 1px solid var(--transparent-green);
+  border-radius: 6px;
+  box-shadow: 0px 2px 9px var(--transparent-darkgreen);
+}
+.gift-to-everyone__gift-to-everyone-button {
+  /* Позиционирование */
+  position: absolute;
+  right: 2px;
+  /* Блочная модель */
+  margin-top: 15px;
+}
+.feedback-form-submit {
+  /* Блочная модель */
+  width: 344px;
+  height: 57px;
+  /* Типографика */
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--basic-green);
+  border: 0;
+  border-radius: 6px;
+}
+.feedback__feedback-form-submit {
+  /* Блочная модель */
+  margin: 7px 5px;
+}
+.feedback-form-submit:hover {
+  /* Типографика */
+  color: var(--basic-green);
+  /* Оформление */
+  background-color: var(--white);
+  border: 1px solid var(--transparent-green);
+  border-radius: 6px;
+  box-shadow: 0px 2px 9px var(--transparent-darkgreen);
+}
+
+/* ==================== ВЫПАДАЮЩИЕ СПИСКИ ==================== */
+.header-nav-contacts__lang {
+  /* Блочная модель */
+  margin-right: 0px;
+  margin-left: 64px;
+}
+.lang {
+  /* Блочная модель */
+  width: auto;
+  /* Типографика */
+  color: inherit;
+  /* Оформление */
+  background: none;
+  border: none;
+  outline: none;
+}
+.feedback__feedback-form-select-seat {
+  /* Блочная модель */
+  padding: 0 10px;
+}

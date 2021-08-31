@@ -4,13 +4,18 @@
   <head>
     <meta charset="utf-8" />
     <title>Продажа билетов в кино в Иннополисе</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/abstracts.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
   </head>
   <body class="body">
     <header class="header">
       <div class="container header__container">
         <a href="#main"
-          ><div class="header-skip header__header-skip">
+          ><div class="header__link header__header-skip">
             Перейти к контенту
           </div></a
         >
@@ -20,7 +25,7 @@
             title="Перейти на сайт innopolis.university"
             target="_blank"
           >
-            <svg class="svg svg_white">
+            <svg class="logo svg_white">
               <use xlink:href="#ico-logo"></use>
             </svg>
           </a>
@@ -49,7 +54,7 @@
               <a
                 aria-label="Написать электронное письмо на адрес kino@innopolis.ru"
                 href="mailto:kino@innopolis.ru"
-                class="header__link"
+                class="link_underline header__link"
                 >kino@innopolis.ru</a
               >
             </li>
@@ -135,22 +140,20 @@
     <main class="main">
       <div class="container main-container">
         <section class="section welcome main-container__welcome">
-          <h2 class="main-container-h2 main-container__main-container-h2">
-            Добро пожаловать!
-          </h2>
-          <p class="main-container-text">
+          <h2 class="welcome-h2 welcome__welcome-h2">Добро пожаловать!</h2>
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </p>
-          <p class="main-container-text">
+          <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt.
           </p>
         </section>
         <section class="section why-we main-container__why-we" id="why-we">
-          <h2 class="h2 why-we__why-we-h2">Почему мы?</h2>
+          <h2 class="why-we__why-we-h2">Почему мы?</h2>
           <div>
             <div class="why-we__why-we-row">
               <div class="why-we-col why-we__why-we-col">
@@ -160,7 +163,7 @@
                   class="why-we-img why-we__why-we-img"
                 />
                 <h3 class="why-we-h3 why-we__why-we-h3">Большие экраны</h3>
-                <p class="text">
+                <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
@@ -173,7 +176,7 @@
                   class="why-we-img why-we__why-we-img"
                 />
                 <h3 class="why-we-h3 why-we__why-we-h3">Объёмный звук</h3>
-                <p class="text">
+                <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
@@ -186,7 +189,7 @@
                   class="why-we-img why-we__why-we-img"
                 />
                 <h3 class="why-we-h3 why-we__why-we-h3">Удобные кресла</h3>
-                <p class="text">
+                <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
@@ -201,7 +204,7 @@
                   class="why-we-img why-we__why-we-img"
                 />
                 <h3 class="why-we-h3 why-we__why-we-h3">Уютная атмосфера</h3>
-                <p class="text">
+                <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
@@ -214,7 +217,7 @@
                   class="why-we-img why-we__why-we-img"
                 />
                 <h3 class="why-we-h3 why-we__why-we-h3">Полное погружение</h3>
-                <p class="text">
+                <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
@@ -229,7 +232,7 @@
                 <h3 class="why-we-h3 why-we__why-we-h3">
                   Поцелуи на заднем ряду
                 </h3>
-                <p class="text">
+                <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
@@ -239,7 +242,7 @@
           </div>
         </section>
         <section class="section choose-movie main-container__choose-movie">
-          <h2 class="h2 choose-movie__choose-movie-h2">Выберите фильм</h2>
+          <h2 class="choose-movie__choose-movie-h2">Выберите фильм</h2>
           <table class="choose-movie-table choose-movie__choose-movie-table">
             <thead>
               <tr class="choose-movie-tr">
@@ -262,7 +265,7 @@
                 >
                   <a href="#" class="choose-movie__link"
                     >Начало сеанса
-                    <svg style="width: 9px; height: 5px; margin: auto 6px">
+                    <svg class="arrow svg_white">
                       <use xlink:href="#ico-arrow-up"></use>
                     </svg>
                   </a>
@@ -276,7 +279,7 @@
                 >
                   <a href="#" class="choose-movie__link"
                     >Название фильма
-                    <svg style="width: 9px; height: 5px; margin: auto 6px">
+                    <svg class="arrow svg_white">
                       <use xlink:href="#ico-arrow-down"></use>
                     </svg>
                   </a>
@@ -364,7 +367,7 @@
             </tbody>
           </table>
           <div class="choose-movie-text choose-movie__choose-movie-text">
-            <p class="text">
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.
@@ -380,48 +383,24 @@
             alt="Подарок"
             class="gift-to-everyone__present"
           />
-          <div class="gift-to-everyone__inner">
-            <h2
-              class="
-                h2
-                gift-to-everyone-h2
-                gift-to-everyone__gift-to-everyone-h2
-              "
-            >
+          <div class="gift-to-everyone__inner text_right">
+            <h2 class="h2 gift-to-everyone-h2 gift-to-everyone__gift-to-everyone-h2">
               Подарок каждому!
             </h2>
-            <p
-              class="
-                text
-                gift-to-everyone-text
-                gift-to-everyone__gift-to-everyone-text
-              "
-            >
+            <p class="gift-to-everyone__gift-to-everyone-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
               mauris cursus mattis molestie a iaculis at. Vel quam elementum
               pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam
               maecenas.&nbsp;
             </p>
-            <p
-              class="
-                text
-                gift-to-everyone-text
-                gift-to-everyone__gift-to-everyone-text
-              "
-            >
+            <p class="gift-to-everyone__gift-to-everyone-text">
               Nunc vel risus commodo viverra maecenas accumsan. Morbi enim nunc
               faucibus a. Mauris commodo quis imperdiet massa.Sed elementum
               tempus egestas sed sed risus pretium quam vulputate. Aliquam
               vestibulum morbi blandit cursus risus at ultrices mi tempus.&nbsp;
             </p>
-            <p
-              class="
-                text
-                gift-to-everyone-text
-                gift-to-everyone__gift-to-everyone-text
-              "
-            >
+            <p class="gift-to-everyone__gift-to-everyone-text">
               Nibh mauris cursus mattis molestie a iaculis at. Vel quam
               elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id
               diam maecenas. Sed elementum tempus egestas sed sed risus pretium
@@ -442,9 +421,9 @@
           <div class="triangle triangle_upward triangle_bottom-right"></div>
         </section>
         <section class="section movies main-container__movies">
-          <h2 class="h2 movies__movies-h2">Фильмы</h2>
+          <h2 class="movies__movies-h2">Фильмы</h2>
           <div class="movies-text movies__movies-text">
-            <p class="text">
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
               mauris cursus mattis molestie a iaculis at. Vel quam elementum
@@ -468,7 +447,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Выживший
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -493,7 +472,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Лёд
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -518,7 +497,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Марсианин
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -545,7 +524,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Спутник
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -569,7 +548,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Калашников
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -593,7 +572,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Территория
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -620,7 +599,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Начало
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -645,7 +624,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Лунный свет
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -670,7 +649,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Живое
                     </h3>
-                    <p class="text movies-item-desc-text">
+                    <p class="movies-item-desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -684,9 +663,9 @@
           </div>
         </section>
         <section class="section goods main-container__goods">
-          <h2 class="h2 goods__goods-h2">Товары</h2>
+          <h2 class="goods__goods-h2">Товары</h2>
           <div class="goods-text goods__goods-text">
-            <p class="text">
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
               mauris cursus mattis molestie a iaculis at. Vel quam elementum
@@ -703,7 +682,7 @@
                 />
                 <div class="goods-cover">
                   <div class="goods-item-desc goods__goods-item-desc">
-                    <p class="text goods-item-desc-text goods__item-desc-text">
+                    <p class="goods-item-desc-text goods__item-desc-text">
                       Coca-cola
                     </p>
                   </div>
@@ -717,10 +696,10 @@
                 />
                 <div class="goods-cover">
                   <div class="goods-item-desc goods__goods-item-desc">
-                    <p class="text goods-item-desc-text goods__item-desc-text">
+                    <p class="goods-item-desc-text goods__item-desc-text">
                       Брелок
                     </p>
-                    <p class="text goods-item-desc-text goods__item-desc-text">
+                    <p class="goods-item-desc-text goods__item-desc-text">
                       "Железный<br />человек"
                     </p>
                   </div>
@@ -734,10 +713,10 @@
                 />
                 <div class="goods-cover">
                   <div class="goods-item-desc goods__goods-item-desc">
-                    <p class="text goods-item-desc-text goods__item-desc-text">
+                    <p class="goods-item-desc-text goods__item-desc-text">
                       Постер
                     </p>
-                    <p class="text goods-item-desc-text goods__item-desc-text">
+                    <p class="goods-item-desc-text goods__item-desc-text">
                       "Мстители"
                     </p>
                   </div>
@@ -748,9 +727,9 @@
         </section>
         <section class="section reviews main-container__reviews">
           <div class="triangle triangle_downward triangle_top-left"></div>
-          <h2 class="h2 reviews__reviews-h2">Отзывы</h2>
+          <h2 class="reviews__reviews-h2">Отзывы</h2>
           <div class="reviews-text reviews__reviews-text">
-            <p class="text reviews-p">
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
               mauris cursus mattis molestie a iaculis at. Vel quam elementum
@@ -767,8 +746,10 @@
                 class="reviews-item-img"
               />
               <div class="reviews__reviews-item1-text">
-                <h3 class="reviews-item-h3">Елена Еленова</h3>
-                <p class="text reviews-item-p reviews__reviews-item1-p">
+                <h3 class="reviews-item-h3 reviews__reviews-item-h3">
+                  Елена Еленова
+                </h3>
+                <p class="reviews-item-p reviews__reviews-item1-p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -786,12 +767,18 @@
                 class="reviews-item-img"
               />
               <div class="reviews__reviews-item2-text">
-                <h3 class="reviews-item-h3 reviews-item-h3_active">
+                <h3
+                  class="
+                    reviews-item-h3
+                    reviews__reviews-item-h3
+                    reviews-item-h3_active
+                    reviews__reviews-item-h3_active
+                  "
+                >
                   Борис Борисов
                 </h3>
                 <p
                   class="
-                    text
                     reviews-item-p reviews__reviews-item2-p
                     reviews-item-p_active
                   "
@@ -819,8 +806,10 @@
                 class="reviews-item-img"
               />
               <div class="reviews__reviews-item3-text">
-                <h3 class="reviews-item-h3">Леонардо ДиКаприо</h3>
-                <p class="text reviews-item-p reviews__reviews-item3-p">
+                <h3 class="reviews-item-h3 reviews__reviews-item-h3">
+                  Леонардо ДиКаприо
+                </h3>
+                <p class="reviews-item-p reviews__reviews-item3-p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -834,7 +823,7 @@
         </section>
         <section class="section feedback main-container__feedback">
           <div class="feedback-inner feedback__inner">
-            <h2 class="h2 feedback-h2 feedback__feedback-h2">Обратная связь</h2>
+            <h2 class="feedback-h2 feedback__feedback-h2">Обратная связь dfdf</h2>
             <form action="/order">
               <div
                 class="
@@ -863,7 +852,6 @@
                   class="
                     feedback-form-item
                     feedback__feedback-form-item
-                    feedback-form-select-seat
                     feedback__feedback-form-select-seat
                   "
                 >
@@ -957,8 +945,8 @@
           </div>
         </section>
         <section class="section how-to-get main-container__how-to-get">
-          <h2 class="h2">Как добраться</h2>
-          <img src="/images/map.png" alt="Карта" />
+          <h2 class="">Как добраться</h2>
+          <img src="/images/map.png" alt="Карта" class="how-to-get__map"/>
         </section>
       </div>
     </main>
@@ -970,20 +958,20 @@
             title="Перейти на сайт innopolis.university"
             target="_blank"
           >
-            <svg class="svg svg_white">
+            <svg class="logo svg_white">
               <use xlink:href="#ico-logo"></use>
             </svg>
           </a>
         </div>
         <div class="footer-text footer__footer-text">
-          <p class="text footer-text-p">
+          <p class="footer-text-p">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam
           </p>
         </div>
         <div class="footer-copyright-text footer__footer-copyright-text">
-          <p class="text footer-copyright-text-p">
+          <p class="footer-copyright-text-p">
             Copyright @ 2020 Innopolis University . All Rights Reserved.
           </p>
         </div>
@@ -991,9 +979,7 @@
           aria-label="Нижнее меню"
           class="footer-nav-menu footer__footer-nav-menu"
         >
-          <h3 class="footer-nav-h3 footer-nav-menu__footer-nav-menu-h3">
-            МЕНЮ
-          </h3>
+          <h3 class="footer-nav-menu__footer-nav-menu-h3">МЕНЮ</h3>
           <ul class="footer-nav-menu__ul">
             <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
               <a href="#why-we" class="footer__link">Почему мы?</a>
@@ -1019,9 +1005,7 @@
           aria-label="Контакты, нижнее меню"
           class="footer-nav-contacts footer__footer-nav-contacts"
         >
-          <h3 class="footer-nav-h3 footer-nav-contacts__footer-nav-contacts-h3">
-            КОНТАКТЫ
-          </h3>
+          <h3 class="footer-nav-contacts__footer-nav-contacts-h3">КОНТАКТЫ</h3>
           <ul class="footer-nav-contacts__ul">
             <li
               class="
@@ -1150,7 +1134,6 @@
       <symbol
         id="ico-arrow-up"
         viewBox="0 0 9 5"
-        fill="white"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M4.49182 0.5L8.49182 5H0.491821L4.49182 0.5Z" />
@@ -1160,7 +1143,6 @@
       <symbol
         id="ico-arrow-down"
         viewBox="0 0 9 5"
-        fill="white"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M4 4.5L8 0H0L4 4.5Z" />

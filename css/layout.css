@@ -1,0 +1,767 @@
+/* Стили элементов макетов страниц (шапка и подвал страницы, навигационная область, различные разделы страницы, сетка, ...) */
+/* ==================== ОБЩИЕ ==================== */
+.body {
+  margin: 0;
+}
+.container {
+  /* Позиционирование */
+  position: relative;
+  /* Блочная модель */
+  width: 1124px;
+  margin: 0 auto;
+  padding: 0;
+  /* Оформление */
+  /* background-color: var(--white);  */
+}
+.section {
+  /* Позиционирование */
+  position: relative;
+  /* Блочная модель */
+
+  margin: 0 135px;
+  /* clear: both; */
+}
+/* ==================== HEADER ==================== */
+.header__container {
+  /* Блочная модель */
+  height: 668px; /* ? */
+  /* Типографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--transparent-black);
+}
+.header__container::after {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  /* Оформление */
+  background: url(/images/header-bg.png) center no-repeat;
+  /* Разное */
+  content: "";
+}
+.header__header-skip {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Блочная модель */
+  padding: 5px;
+}
+.header-title-div {
+  /* Блочная модель */
+  margin: 0;
+  padding: 0;
+}
+.header__header-title-div {
+  /* Позиционирование */
+  position: absolute;
+  top: 225px;
+  left: 199px;
+  /* Блочная модель */
+  width: 728px;
+  margin: 0;
+  padding: 0;
+}
+.header-title-div__h {
+  /* Блочная модель */
+  margin: 0;
+}
+.header-title-div__header-title {
+  /* Блочная модель */
+  display: block;
+  margin: 0 0 18px;
+  padding: 0;
+}
+.header-title-div__header-subtitle {
+  /* Блочная модель */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==================== Секция "Добро пожаловать!" ==================== */
+.welcome {
+  /* Блочная модель */
+  width: 426px;
+  height: 221px;
+  /* Типографика */
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  color: var(--black);
+  /* Оформление */
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 27px 39px var(--transparent-gray);
+}
+.main-container__welcome {
+  /* Позиционирование */
+  position: absolute;
+  top: -143px;
+  left: 563px;
+  z-index: 2;
+  /* Блочная модель */
+  margin: 0;
+  padding: 30px 47px;
+}
+.welcome__welcome-h2 {
+  /* Блочная модель */
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+/* ==================== Секция "Почему мы?" ==================== */
+.main-container__why-we {
+  /* Блочная модель */
+  padding-top: 29px;
+}
+.why-we__why-we-h2 {
+  /* Блочная модель */
+  margin-top: 0px;
+  margin-bottom: 84px;
+}
+.why-we__why-we-h3 {
+  /* Позиционирование */
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+/* ==================== Секция "Выберите фильм" ==================== */
+.main-container__choose-movie {
+  /* Блочная модель */
+  padding-top: 115px;
+}
+.choose-movie__choose-movie-h2 {
+  /* Блочная модель */
+  margin-top: 0px;
+  margin-bottom: 84px;
+}
+.choose-movie-text {
+  /* Блочная модель */
+  width: 539px;
+  /* Типографика */
+  text-align: center;
+}
+.choose-movie__choose-movie-text {
+  /* Блочная модель */
+  margin: 0 auto;
+}
+/* ==================== Секция "Подарок каждому!" ==================== */
+.gift-to-everyone {
+  /* Блочная модель */
+  width: 1124px;
+  height: 587px;
+  /* Типографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--transparent-black);
+}
+.gift-to-everyone::after {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  /* Оформление */
+  background: url(/images/present-bg.png) center no-repeat;
+  /* Разное */
+  content: "";
+}
+.main-container__gift-to-everyone {
+  /* Позиционирование */
+  position: relative;
+  /* Блочная модель */
+  margin: 122px 0 0 0;
+}
+.gift-to-everyone__present {
+  /* Позиционирование */
+  position: absolute;
+  top: -58px;
+  left: 139px;
+  z-index: 2;
+}
+.gift-to-everyone__inner {
+  /* Позиционирование */
+  position: absolute;
+  top: 104px;
+  right: 135px;
+  /* Блочная модель */
+  width: 548px;
+  margin: 0;
+}
+.gift-to-everyone__gift-to-everyone-h2 {
+  /* Блочная модель */
+  margin-bottom: 38px;
+}
+.gift-to-everyone__gift-to-everyone-text {
+  /* Блочная модель */
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* ==================== Секция "Фильмы" ==================== */
+.main-container__movies {
+  /* Блочная модель */
+  padding-top: 46px;
+}
+.movies__movies-h2 {
+  /* Блочная модель */
+  margin-top: 0px;
+  margin-bottom: 27px;
+  margin-left: 2px;
+}
+.movies__movies-item-desc-h3 {
+  /* Блочная модель */
+  margin: 0 0 13px -1px;
+}
+.movies-text {
+  /* Блочная модель */
+  width: 548px;
+}
+.movies__movies-text {
+  /* Блочная модель */
+  margin-left: 4px;
+}
+.movies-item-desc {
+  /* Блочная модель */
+
+  width: 100%;
+  height: 100%;
+  /* Типографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--transparent-black);
+}
+.movies__movies-item-desc {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Блочная модель */
+  padding: 17px 23px;
+}
+.movies-item-desc:hover {
+  /* Оформление */
+  background-color: var(--transparent-darkgreen);
+}
+
+/* ==================== Секция "Товары" ==================== */
+.main-container__goods {
+  /* Блочная модель */
+  padding-top: 79px;
+}
+.goods__goods-h2 {
+  /* Блочная модель */
+  margin-top: 0px;
+  margin-bottom: 27px;
+  margin-left: 4px;
+}
+.goods-text {
+  /* Блочная модель */
+  width: 548px;
+}
+.goods__goods-text {
+  /* Блочная модель */
+  margin-left: 4px;
+  margin-bottom: 57px;
+}
+.goods-item-desc {
+  /* Блочная модель */
+  display: inline-block;
+  width: 245px;
+  height: 100px;
+}
+.goods__goods-item-desc {
+  /* Позиционирование */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0 0 4px;
+  vertical-align: middle;
+}
+.goods__item-desc-text {
+  /* Блочная модель */
+  margin: 8px 0;
+}
+
+/* ==================== Секция "Отзывы" ==================== */
+.reviews {
+  /* Блочная модель */
+  width: 1124px;
+  height: 792px;
+  /* Типографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--transparent-black);
+}
+.reviews::after {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  /* Оформление */
+  background: url(/images/reviews-bg.png) center no-repeat;
+  /* Разное */
+  content: "";
+}
+.main-container__reviews {
+  /* Позиционирование */
+  position: relative;
+  /* Блочная модель */
+  margin: 48px 0 0 0;
+  padding: 126px 135px 0;
+}
+.reviews__reviews-h2 {
+  /* Блочная модель */
+  margin-top: 0px;
+  margin-bottom: 26px;
+  margin-left: 4px;
+}
+
+/* ==================== Секция "Обратная связь" ==================== */
+.feedback {
+  /* Блочная модель */
+  width: 767px;
+  height: 527px;
+}
+.feedback::after {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  /* Оформление */
+  background: url(/images/feedback.png) center no-repeat;
+  /* Разное */
+  content: "";
+}
+.main-container__feedback {
+  /* Позиционирование */
+  position: relative;
+  /* Блочная модель */
+  margin: 43px 0 0 174px;
+  clear: both;
+}
+.feedback__inner {
+  /* Позиционирование */
+  position: absolute;
+  top: 32px;
+  left: 375px;
+}
+.feedback__feedback-h2 {
+  /* Блочная модель */
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+/* ==================== Секция "Как добраться" ==================== */
+.how-to-get {
+  /* Блочная модель */
+  width: 1124px;
+  height: 421px;
+  clear: both;
+}
+.main-container__how-to-get {
+  /* Позиционирование */
+  position: relative;
+  margin: 0px auto 39px;
+  padding: 0 135px 0;
+}
+.how-to-get__map {
+  /* Блочная модель */
+  margin-left: -60px;
+}
+
+/* ======================================== FOOTER ======================================== */
+/* ==================== КОНТЕЙНЕРЫ ==================== */
+.footer__container {
+  /* Блочная модель */
+  height: 362px;
+  /* Типоографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--basic-green);
+}
+.footer-text {
+  /* Блочная модель */
+  width: 272px;
+  height: 72px;
+}
+.footer__footer-text {
+  /* Позиционирование */
+  position: absolute;
+  top: 140px;
+  left: 89px;
+}
+.footer-copyright-text {
+  /* Блочная модель */
+  width: 436px;
+  height: 39px;
+}
+.footer__footer-copyright-text {
+  /* Позиционирование */
+  position: absolute;
+  top: 312px;
+  left: 89px;
+}
+/* ==================== МЕНЮ ==================== */
+.header-nav-contacts {
+  /* Блочная модель */
+  margin: 0;
+  padding: 0;
+}
+.header__header-nav-contacts {
+  /* Позиционирование */
+  position: absolute;
+  top: 42px;
+  left: 289px;
+}
+.header-nav-menu {
+  /* Блочная модель */
+  float: right;
+}
+.header__header-nav-menu {
+  /* Позиционирование */
+  position: absolute;
+  top: 74px;
+  left: 289px;
+}
+.header-nav-contacts__ul,
+.header-nav-menu__ul {
+  /* Блочная модель */
+  margin: 0;
+  padding: 0;
+}
+.header-nav-contacts-li,
+.header-nav-menu-li {
+  /* Типографика */
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  list-style-type: none;
+}
+.header-nav-contacts__header-nav-contacts-li {
+  /* Позиционирование */
+  vertical-align: middle;
+  /* Блочная модель */
+  display: inline-block;
+  margin: auto 46px auto 0;
+  padding: 0;
+}
+.header-nav-menu__header-nav-menu-li {
+  /* Позиционирование */
+  vertical-align: middle;
+  /* Блочная модель */
+  display: inline-block;
+  margin: auto 77px auto 0;
+  padding: 0;
+}
+.footer__footer-nav-contacts {
+  /* Позиционирование */
+  position: absolute;
+  top: 91px;
+  left: 738px;
+}
+.footer__footer-nav-menu {
+  /* Позиционирование */
+  position: absolute;
+  top: 91px;
+  left: 529px;
+}
+.footer-nav-contacts__ul,
+.footer-nav-menu__ul {
+  /* Блочная модель */
+  margin: 0;
+  padding: 0;
+}
+.footer-nav-contacts-li,
+.footer-nav-menu-li {
+  /* Типографика */
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  list-style-type: none;
+}
+.footer-nav-contacts__footer-nav-contacts-li,
+.footer-nav-menu__footer-nav-menu-li {
+  /* Блочная модель */
+  margin-bottom: 12px;
+}
+.footer-nav-menu__footer-nav-menu-h3,
+.footer-nav-contacts__footer-nav-contacts-h3 {
+  margin-bottom: 26px;
+}
+
+/* ТАБЛИЧНАЯ ВЕРСТКА */
+.why-we__why-we-row {
+  /* Блочная модель */
+  margin-left: -23px;
+  margin-right: -23px;
+  overflow: hidden;
+}
+.why-we-col {
+  /* Блочная модель */
+
+  float: left;
+  width: 33.33%;
+  height: 338px;
+  /* Типографика */
+  text-align: center;
+}
+.why-we__why-we-col {
+  /* Блочная модель */
+  margin: 0 0 29px 0;
+  padding: 0 27px;
+}
+.choose-movie-table {
+  /* Блочная модель */
+  width: 849px;
+  /* Оформление */
+  border: none;
+  border-collapse: collapse;
+}
+.choose-movie__choose-movie-table {
+  /* Блочная модель */
+  margin: 0 0 30px 3px;
+  padding: 0;
+}
+.choose-movie-tr {
+  /* Блочная модель */
+  height: 45px;
+}
+.choose-movie-tr_light {
+  /* Типографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--light-gray);
+}
+.choose-movie-tr_dark {
+  /* Типографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--dark-gray);
+}
+.choose-movie-th {
+  /* Типографика */
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  text-align: left;
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--basic-green);
+}
+.choose-movie-th_narrow {
+  width: 76px;
+}
+.choose-movie-wide {
+  width: 240px;
+}
+.choose-movie__choose-movie-th {
+  /* Позиционирование */
+  vertical-align: top;
+  /* Блочная модель */
+  padding: 2px 1px;
+}
+.choose-movie-td {
+  /* Типографика */
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.choose-movie__choose-movie-td {
+  /* Позиционирование */
+  vertical-align: top;
+  /* Блочная модель */
+  padding: 2px 1px;
+}
+.choose-movie-th_rounded-top-left {
+  border-top-left-radius: 10px;
+}
+.choose-movie-th_rounded-top-right {
+  border-top-right-radius: 10px;
+}
+.choose-movie-td_rounded-bottom-left {
+  border-bottom-left-radius: 10px;
+}
+.choose-movie-td_rounded-bottom-right {
+  border-bottom-right-radius: 10px;
+}
+.movies-table {
+  /* Блочная модель */
+  width: 850px;
+  height: 850px;
+}
+.movies__movies-table {
+  /* Блочная модель */
+  margin: 64px 0 0 4px;
+  padding: 0;
+}
+.movies-row {
+  /* Блочная модель */
+  height: 33.33%;
+  /* overflow: hidden; */
+}
+.movies__movies-row {
+  /* Блочная модель */
+  margin: 0;
+  padding: 0;
+}
+.movies-col {
+  /* Блочная модель */
+
+  width: 33.33%;
+  height: 100%;
+  float: left;
+}
+.movies__movies-col {
+  /* Позиционирование */
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.goods-table {
+  /* Блочная модель */
+
+  width: 100%;
+  height: 100%;
+}
+.goods__goods-table {
+  /* Позиционирование */
+  /* margin-left: 2px; */
+  padding: 0;
+}
+.goods-row {
+  /* Блочная модель */
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.goods__goods-row {
+  /* Блочная модель */
+  margin: 0 auto;
+  padding: 0;
+}
+.goods-col {
+  /* Блочная модель */
+
+  float: left;
+  width: 245px;
+  height: 331px;
+}
+.goods__goods-col {
+  /* Позиционирование */
+  position: relative;
+  /* Блочная модель */
+  display: table;
+  margin: 0 19px;
+  padding: 0;
+}
+
+.reviews__reviews-table {
+  /* Позиционирование */
+  position: relative;
+}
+.reviews-item {
+  /* Типографика */
+  text-align: left;
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--basic-green);
+  border-radius: 9px;
+}
+.reviews__reviews-item1 {
+  /* Позиционирование */
+  position: absolute;
+  top: 86px;
+  left: 7px;
+}
+.reviews__reviews-item2 {
+  /* Позиционирование */
+  position: absolute;
+  top: 62px;
+  left: 307px;
+}
+.reviews__reviews-item3 {
+  /* Позиционирование */
+  position: absolute;
+  top: 87px;
+  left: 641px;
+}
+.reviews-item_default {
+  /* Блочная модель */
+  width: 210px;
+  height: 284px;
+}
+.reviews-item_active {
+  /* Блочная модель */
+  width: 246px;
+  height: 332px;
+}
+.reviews__reviews-item-h3 {
+  /* Блочная модель */
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.reviews__reviews-item1-p {
+  /* Блочная модель */
+  margin-top: -1px;
+}
+.reviews__reviews-item2-p {
+  /* Блочная модель */
+  margin-top: 19px;
+}
+.reviews__reviews-item3-p {
+  /* Блочная модель */
+  margin-top: -3px;
+}
+.reviews__reviews-item-date {
+  /* Блочная модель */
+  margin-bottom: 0;
+  /* Позиционирование */
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+}
+.reviews__reviews-item-date_active {
+  /* Блочная модель */
+  margin-bottom: 0;
+  /* Позиционирование */
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+.reviews-text {
+  /* Блочная модель */
+  width: 548px;
+}
+.reviews__reviews-text {
+  /* Блочная модель */
+  margin-top: 0;
+  margin-left: 6px;
+}
+.reviews__reviews-item1-text {
+  /* Блочная модель */
+  margin-top: 19px;
+  padding: 0 9px;
+}
+.reviews__reviews-item2-text {
+  /* Блочная модель */
+  margin-top: 18px;
+  padding: 0 14px 0 17px;
+}
+.reviews__reviews-item3-text {
+  /* Блочная модель */
+  margin-top: 16px;
+  padding: 0 19px 0 17px;
+}

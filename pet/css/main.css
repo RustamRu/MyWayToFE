@@ -16,19 +16,19 @@ p {
 же, что важность зависит от способа подключения: inline,
 глобальные и связанные таблицы);  */
 div .content {
-  background-color: lightcoral;
+  background: red;
 }
-div .content:after {
-  content: "Specifity: 0 (linked), 0, 1, 2; 5rd entry";
+div .content::after {
+  content: "Specifity: 0 (linked), 0, 1, 2; 3rd entry";
   background-color: red;
 }
 
 div .content {
   background-color: lightcoral;
 }
-div .content:after {
-  content: "Specifity: 0 (linked), 0, 1, 2; 6th entry";
-  background-color: green;
+div .content::after {
+  content: "Specifity: 0 (linked), 0, 1, 2; 4th entry";
+  background-color: red;
 }
 
 /* 2) теперь придайте этим стилям разное число специфичности
@@ -37,17 +37,17 @@ div .content:after {
 вверх/вниз, обратите внимание, что при разном числе
 специфичности – расположение не влияет на применимость
 правил; */
-div#pagewrapper .secondary:after {
+div#pagewrapper .secondary::after {
   content: "Specifity: 0 (linked), 1, 1, 2";
   background-color: green;
 }
 
-div .secondary:after {
+div .secondary::after {
   content: "Specifity: 0 (linked), 0, 1, 2; 1st entry";
   background-color: red;
 }
 
-div .secondary:after {
+div .secondary::after {
   content: "Specifity: 0 (linked), 0, 1, 2; 2nd entry";
   background-color: red;
 }
@@ -57,40 +57,40 @@ div .secondary:after {
 Например: #pagewrapper > .content и #pagewrapper .content –
 будут иметь одинаковую специфичность, и подчиняться правилу
 подключения в каскаде (выше/ниже); */
-#pagewrapper > .third:after {
+#pagewrapper > .third::after {
   content: "Specifity: 0 (linked), 0, 1, 2; 1st entry";
   background-color: red;
 }
-#pagewrapper .third:after {
+#pagewrapper .third::after {
   content: "Specifity: 0 (linked), 0, 1, 2; 2nd entry";
   background-color: yellow;
 }
-#pagewrapper > .third:after {
+#pagewrapper > .third::after {
   content: "Specifity: 0 (linked), 0, 1, 2; 2nd entry";
   background-color: green;
 }
 
 /* поэкспериментируйте с ключевым словом !important, сделайте
 выводы; */
-#pagewrapper > .fourth:after {
+#pagewrapper > .fourth::after {
   content: "Specifity: 0 (linked), 0, 1, 2; 1st entry";
   background-color: green !important;
 }
-#pagewrapper .fourth:after {
+#pagewrapper .fourth::after {
   content: "Specifity: 0 (linked), 0, 1, 2; 2nd entry";
   background-color: red;
 }
-#pagewrapper > .fourth:after {
+#pagewrapper > .fourth::after {
   content: "Specifity: 0 (linked), 0, 1, 2; 2nd entry";
   background-color: red;
 }
 
 /* поэкспериментируйте с псевдоклассом :not(), сделайте выводы */
-.fifth li p.item.not:after {
+.fifth li p.item.not::after {
   content: "Specifity: 0 (linked), 0, 3, 3";
   background-color: green;
 }
-.fifth li p:not(.item):after {
+.fifth li p:not(.item)::after {
   content: "Specifity: 0 (linked), 0, 2, 3";
   background-color: red;
 }

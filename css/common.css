@@ -1,0 +1,298 @@
+/* «Шаблонный» код - CSS-код, который приходится писать при создании нового проекта (типографские правила, анимации, утилиты, ...) */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.text_right {
+  /* Типографика */
+  text-align: right;
+}
+/* ==================== ЗАГОЛОВКИ ==================== */
+.header-title {
+  /* Блочная модель */
+  width: 100%;
+  height: 88px;
+  /* Типографика */
+  font-size: 68px;
+  line-height: 88px;
+  font-weight: 100;
+  text-align: center;
+  color: inherit;
+}
+.header-subtitle {
+  /* Блочная модель */
+  width: 100%;
+  height: 53px;
+  /* Типографика */
+  font-size: 41px;
+  line-height: 53px;
+  font-weight: 400;
+  text-align: center;
+  color: inherit;
+}
+h2 {
+  /* Типографика */
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 500;
+  color: var(--basic-green);
+}
+.welcome-h2 {
+  /* Типографика */
+  font-size: 33px;
+  line-height: 43px;
+  font-weight: 600;
+  color: inherit;
+}
+.feedback-h2 {
+  /* Типографика */
+  font-size: 25px;
+  line-height: 32px;
+  text-align: center;
+}
+.gift-to-everyone-h2 {
+  /* Типографика */
+  color: inherit;
+}
+h3 {
+  font-weight: 600;
+  color: inherit;
+}
+.why-we-h3 {
+  /* Типографика */
+  font-size: 20px;
+  line-height: 26px;
+}
+.movies-item-desc-h3 {
+  /* Оформление */
+  font-size: 29px;
+  line-height: 38px;
+  /* Разное */
+  visibility: hidden;
+}
+.movies-item-desc:hover .movies-item-desc-h3 {
+  visibility: visible;
+}
+.reviews-item-h3 {
+  /* Типографика */
+  font-size: 15px;
+  line-height: 19px;
+}
+.reviews-item-h3_active {
+  /* Типографика */
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/* ==================== ТЕКСТ ==================== */
+p {
+  margin-bottom: 13px;
+  /* Типографика */
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  color: inherit;
+}
+.movies-item-desc-text {
+  /* Разное */
+  visibility: hidden;
+}
+.movies-item-desc:hover .movies-item-desc-text {
+  visibility: visible;
+}
+.goods-item-desc-text {
+  /* Типографика */
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  text-align: center;
+}
+.reviews-item-p {
+  /* Типографика */
+  font-size: 10px;
+  line-height: 13px;
+}
+.reviews-item-p_active {
+  /* Типографика */
+  font-size: 11px;
+  line-height: 14px;
+}
+.reviews-item-date {
+  /* Типографика */
+  font-size: 8px;
+  line-height: 10px;
+  font-weight: 300;
+}
+.reviews-item-date_active {
+  /* Типографика */
+  font-size: 9px;
+  line-height: 12px;
+}
+.footer-text-p {
+    /* Типографика */
+    font-size: 14px;
+    line-height: 18px;
+  }
+.footer-copyright-text-p {
+  /* Типографика */
+  font-size: 15px;
+  line-height: 19px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==================== ССЫЛКИ ==================== */
+a {
+  /* Типографика */
+  text-decoration: none;
+  color: inherit;
+}
+.link_underline {
+  /* Типографика */
+  text-decoration: underline;
+}
+.header__link:hover {
+  /* Типографика */
+  text-decoration-line: underline;
+  color: var(--basic-green);
+}
+.footer__link:hover {
+  /* Типографика */
+  text-decoration-line: underline;
+  color: var(--white);
+}
+.choose-movie__link {
+  /* Блочная модель */
+  display: block;
+}
+
+/* ==================== ЛОГОТИП ==================== */
+.header-iu-logo {
+  /* Блочная модель */
+  width: 156px;
+  height: 40px;
+}
+.header__header-iu-logo {
+  /* Позиционирование */
+  position: absolute;
+  top: 51px;
+  left: 89px;
+}
+.footer-iu-logo {
+  /* Блочная модель */
+  width: 161px;
+  height: 42px;
+}
+.footer__footer-iu-logo {
+  /* Позиционирование */
+  position: absolute;
+  top: 84px;
+  left: 90px;
+}
+
+/* ==================== ИЗОБРАЖЕНИЯ ==================== */
+.why-we-img {
+  /* Блочная модель */
+  width: 245px;
+  height: 169px;
+}
+.why-we__why-we-img {
+  /* Позиционирование */
+  margin-bottom: 36px;
+  vertical-align: bottom;
+}
+.goods-item-img {
+  /* Блочная модель */
+  width: 245px;
+  height: 331px;
+}
+.goods__goods-item-img {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  left: 0;
+  vertical-align: bottom;
+}
+.reviews-item-img {
+  /* Блочная модель */
+  width: 100%;
+}
+.movies__movies-img {
+  /* Позиционирование */
+  vertical-align: bottom;
+}
+
+/* ==================== CSS-графика ==================== */
+.triangle {
+  /* Блочная модель */
+  width: 100%;
+  height: 128px;
+  /* Оформление */
+  background-color: var(--white);
+}
+.triangle_upward {
+  /* Разное */
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.triangle_downward {
+  /* Разное */
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+.triangle_top-left {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.triangle_bottom-right {
+  /* Позиционирование */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.goods-cover {
+  /* Позиционирование */
+  position: absolute;
+  bottom: 0;
+  /* Блочная модель */
+  /* display: table; */
+  width: 100%;
+  height: 153px;
+  /* Типографика */
+  color: var(--white);
+  /* Оформление */
+  background-color: var(--transparent-darkgreen);
+  /* Разное */
+  clip-path: polygon(245px 0, 245px 153px, 0 153px, 0 65px);
+}
+
+/* ==================== ВЕКТОРНЫЕ ИЗОБРАЖЕНИЯ ==================== */
+.logo {
+  /* Блочная модель */
+  width: 100%;
+  height: 100%;
+}
+.svg_white {
+  /* Оформление */
+  fill: white;
+}
+.arrow {
+  /* Блочная модель */
+  width: 9px;
+  height: 5px;
+  margin: auto 6px;
+}
