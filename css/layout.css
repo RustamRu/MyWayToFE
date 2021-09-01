@@ -96,7 +96,7 @@
   /* Оформление */
   background-color: var(--white);
   border-radius: 10px;
-  box-shadow: 0px 27px 39px var(--transparent-gray);
+  box-shadow: 0px 27px 39px var(--shadow-green);
 }
 .main-container__welcome {
   /* Позиционирование */
@@ -269,11 +269,24 @@
   margin-left: 4px;
   margin-bottom: 57px;
 }
+.goods__trapezoid {  
+  /* Позиционирование */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .goods-item-desc {
+  /* Позиционирование */
+  position: absolute;
+  bottom: 0;
   /* Блочная модель */
-  display: inline-block;
-  width: 245px;
-  height: 100px;
+  display: flex;
+  width: 100%;
+  height: 153px;
+  align-items: center;
+  justify-content: center;
+  /* Типографика */
+  color: var(--white);
 }
 .goods__goods-item-desc {
   /* Позиционирование */
@@ -281,7 +294,7 @@
   left: 0;
   bottom: 0;
   margin: 0;
-  padding: 0 0 4px;
+  padding: 42px 0 0;
   vertical-align: middle;
 }
 .goods__item-desc-text {
@@ -331,6 +344,10 @@
   /* Блочная модель */
   width: 767px;
   height: 527px;
+  /* Оформление */
+  /* background-color: var(--white); */
+  border-radius: 20px;
+  box-shadow: 8px 9px 39px var(--shadow-light-gray);
 }
 .feedback::after {
   /* Позиционирование */
@@ -500,6 +517,22 @@
 .footer-nav-contacts__footer-nav-contacts-h3 {
   margin-bottom: 26px;
 }
+.footer__smm-bar {
+  /* Позиционирование */
+  position: absolute;
+  top: 237px;
+  left: 90px;  
+}
+.ico-smm-bg{
+  /* Блочная верстка */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+.footer__ico-smm-bg{
+  margin-right: 31px;
+}
 
 /* ТАБЛИЧНАЯ ВЕРСТКА */
 .why-we__why-we-row {
@@ -510,7 +543,6 @@
 }
 .why-we-col {
   /* Блочная модель */
-
   float: left;
   width: 33.33%;
   height: 338px;
@@ -561,16 +593,16 @@
   background-color: var(--basic-green);
 }
 .choose-movie-th_narrow {
-  width: 76px;
+  width: 53px;
 }
-.choose-movie-wide {
+.choose-movie-th_wide {
   width: 240px;
 }
 .choose-movie__choose-movie-th {
   /* Позиционирование */
   vertical-align: top;
   /* Блочная модель */
-  padding: 2px 1px;
+  padding: 2px 2px 2px 25px;
 }
 .choose-movie-td {
   /* Типографика */
@@ -582,7 +614,7 @@
   /* Позиционирование */
   vertical-align: top;
   /* Блочная модель */
-  padding: 2px 1px;
+  padding: 2px 2px 2px 25px;
 }
 .choose-movie-th_rounded-top-left {
   border-top-left-radius: 10px;
@@ -642,7 +674,6 @@
 }
 .goods-row {
   /* Блочная модель */
-
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -654,7 +685,6 @@
 }
 .goods-col {
   /* Блочная модель */
-
   float: left;
   width: 245px;
   height: 331px;
