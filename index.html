@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
   </head>
-  <body class="body">
+  <body>
     <header class="header">
-      <div class="container header__container">
+      <div class="container header-container">
         <a href="#main"
           ><div class="header__link header__header-skip">
             Перейти к контенту
@@ -25,7 +25,7 @@
             title="Перейти на сайт innopolis.university"
             target="_blank"
           >
-            <svg class="logo svg_white">
+            <svg class="logo svg svg_white">
               <use xlink:href="#ico-logo"></use>
             </svg>
           </a>
@@ -54,7 +54,7 @@
               <a
                 aria-label="Написать электронное письмо на адрес kino@innopolis.ru"
                 href="mailto:kino@innopolis.ru"
-                class="link_underline header__link"
+                class="link link_underline header__link"
                 >kino@innopolis.ru</a
               >
             </li>
@@ -96,8 +96,8 @@
                 class="lang header-nav-contacts__lang"
                 aria-label="Выберите язык страницы"
               >
-                <option value="RU" selected>RU</option>
-                <option value="EN">EN</option>
+                <option value="RU" selected>ru</option>
+                <option value="EN">en</option>
               </select>
             </li>
           </ul>
@@ -125,7 +125,7 @@
           </ul>
         </nav>
         <div class="header-title-div header__header-title-div">
-          <h1 class="header-title-div__h">
+          <h1>
             <span class="header-title header-title-div__header-title"
               >Закажите билет в кино</span
             >
@@ -154,7 +154,7 @@
         </section>
         <section class="section why-we main-container__why-we" id="why-we">
           <h2 class="why-we__why-we-h2">Почему мы?</h2>
-          <div>
+          <div class="why-we__why-we-table">
             <div class="why-we__why-we-row">
               <div class="why-we-col why-we__why-we-col">
                 <img
@@ -265,7 +265,7 @@
                 >
                   <a href="#" class="choose-movie__link"
                     >Начало сеанса
-                    <svg class="arrow svg_white">
+                    <svg class="arrow svg svg_white">
                       <use xlink:href="#ico-arrow-up"></use>
                     </svg>
                   </a>
@@ -279,7 +279,7 @@
                 >
                   <a href="#" class="choose-movie__link"
                     >Название фильма
-                    <svg class="arrow svg_white">
+                    <svg class="arrow svg svg_white">
                       <use xlink:href="#ico-arrow-down"></use>
                     </svg>
                   </a>
@@ -383,7 +383,7 @@
             alt="Подарок"
             class="gift-to-everyone__present"
           />
-          <div class="gift-to-everyone__inner text_right">
+          <div class="gift-to-everyone__inner">
             <h2
               class="
                 h2
@@ -393,20 +393,20 @@
             >
               Подарок каждому!
             </h2>
-            <p class="gift-to-everyone__gift-to-everyone-text">
+            <p class="gift-to-everyone__gift-to-everyone-p">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
               mauris cursus mattis molestie a iaculis at. Vel quam elementum
               pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam
               maecenas.&nbsp;
             </p>
-            <p class="gift-to-everyone__gift-to-everyone-text">
+            <p class="gift-to-everyone__gift-to-everyone-p">
               Nunc vel risus commodo viverra maecenas accumsan. Morbi enim nunc
               faucibus a. Mauris commodo quis imperdiet massa.Sed elementum
               tempus egestas sed sed risus pretium quam vulputate. Aliquam
               vestibulum morbi blandit cursus risus at ultrices mi tempus.&nbsp;
             </p>
-            <p class="gift-to-everyone__gift-to-everyone-text">
+            <p class="gift-to-everyone__gift-to-everyone-p">
               Nibh mauris cursus mattis molestie a iaculis at. Vel quam
               elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id
               diam maecenas. Sed elementum tempus egestas sed sed risus pretium
@@ -453,7 +453,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Выживший
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -478,7 +478,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Лёд
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -503,7 +503,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Марсианин
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -530,7 +530,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Спутник
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -554,7 +554,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Калашников
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -578,7 +578,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Территория
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -605,7 +605,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Начало
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -630,7 +630,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Лунный свет
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -655,7 +655,7 @@
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Живое
                     </h3>
-                    <p class="movies-item-desc-text">
+                    <p class="movies-item-desc-p">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
@@ -688,9 +688,7 @@
                 />
                 <div class="trapezoid goods__trapezoid"></div>
                 <div class="goods-item-desc goods__goods-item-desc">
-                  <p class="goods-item-desc-text goods__item-desc-text">
-                    Coca-cola
-                  </p>
+                  <p class="goods-item-desc-p goods__item-desc-p">Coca-cola</p>
                 </div>
               </div>
               <div class="goods-col goods__goods-col">
@@ -701,7 +699,7 @@
                 />
                 <div class="trapezoid goods__trapezoid"></div>
                 <div class="goods-item-desc goods__goods-item-desc">
-                  <p class="goods-item-desc-text goods__item-desc-text">
+                  <p class="goods-item-desc-p goods__item-desc-p">
                     Брелок<br />
                     "Железный<br />человек"
                   </p>
@@ -715,7 +713,7 @@
                 />
                 <div class="trapezoid goods__trapezoid"></div>
                 <div class="goods-item-desc goods__goods-item-desc">
-                  <p class="goods-item-desc-text goods__item-desc-text">
+                  <p class="goods-item-desc-p goods__item-desc-p">
                     Постер<br />
                     "Мстители"
                   </p>
@@ -822,109 +820,79 @@
         <section class="section feedback main-container__feedback">
           <div class="feedback-inner feedback__inner">
             <h2 class="feedback-h2 feedback__feedback-h2">Обратная связь</h2>
-            <form action="/order">
-              <div
+            <form action="/order" class="feedback-form feedback__feedback-form">
+              <input
+                type="text"
+                placeholder="Полное имя"
+                aria-label="Ввести полное имя"
+                required
+                class="feedback-form-item feedback__feedback-form-item"
+              />
+              <select
+                name="nomer-mesta"
+                aria-label="Выбрать из списка номер места"
+                required
                 class="
-                  feedback-form-item-outline
-                  feedback__feedback-form-item-outline
+                  feedback-form-item
+                  feedback__feedback-form-item
+                  feedback__feedback-form-select-seat
                 "
               >
-                <input
-                  type="text"
-                  placeholder="Полное имя"
-                  aria-label="Ввести полное имя"
-                  required
-                  class="feedback-form-item feedback__feedback-form-item"
-                />
-              </div>
-              <div
+                <option label="Номер места" disabled selected></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <input
+                type="email"
+                placeholder="Электронный адрес"
+                aria-label="Ввести электронный адрес"
+                required
+                class="feedback-form-item feedback__feedback-form-item"
+              />
+              <textarea
+                name="otzyv"
+                cols="30"
+                rows="10"
+                placeholder="Напишите свой отзыв"
+                aria-label="Ввести свой отзыв"
                 class="
-                  feedback-form-item-outline
-                  feedback__feedback-form-item-outline
+                  feedback-form-item
+                  feedback__feedback-form-item
+                  feedback-form-textarea
+                  feedback__feedback-form-textarea
                 "
-              >
-                <select
-                  name="nomer-mesta"
-                  aria-label="Выбрать из списка номер места"
-                  required
-                  class="
-                    feedback-form-item
-                    feedback__feedback-form-item
-                    feedback__feedback-form-select-seat
-                  "
-                >
-                  <option label="Номер места" disabled selected></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
-              <div
+              ></textarea>
+              <label
                 class="
-                  feedback-form-item-outline
-                  feedback__feedback-form-item-outline
-                "
-              >
-                <input
-                  type="email"
-                  placeholder="Электронный адрес"
-                  aria-label="Ввести электронный адрес"
-                  required
-                  class="feedback-form-item feedback__feedback-form-item"
-                />
-              </div>
-              <div
-                class="
-                  feedback-form-item-outline
-                  feedback__feedback-form-item-outline
-                "
-              >
-                <textarea
-                  name="otzyv"
-                  cols="30"
-                  rows="10"
-                  placeholder="Напишите свой отзыв"
-                  aria-label="Ввести свой отзыв"
-                  class="
-                    feedback-form-item
-                    feedback__feedback-form-item
-                    feedback-form-textarea
-                    feedback__feedback-form-textarea
-                  "
-                ></textarea>
-              </div>
-              <div
-                class="
+                  feedback-form-item feedback__feedback-form-item
+                  filebutton
                   feedback-form-filebutton feedback__feedback-form-filebutton
                 "
               >
-                <label>
-                  <input
-                    type="file"
-                    name="feedback-file"
-                    aria-label="Прикрепите файл"
-                  />
-                  <span>ВЫБЕРИТЕ ФАЙЛ</span>
-                </label>
-              </div>
-              <div
-                class="
-                  feedback-form-item-outline
-                  feedback__feedback-form-item-outline
-                "
-              >
+                <input
+                  type="file"
+                  name="feedback-file"
+                  aria-label="Прикрепите файл"
+                />
+                <span>Выберите файл</span>
+              </label>
+              <div class="feedback__feedback-form-item">
                 <input
                   type="checkbox"
                   name="pers_data_proc_agree"
                   id="pers_data_proc_agree"
                   required
+                  class="
+                    feedback-form-checkbox feedback__feedback-form-checkbox
+                  "
                 />
                 <label
                   for="pers_data_proc_agree"
@@ -935,155 +903,184 @@
                   >Я согласен на обработку своих персональных данных</label
                 >
               </div>
-              <div>
-                <button
-                  type="submit"
-                  name="feedback-inner-submit-btn1"
-                  title="исходный вариант - внутри формы"
-                  aria-label="Отправить форму обратной связи"
-                  class="feedback-form-submit feedback__feedback-form-submit"
-                >
-                  ЗАКАЗАТЬ
-                </button>
-              </div>
+              <button
+                type="submit"
+                name="feedback-inner-submit-btn1"
+                title="Отправить форму обратной связи"
+                aria-label="Отправить форму обратной связи"
+                class="
+                  feedback-form-item
+                  feedback__feedback-form-item
+                  feedback-form-submit
+                  feedback__feedback-form-submit
+                "
+              >
+                Заказать
+              </button>
             </form>
           </div>
         </section>
         <section class="section how-to-get main-container__how-to-get">
           <h2 class="">Как добраться</h2>
-          <img src="/images/map.png" alt="Карта" class="how-to-get__map" />
+          <img src="/images/map_2.png" alt="Карта" class="how-to-get__map" />
         </section>
       </div>
     </main>
     <footer class="footer">
-      <div class="container footer__container">
-        <div class="footer-iu-logo footer__footer-iu-logo">
-          <a
-            href="https://innopolis.university/"
-            title="Перейти на сайт innopolis.university"
-            target="_blank"
+      <div class="container footer-container">
+        <div class="footer-inner-col1">
+          <div class="footer-iu-logo footer__footer-iu-logo">
+            <a
+              href="https://innopolis.university/"
+              title="Перейти на сайт innopolis.university"
+              target="_blank"
+            >
+              <svg class="logo svg svg_white">
+                <use xlink:href="#ico-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="footer-text footer__footer-text">
+            <p class="footer-text-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </p>
+          </div>
+          <div class="smm-bar footer__smm-bar">
+            <div class="ico-smm-bg circle footer__ico-smm-bg">
+              <svg class="ico-smm svg svg_white">
+                <use xlink:href="#ico-instagram"></use>
+              </svg>
+            </div>
+            <div class="ico-smm-bg circle footer__ico-smm-bg">
+              <svg class="ico-smm svg svg_white">
+                <use xlink:href="#ico-linkedin"></use>
+              </svg>
+            </div>
+            <div class="ico-smm-bg circle footer__ico-smm-bg">
+              <svg class="ico-smm svg svg_white">
+                <use xlink:href="#ico-twitter"></use>
+              </svg>
+            </div>
+            <div class="ico-smm-bg circle footer__ico-smm-bg">
+              <svg class="ico-smm svg svg_white">
+                <use xlink:href="#ico-youtube"></use>
+              </svg>
+            </div>
+            <div class="ico-smm-bg circle footer__ico-smm-bg">
+              <svg class="ico-smm svg svg_white">
+                <use xlink:href="#ico-facebook"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer-copyright-text footer__footer-copyright-text">
+            <p class="footer-copyright-text-p">
+              Copyright @ 2020 Innopolis University . All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <div class="footer-inner-col2">
+          <nav
+            aria-label="Нижнее меню"
+            class="footer-nav-menu footer__footer-nav-menu"
           >
-            <svg class="logo svg_white">
-              <use xlink:href="#ico-logo"></use>
-            </svg>
-          </a>
-        </div>
-        <div class="footer-text footer__footer-text">
-          <p class="footer-text-p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
-          </p>
-        </div>
-        <div class="smm-bar footer__smm-bar">
-          <div class="ico-smm-bg circle footer__ico-smm-bg">
-            <svg class="ico-smm svg_white">
-              <use xlink:href="#ico-instagram"></use>
-            </svg>
-          </div>
-          <div class="ico-smm-bg circle footer__ico-smm-bg">
-            <svg class="ico-smm svg_white">
-              <use xlink:href="#ico-linkedin"></use>
-            </svg>
-          </div>
-          <div class="ico-smm-bg circle footer__ico-smm-bg">
-            <svg class="ico-smm svg_white">
-              <use xlink:href="#ico-twitter"></use>
-            </svg>
-          </div>
-          <div class="ico-smm-bg circle footer__ico-smm-bg">
-            <svg class="ico-smm svg_white">
-              <use xlink:href="#ico-youtube"></use>
-            </svg>
-          </div>
-          <div class="ico-smm-bg circle footer__ico-smm-bg">
-            <svg class="ico-smm svg_white">
-              <use xlink:href="#ico-facebook"></use>
-            </svg>
-          </div>
-        </div>
-        <div class="footer-copyright-text footer__footer-copyright-text">
-          <p class="footer-copyright-text-p">
-            Copyright @ 2020 Innopolis University . All Rights Reserved.
-          </p>
-        </div>
-        <nav
-          aria-label="Нижнее меню"
-          class="footer-nav-menu footer__footer-nav-menu"
-        >
-          <h3 class="footer-nav-menu__footer-nav-menu-h3">МЕНЮ</h3>
-          <ul class="footer-nav-menu__ul">
-            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
-              <a href="#why-we" class="footer__link">Почему мы?</a>
-            </li>
-            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
-              <a href="#choose-movie" class="footer__link">Выберите фильм</a>
-            </li>
-            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
-              <a href="#movies" class="footer__link">Фильмы</a>
-            </li>
-            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
-              <a href="#goods" class="footer__link">Товары</a>
-            </li>
-            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
-              <a href="#reviews" class="footer__link">Отзывы</a>
-            </li>
-            <li class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li">
-              <a href="#feedback" class="footer__link">Обратная связь</a>
-            </li>
-          </ul>
-        </nav>
-        <nav
-          aria-label="Контакты, нижнее меню"
-          class="footer-nav-contacts footer__footer-nav-contacts"
-        >
-          <h3 class="footer-nav-contacts__footer-nav-contacts-h3">КОНТАКТЫ</h3>
-          <ul class="footer-nav-contacts__ul">
-            <li
-              class="
-                footer-nav-contacts-li
-                footer-nav-contacts__footer-nav-contacts-li
-              "
-            >
-              <a href="tel:+78003551256" class="footer__link"
-                >+7 (800) 355 12-56</a
+            <h3 class="footer-nav-menu__footer-nav-menu-h3">Меню</h3>
+            <ul class="footer-nav-menu-ul footer-nav-menu__footer-nav-menu-ul">
+              <li
+                class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li"
               >
-            </li>
-            <li
-              class="
-                footer-nav-contacts-li
-                footer-nav-contacts__footer-nav-contacts-li
-              "
-            >
-              <a href="mailto:kino@innopolis.ru" class="footer__link"
-                >kino@innopolis.ru</a
+                <a href="#why-we" class="footer__link">Почему мы?</a>
+              </li>
+              <li
+                class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li"
               >
-            </li>
-            <li
-              class="
-                footer-nav-contacts-li
-                footer-nav-contacts__footer-nav-contacts-li
-              "
-            >
-              <a href="" class="footer__link"
-                >420500, г. Иннополис<br />ул.Университетская, д.1</a
+                <a href="#choose-movie" class="footer__link">Выберите фильм</a>
+              </li>
+              <li
+                class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li"
               >
-            </li>
-            <li
+                <a href="#movies" class="footer__link">Фильмы</a>
+              </li>
+              <li
+                class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li"
+              >
+                <a href="#goods" class="footer__link">Товары</a>
+              </li>
+              <li
+                class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li"
+              >
+                <a href="#reviews" class="footer__link">Отзывы</a>
+              </li>
+              <li
+                class="footer-nav-menu-li footer-nav-menu__footer-nav-menu-li"
+              >
+                <a href="#feedback" class="footer__link">Обратная связь</a>
+              </li>
+            </ul>
+          </nav>
+          <nav
+            aria-label="Контакты, нижнее меню"
+            class="footer-nav-contacts footer__footer-nav-contacts"
+          >
+            <h3 class="footer-nav-contacts-h3">
+              Контакты
+            </h3>
+            <ul
               class="
-                footer-nav-contacts-li
-                footer-nav-contacts__footer-nav-contacts-li
+                footer-nav-contacts-ul
+                footer-nav-contacts__footer-nav-contacts-ul
               "
             >
-              <a href="how-to-get" class="footer__link">Как добраться</a>
-            </li>
-            <li
-              class="footer-nav-contacts-li footer-nav-contacts__footer-nav-li"
-            >
-              <a href="" class="footer__link">Все контакты</a>
-            </li>
-          </ul>
-        </nav>
+              <li
+                class="
+                  footer-nav-contacts-li
+                  footer-nav-contacts__footer-nav-contacts-li
+                "
+              >
+                <a href="tel:+78003551256" class="footer__link"
+                  >+7 (800) 355 12-56</a
+                >
+              </li>
+              <li
+                class="
+                  footer-nav-contacts-li
+                  footer-nav-contacts__footer-nav-contacts-li
+                "
+              >
+                <a href="mailto:kino@innopolis.ru" class="footer__link"
+                  >kino@innopolis.ru</a
+                >
+              </li>
+              <li
+                class="
+                  footer-nav-contacts-li
+                  footer-nav-contacts__footer-nav-contacts-li
+                "
+              >
+                <a href="" class="footer__link"
+                  >420500, г. Иннополис<br />ул.Университетская, д.1</a
+                >
+              </li>
+              <li
+                class="
+                  footer-nav-contacts-li
+                  footer-nav-contacts__footer-nav-contacts-li
+                "
+              >
+                <a href="how-to-get" class="footer__link">Как добраться</a>
+              </li>
+              <li
+                class="
+                  footer-nav-contacts-li
+                  footer-nav-contacts__footer-nav-contacts-li
+                "
+              >
+                <a href="" class="footer__link">Все контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </footer>
     <svg style="display: none">

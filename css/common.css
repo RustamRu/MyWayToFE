@@ -8,11 +8,18 @@ html {
   box-sizing: inherit;
 }
 
-.text_right {
-  /* Типографика */
-  text-align: right;
-}
 /* ==================== ЗАГОЛОВКИ ==================== */
+h2 {
+  /* Типографика */
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 500;
+  color: var(--basic-green);
+}
+h3 {
+  font-weight: 600;
+  color: inherit;
+}
 .header-title {
   /* Блочная модель */
   width: 100%;
@@ -35,13 +42,6 @@ html {
   text-align: center;
   color: inherit;
 }
-h2 {
-  /* Типографика */
-  font-size: 48px;
-  line-height: 62px;
-  font-weight: 500;
-  color: var(--basic-green);
-}
 .welcome-h2 {
   /* Типографика */
   font-size: 33px;
@@ -57,10 +57,6 @@ h2 {
 }
 .gift-to-everyone-h2 {
   /* Типографика */
-  color: inherit;
-}
-h3 {
-  font-weight: 600;
   color: inherit;
 }
 .why-we-h3 {
@@ -88,24 +84,31 @@ h3 {
   font-size: 18px;
   line-height: 23px;
 }
+.footer-nav-contacts-h3,
+.footer-nav-menu-h3 {
+  /* Типографика */
+  text-transform: uppercase;
+}
 
 /* ==================== ТЕКСТ ==================== */
 p {
-  margin-bottom: 13px;
+  margin-top: 13px;
   /* Типографика */
   font-size: 11px;
   line-height: 14px;
   font-weight: 400;
   color: inherit;
 }
-.movies-item-desc-text {
+.movies-item-desc-p {
+  /* Блочная модель */
+  margin-top: 13px;
   /* Разное */
   visibility: hidden;
 }
-.movies-item-desc:hover .movies-item-desc-text {
+.movies-item-desc:hover .movies-item-desc-p {
   visibility: visible;
 }
-.goods-item-desc-text {
+.goods-item-desc-p {
   /* Типографика */
   font-size: 20px;
   line-height: 26px;
@@ -147,7 +150,6 @@ p {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
@@ -167,12 +169,12 @@ a {
 }
 .header__link:hover {
   /* Типографика */
-  text-decoration-line: underline;
+  text-decoration: underline;
   color: var(--basic-green);
 }
 .footer__link:hover {
   /* Типографика */
-  text-decoration-line: underline;
+  text-decoration: underline;
   color: var(--white);
 }
 .choose-movie__link {
@@ -186,22 +188,10 @@ a {
   width: 156px;
   height: 40px;
 }
-.header__header-iu-logo {
-  /* Позиционирование */
-  position: absolute;
-  top: 51px;
-  left: 89px;
-}
 .footer-iu-logo {
   /* Блочная модель */
   width: 161px;
   height: 42px;
-}
-.footer__footer-iu-logo {
-  /* Позиционирование */
-  position: absolute;
-  top: 84px;
-  left: 90px;
 }
 
 /* ==================== ИЗОБРАЖЕНИЯ ==================== */
@@ -209,11 +199,6 @@ a {
   /* Блочная модель */
   width: 245px;
   height: 169px;
-}
-.why-we__why-we-img {
-  /* Позиционирование */
-  margin-bottom: 36px;
-  vertical-align: bottom;
 }
 .goods-item-img {
   /* Блочная модель */
@@ -223,20 +208,9 @@ a {
   /* Оформление */
   border: 0;
 }
-.goods__goods-item-img {
-  /* Позиционирование */
-  position: absolute;
-  top: 0;
-  left: 0;
-  vertical-align: bottom;
-}
 .reviews-item-img {
   /* Блочная модель */
   width: 100%;
-}
-.movies__movies-img {
-  /* Позиционирование */
-  vertical-align: bottom;
 }
 
 /* ==================== CSS-графика ==================== */
@@ -252,16 +226,16 @@ a {
 .triangle_upward {
   /* Оформление */
   border-top-color: transparent;
+  border-bottom-color: transparent;
   border-left-color: transparent;
-  border-right-color: transparent;
-  border-right-width: 0;
+  border-bottom-width: 0;
 }
 .triangle_downward {
   /* Оформление */
-  border-bottom-color: transparent;
-  border-left-color: transparent;
+  border-top-color: transparent;
   border-right-color: transparent;
-  border-left-width: 0;
+  border-bottom-color: transparent;
+  border-top-width: 0;
 }
 .triangle_top-left {
   /* Позиционирование */
@@ -284,7 +258,7 @@ a {
   border-radius: 50%;
 }
 .trapezoid {
-  /* Оформление */ 
+  /* Оформление */
   border-right: 245px solid var(--transparent-green);
   border-bottom: 88px solid var(--transparent-green);
   border-top: 65px solid transparent;
@@ -297,7 +271,7 @@ a {
 }
 .svg_white {
   /* Оформление */
-  fill: white;
+  fill: var(--white);
 }
 .arrow {
   /* Блочная модель */
