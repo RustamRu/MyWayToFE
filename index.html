@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="lib/owlcarousel/owl.theme.default.min.css" />
+    <script defer src="lib/jquery/jquery.min.js"></script>
+    <script defer src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/films-table.js"></script>
   </head>
   <body>
     <header class="header">
@@ -297,75 +301,7 @@
                 </th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="choose-movie-tr choose-movie-tr_dark">
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  &#10004;
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  10:00
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  Человек-паук
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  Фантастика, боевик, приключения
-                </td>
-              </tr>
-              <tr class="choose-movie-tr choose-movie-tr_light">
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  &#10004;
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  12:00
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  Собачья жизнь 2
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  Фэнтэзи, драма, комедия
-                </td>
-              </tr>
-              <tr class="choose-movie-tr choose-movie-tr_dark">
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  &#10004;
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  14:00
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  История игрушек 4
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  Мультфильм, фэнтэзи, комедия
-                </td>
-              </tr>
-              <tr class="choose-movie-tr choose-movie-tr_light">
-                <td
-                  class="
-                    choose-movie-td
-                    choose-movie__choose-movie-td
-                    choose-movie-td_rounded-bottom-left
-                  "
-                >
-                  &#10004;
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  16:00
-                </td>
-                <td class="choose-movie-td choose-movie__choose-movie-td">
-                  Люди в чёрном: Интэрнэшнл
-                </td>
-                <td
-                  class="
-                    choose-movie-td
-                    choose-movie__choose-movie-td
-                    choose-movie-td_rounded-bottom-right
-                  "
-                >
-                  Фантастика, боевик, комедия
-                </td>
-              </tr>
+            <tbody id="movies_output">
             </tbody>
           </table>
           <div class="choose-movie-text choose-movie__choose-movie-text">
@@ -1097,9 +1033,6 @@
           </nav>
         </div>
       </div>
-      <script src="lib/jquery/jquery.min.js"></script>
-      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-      <script src="js/main.js"></script>
     </footer>
     <svg style="display: none">
       <symbol
