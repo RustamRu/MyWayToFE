@@ -637,12 +637,18 @@ body {
   display: table;
   margin: 0 19px;
 }
-
 .reviews__reviews-table {
+  /* Блочная модель */
+  margin: 0;
   /* Позиционирование */
   position: relative;
+  left: 3px;
 }
 .reviews-item {
+  /* Блочная модель */
+  float: left;
+  width: 210px;
+  height: 284px;
   /* Типографика */
   text-align: left;
   color: var(--white);
@@ -650,61 +656,29 @@ body {
   background-color: var(--basic-green);
   border-radius: 9px;
 }
-.reviews__reviews-item1 {
-  /* Позиционирование */
-  position: relative;
-  top: 100px;
-  left: 7px;
-}
-.reviews__reviews-item2 {
-  /* Позиционирование */
-  position: relative;
-  top: 75px;
-  left: 97px;
-}
-.reviews__reviews-item3 {
-  /* Позиционирование */
-  position: relative;
-  top: 100px;
-  left: 185px;
-}
-.reviews-item_default {
+.reviews__reviews-item {
   /* Блочная модель */
-  float: left;
-  width: 210px;
-  height: 284px;
+  margin: 100px 0;
 }
 .reviews-item_active {
   /* Блочная модель */
-  float: left;
   width: 246px;
   height: 332px;
 }
-.reviews__reviews-item1-p {
+.reviews__reviews-item_active {
   /* Блочная модель */
-  margin-top: 14px;
+  margin: 75px 45px;
 }
-.reviews__reviews-item2-p {
+.reviews__reviews-item-p_active {
   /* Блочная модель */
   margin-top: 19px;
 }
-.reviews__reviews-item3-p {
-  /* Блочная модель */
-  margin-top: 12px;
-}
 .reviews__reviews-item-date {
-  /* Позиционирование */
-  position: absolute;
-  right: 10px;
-  bottom: 9px;
+  margin-top: 10px;
 }
 .reviews__reviews-item-date_active {
   /* Блочная модель */
-  margin-bottom: 0;
-  /* Позиционирование */
-  position: absolute;
-  right: 15px;
-  bottom: 10px;
+  margin-top: 30px;
 }
 .reviews-text {
   /* Блочная модель */
@@ -715,18 +689,13 @@ body {
   margin-top: 26px;
   margin-left: 6px;
 }
-.reviews__reviews-item1-text {
+.reviews__reviews-item-text {
   /* Блочная модель */
   margin-top: 18px;
-  padding: 0 9px;
+  padding: 0 11px 0 8px;
 }
-.reviews__reviews-item2-text {
+.reviews__reviews-item-text_active {
   /* Блочная модель */
   margin-top: 18px;
   padding: 0 14px 0 17px;
-}
-.reviews__reviews-item3-text {
-  /* Блочная модель */
-  margin-top: 16px;
-  padding: 0 19px 0 17px;
 }

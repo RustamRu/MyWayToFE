@@ -130,6 +130,7 @@ p {
   font-size: 8px;
   line-height: 10px;
   font-weight: 300;
+  text-align: right;
 }
 .reviews-item-date_active {
   /* Типографика */
@@ -229,6 +230,7 @@ a {
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-bottom-width: 0;
+  border-left-width: 0;
 }
 .triangle_downward {
   /* Оформление */
@@ -236,6 +238,7 @@ a {
   border-right-color: transparent;
   border-bottom-color: transparent;
   border-top-width: 0;
+  border-right-width: 0;
 }
 .triangle_top-left {
   /* Позиционирование */

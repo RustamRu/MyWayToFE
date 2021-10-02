@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="lib/owlcarousel/owl.theme.default.min.css" />
   </head>
   <body>
     <header class="header">
@@ -733,20 +735,18 @@
               pulvinar etiam non quam.
             </p>
           </div>
-          <div class="reviews__reviews-table">
-            <div
-              class="reviews-item reviews__reviews-item1 reviews-item_default"
-            >
+          <div class="reviews-table reviews__reviews-table owl-carousel owl-theme">
+            <div class="item reviews-item reviews__reviews-item">
               <img
                 src="/images/reviews-elenova-elena.png"
                 alt="Елена Еленова"
                 class="reviews-item-img"
               />
-              <div class="reviews__reviews-item1-text">
+              <div class="reviews__reviews-item-text">
                 <h3 class="reviews-item-h3 reviews__reviews-item-h3">
                   Елена Еленова
                 </h3>
-                <p class="reviews-item-p reviews__reviews-item1-p">
+                <p class="reviews-item-p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -755,57 +755,74 @@
                 </p>
               </div>
             </div>
-            <div
-              class="reviews-item reviews__reviews-item2 reviews-item_active"
-            >
+            <div class="item reviews-item reviews__reviews-item">
               <img
                 src="/images/reviews-borisov-boris.png"
                 alt="Борис Борисов"
                 class="reviews-item-img"
               />
-              <div class="reviews__reviews-item2-text">
-                <h3
-                  class="
-                    reviews-item-h3 reviews__reviews-item-h3
-                    reviews-item-h3_active
-                    reviews__reviews-item-h3_active
-                  "
-                >
+              <div class="reviews__reviews-item-text">
+                <h3 class="reviews-item-h3 reviews__reviews-item-h3">
                   Борис Борисов
                 </h3>
-                <p
-                  class="
-                    reviews-item-p reviews__reviews-item2-p
-                    reviews-item-p_active
-                  "
-                >
+                <p class="reviews-item-p reviews-item-p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <p
-                  class="
-                    reviews-item-date reviews__reviews-item-date
-                    reviews-item-date_active
-                    reviews__reviews-item-date_active
-                  "
-                >
+                <p class="reviews-item-date reviews__reviews-item-date">
                   13.12.2020
                 </p>
               </div>
             </div>
-            <div
-              class="reviews-item reviews__reviews-item3 reviews-item_default"
-            >
+            <div class="item reviews-item reviews__reviews-item">
               <img
                 src="/images/reviews-dikaprio-leonardo.png"
                 alt="Леонардо ДиКаприо"
                 class="reviews-item-img"
               />
-              <div class="reviews__reviews-item3-text">
+              <div class="reviews__reviews-item-text">
                 <h3 class="reviews-item-h3 reviews__reviews-item-h3">
                   Леонардо ДиКаприо
                 </h3>
-                <p class="reviews-item-p reviews__reviews-item3-p">
+                <p class="reviews-item-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="reviews-item-date reviews__reviews-item-date">
+                  13.12.2020
+                </p>
+              </div>
+            </div>
+            <div class="item reviews-item reviews__reviews-item">
+              <img
+                src="/images/reviews-dikaprio-leonardo.png"
+                alt="Леонардо ДиКаприо"
+                class="reviews-item-img"
+              />
+              <div class="reviews__reviews-item-text">
+                <h3 class="reviews-item-h3 reviews__reviews-item-h3">
+                  Леонардо ДиКаприо
+                </h3>
+                <p class="reviews-item-p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="reviews-item-date reviews__reviews-item-date">
+                  13.12.2020
+                </p>
+              </div>
+            </div>
+            <div class="item reviews-item reviews__reviews-item">
+              <img
+                src="/images/reviews-dikaprio-leonardo.png"
+                alt="Леонардо ДиКаприо"
+                class="reviews-item-img"
+              />
+              <div class="reviews__reviews-item-text">
+                <h3 class="reviews-item-h3 reviews__reviews-item-h3">
+                  Леонардо ДиКаприо
+                </h3>
+                <p class="reviews-item-p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -1023,9 +1040,7 @@
             aria-label="Контакты, нижнее меню"
             class="footer-nav-contacts footer__footer-nav-contacts"
           >
-            <h3 class="footer-nav-contacts-h3">
-              Контакты
-            </h3>
+            <h3 class="footer-nav-contacts-h3">Контакты</h3>
             <ul
               class="
                 footer-nav-contacts-ul
@@ -1082,6 +1097,9 @@
           </nav>
         </div>
       </div>
+      <script src="lib/jquery/jquery.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+      <script src="js/main.js"></script>
     </footer>
     <svg style="display: none">
       <symbol
