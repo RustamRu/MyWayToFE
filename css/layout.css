@@ -133,7 +133,7 @@ body {
   width: 849px;
   /* Оформление */
   border: none;
-  border-collapse: collapse;
+  border-collapse: separate;
 }
 .choose-movie__choose-movie-table {
   /* Блочная модель */
@@ -143,13 +143,13 @@ body {
   /* Блочная модель */
   height: 45px;
 }
-.choose-movie-tr_light {
+.choose-movie-table tr:nth-child(2n+1) {
   /* Типографика */
   color: var(--white);
   /* Оформление */
   background-color: var(--light-gray);
 }
-.choose-movie-tr_dark {
+.choose-movie-table tr:nth-child(2n) {
   /* Типографика */
   color: var(--white);
   /* Оформление */
@@ -184,16 +184,16 @@ body {
   line-height: 18px;
   font-weight: 400;
 }
-.choose-movie-th_rounded-top-left {
+.choose-movie-table tr:first-child th:first-child {
   border-top-left-radius: 10px;
 }
-.choose-movie-th_rounded-top-right {
+.choose-movie-table tr:first-child th:last-child {
   border-top-right-radius: 10px;
 }
-.choose-movie-td_rounded-bottom-left {
+.choose-movie-table tr:last-child td:first-child {
   border-bottom-left-radius: 10px;
 }
-.choose-movie-td_rounded-bottom-right {
+.choose-movie-table tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
 }
 /* ==================== Секция "Подарок каждому!" ==================== */
