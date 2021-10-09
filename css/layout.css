@@ -143,7 +143,7 @@ body {
   /* Блочная модель */
   height: 45px;
 }
-.choose-movie-table tr:nth-child(2n+1) {
+.choose-movie-table tr:nth-child(2n + 1) {
   /* Типографика */
   color: var(--white);
   /* Оформление */
@@ -213,6 +213,7 @@ body {
   z-index: -1;
   /* Оформление */
   background: url(/images/present-bg.png) center no-repeat;
+  background-size: cover;
   /* Разное */
   content: "";
 }
@@ -261,6 +262,19 @@ body {
   margin-top: 27px;
   margin-left: 4px;
 }
+.movies-item-cover {
+  /* Блочная модель */
+  width: 100%;
+  height: 100%;
+  /* Оформление */
+  background-color: var(--transparent-black);
+}
+.movies__movies-item-cover {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .movies-item-desc {
   /* Блочная модель */
   width: 100%;
@@ -268,19 +282,16 @@ body {
   /* Типографика */
   color: var(--white);
   /* Оформление */
-  background-color: var(--transparent-black);
+  background-color: var(--transparent-darkgreen);
 }
 .movies__movies-item-desc {
   /* Позиционирование */
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(100%);
   /* Блочная модель */
   padding: 17px 23px;
-}
-.movies-item-desc:hover {
-  /* Оформление */
-  background-color: var(--transparent-darkgreen);
 }
 
 /* ==================== Секция "Товары" ==================== */
@@ -295,6 +306,10 @@ body {
   top: 0;
   left: 0;
   vertical-align: bottom;
+}
+.movies-img {
+  /* Позиционирование */
+  width: 100%;
 }
 .movies__movies-img {
   /* Позиционирование */
@@ -360,6 +375,7 @@ body {
   z-index: -1;
   /* Оформление */
   background: url(/images/reviews-bg.png) center no-repeat;
+  background-size: cover;
   /* Разное */
   content: "";
 }
@@ -552,6 +568,12 @@ body {
 .footer__ico-smm-bg {
   margin-left: 31px;
 }
+.ico-smm-bg:hover{
+  box-shadow: 1px 1px 1px 1px var(--light-gray);
+}
+.ico-smm-bg:hover .ico-smm{
+  fill: var(--transparent-darkgreen)
+}
 .footer__footer-copyright-text {
   /* Блочная модель */
   margin-top: 100px;
@@ -560,24 +582,28 @@ body {
 /* ТАБЛИЧНАЯ ВЕРСТКА */
 .why-we__why-we-table {
   /* Блочная модель */
-  margin-top: 84px;
+  margin-top: 57px;
 }
 .why-we__why-we-row {
   /* Блочная модель */
-  margin: 29px -23px auto;
+  margin: 0px -23px auto;
   overflow: hidden;
 }
 .why-we-col {
   /* Блочная модель */
   float: left;
   width: 33.33%;
-  height: 338px;
+  height: 367px;
+  overflow: hidden;
   /* Типографика */
   text-align: center;
 }
+.why-we-col:nth-of-type(2n+1) {
+  background-color: var(--light-light-gray);
+}
 .why-we__why-we-col {
   /* Блочная модель */
-  padding: 0 27px;
+  padding: 27px;
 }
 
 .movies-table {
@@ -599,6 +625,7 @@ body {
   width: 33.33%;
   height: 100%;
   float: left;
+  overflow: hidden;
 }
 .movies__movies-col {
   /* Позиционирование */

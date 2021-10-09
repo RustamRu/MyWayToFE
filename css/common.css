@@ -68,11 +68,6 @@ h3 {
   /* Оформление */
   font-size: 29px;
   line-height: 38px;
-  /* Разное */
-  visibility: hidden;
-}
-.movies-item-desc:hover .movies-item-desc-h3 {
-  visibility: visible;
 }
 .reviews-item-h3 {
   /* Типографика */
@@ -102,11 +97,6 @@ p {
 .movies-item-desc-p {
   /* Блочная модель */
   margin-top: 13px;
-  /* Разное */
-  visibility: hidden;
-}
-.movies-item-desc:hover .movies-item-desc-p {
-  visibility: visible;
 }
 .goods-item-desc-p {
   /* Типографика */

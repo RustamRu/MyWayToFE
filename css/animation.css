@@ -1,0 +1,63 @@
+/* Стили элементов макетов страниц (шапка и подвал страницы, навигационная область, различные разделы страницы, сетка, ...) */
+/* ==================== Секция "Фильмы" ==================== */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.movies-col > a:hover .movies-item-cover, .movies-item-desc {
+  /* Анимация */
+  animation-delay: 0.5s;
+  animation: slideDown;
+  animation-duration: 0.4s;
+  transform: translateY(100%);
+}
+.movies-col > a:hover .movies-item-desc, .movies-item-cover {
+  /* Анимация */
+  animation: slideUp;
+  animation-duration: 0.5s;
+  transform: translateY(0);
+}
+
+/* ==================== ИЗОБРАЖЕНИЯ ==================== */
+@keyframes scaleDown_100pc {
+  0% {
+    transform: scale(107%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes scaleUp_107pc {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(107%);
+  }
+}
+
+.why-we-img {
+  /* Анимация */
+  animation: scaleDown_100pc;
+  animation-duration: 0.2s;
+  transform: scale(100%);
+}
+.why-we-img:hover {
+  /* Анимация */
+  animation: scaleUp_107pc;
+  animation-duration: 0.3s;
+  transform: scale(107%);
+}

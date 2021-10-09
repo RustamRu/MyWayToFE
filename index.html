@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/abstracts.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
@@ -290,18 +291,12 @@
                     </svg>
                   </a>
                 </th>
-                <th
-                  class="
-                    choose-movie-th
-                    choose-movie__choose-movie-th
-                  "
-                >
+                <th class="choose-movie-th choose-movie__choose-movie-th">
                   Жанр
                 </th>
               </tr>
             </thead>
-            <tbody id="movies_output">
-            </tbody>
+            <tbody id="movies_output"></tbody>
           </table>
           <div class="choose-movie-text choose-movie__choose-movie-text">
             <p>
@@ -384,8 +379,11 @@
                   <img
                     src="/images/movies/poster-vyzhevshiy.png"
                     alt='Постер фильма "Выживший"'
-                    class="movies__movies-img"
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Выживший
@@ -395,7 +393,16 @@
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Nibh mauris cursus mattis molestie a iaculis at.
                       Vel quam elementum pulvinar etiam non quam. Ut pharetra
-                      sit amet aliquam id diam maecenas.
+                      sit amet aliquam id diam maecenas. Lorem ipsum dolor sit
+                      amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Nibh mauris
+                      cursus mattis molestie a iaculis at. Vel quam elementum
+                      pulvinar etiam non quam. Ut pharetra sit amet aliquam id
+                      diam maecenas. Lorem ipsum dolor sit amet, consectetur
+                      adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Nibh mauris cursus mattis
+                      molestie a iaculis at. Vel quam elementum pulvinar etiam
+                      non quam. Ut pharetra sit amet aliquam id diam maecenas.
                     </p>
                   </div>
                 </a>
@@ -409,8 +416,11 @@
                   <img
                     src="/images/movies/poster-lyod.png"
                     alt='Постер фильма "Лёд"'
-                    class="movies__movies-img"
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Лёд
@@ -434,8 +444,11 @@
                   <img
                     src="/images/movies/poster-marsianin.png"
                     alt='Постер фильма "Марсианин"'
-                    class="movies__movies-img"
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Марсианин
@@ -461,8 +474,11 @@
                   <img
                     src="/images/movies/poster-sputnik.png"
                     alt='Постер фильма "Спутник"'
-                    class="movies__movies-img"
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Спутник
@@ -486,7 +502,11 @@
                   <img
                     src="/images/movies/poster-kalashnikov.png"
                     alt='Постер фильма "Калашников"'
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Калашников
@@ -510,7 +530,11 @@
                   <img
                     src="/images/movies/poster-territoriya.png"
                     alt='Постер фильма "Территория"'
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Территория
@@ -536,8 +560,11 @@
                   <img
                     src="/images/movies/poster-nachalo.png"
                     alt='Постер фильма "Начало"'
-                    class="movies__movies-img"
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Начало
@@ -561,8 +588,11 @@
                   <img
                     src="/images/movies/poster-lunniy-svet.png"
                     alt='Постер фильма "Лунный свет"'
-                    class="movies__movies-img"
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Лунный свет
@@ -586,8 +616,11 @@
                   <img
                     src="/images/movies/poster-zhivoe.png"
                     alt='Постер фильма "Живое"'
-                    class="movies__movies-img"
+                    class="movies-img movies__movies-img"
                   />
+                  <div
+                    class="movies-item-cover movies__movies-item-cover"
+                  ></div>
                   <div class="movies-item-desc movies__movies-item-desc">
                     <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
                       Живое
@@ -670,7 +703,9 @@
               pulvinar etiam non quam.
             </p>
           </div>
-          <div class="reviews-table reviews__reviews-table owl-carousel owl-theme">
+          <div
+            class="reviews-table reviews__reviews-table owl-carousel owl-theme"
+          >
             <div class="item reviews-item reviews__reviews-item">
               <img
                 src="/images/reviews-elenova-elena.png"
@@ -1135,7 +1170,6 @@
       >
         <path
           d="M6 2.25C5.00544 2.25 4.05161 2.64509 3.34835 3.34835C2.64509 4.05161 2.25 5.00544 2.25 6V12C2.25 12.9946 2.64509 13.9484 3.34835 14.6517C4.05161 15.3549 5.00544 15.75 6 15.75H12C12.9946 15.75 13.9484 15.3549 14.6517 14.6517C15.3549 13.9484 15.75 12.9946 15.75 12V6C15.75 5.00544 15.3549 4.05161 14.6517 3.34835C13.9484 2.64509 12.9946 2.25 12 2.25H6ZM13.5 3.75C13.9125 3.75 14.25 4.0875 14.25 4.5C14.25 4.9125 13.9125 5.25 13.5 5.25C13.0875 5.25 12.75 4.9125 12.75 4.5C12.75 4.0875 13.0875 3.75 13.5 3.75ZM9 5.25C9.99456 5.25 10.9484 5.64509 11.6517 6.34835C12.3549 7.05161 12.75 8.00544 12.75 9C12.75 9.99456 12.3549 10.9484 11.6517 11.6517C10.9484 12.3549 9.99456 12.75 9 12.75C8.00544 12.75 7.05161 12.3549 6.34835 11.6517C5.64509 10.9484 5.25 9.99456 5.25 9C5.25 8.00544 5.64509 7.05161 6.34835 6.34835C7.05161 5.64509 8.00544 5.25 9 5.25ZM9 6.75C8.70443 6.7501 8.41177 6.80841 8.13873 6.92161C7.8657 7.03482 7.61763 7.20069 7.4087 7.40976C7.19977 7.61883 7.03406 7.86701 6.92104 8.14012C6.80802 8.41323 6.7499 8.70593 6.75 9.0015C6.7501 9.29707 6.80841 9.58973 6.92161 9.86277C7.03482 10.1358 7.20069 10.3839 7.40976 10.5928C7.61883 10.8017 7.86701 10.9674 8.14012 11.0805C8.41323 11.1935 8.70593 11.2516 9.0015 11.2515C9.59844 11.2513 10.1708 11.014 10.5928 10.5917C11.0148 10.1695 11.2517 9.59694 11.2515 9C11.2513 8.40306 11.014 7.83066 10.5917 7.4087C10.1695 6.98674 9.59694 6.7498 9 6.75Z"
-          fill="white"
         />
       </symbol>
     </svg>
@@ -1147,7 +1181,6 @@
       >
         <path
           d="M16.4692 10.2893V15.8235H13.2607V10.6598C13.2607 9.36228 12.7965 8.47728 11.6355 8.47728C10.749 8.47728 10.221 9.07428 9.98925 9.65103C9.9045 9.85728 9.88275 10.1445 9.88275 10.4333V15.8235H6.67275C6.67275 15.8235 6.71625 7.07853 6.67275 6.17178H9.88275V7.53978L9.86175 7.57128H9.88275V7.53978C10.3088 6.88353 11.07 5.94528 12.7747 5.94528C14.886 5.94528 16.4692 7.32528 16.4692 10.2893ZM3.31575 1.51953C2.2185 1.51953 1.5 2.23953 1.5 3.18678C1.5 4.11303 2.1975 4.85478 3.27375 4.85478H3.29475C4.4145 4.85478 5.10975 4.11303 5.10975 3.18678C5.09025 2.23953 4.41525 1.51953 3.3165 1.51953H3.31575ZM1.6905 15.8235H4.899V6.17178H1.6905V15.8235Z"
-          fill="white"
         />
       </symbol>
     </svg>
@@ -1159,7 +1192,6 @@
       >
         <path
           d="M16.5 5.18025C15.9378 5.42578 15.3423 5.58678 14.733 5.658C15.3726 5.28243 15.8535 4.68683 16.086 3.9825C15.48 4.33525 14.8191 4.5837 14.1307 4.7175C13.8409 4.41391 13.4923 4.17254 13.1061 4.00813C12.7199 3.84373 12.3042 3.75972 11.8845 3.76125C10.185 3.76125 8.80725 5.11875 8.80725 6.79125C8.80725 7.02825 8.83425 7.26 8.88675 7.48125C7.66768 7.42327 6.47409 7.11181 5.38213 6.56673C4.29016 6.02165 3.32382 5.25494 2.54475 4.3155C2.27162 4.7763 2.12806 5.30234 2.12925 5.838C2.12925 6.89025 2.67225 7.818 3.49725 8.36025C3.00936 8.3445 2.53202 8.21424 2.10375 7.98V8.0175C2.10375 9.486 3.165 10.7108 4.57125 10.9898C4.30696 11.0599 4.03469 11.0954 3.76125 11.0955C3.5625 11.0955 3.36975 11.0768 3.1815 11.0393C3.38256 11.6452 3.76733 12.1735 4.28236 12.5508C4.7974 12.928 5.41713 13.1355 6.0555 13.1445C4.96055 13.9879 3.61636 14.4435 2.23425 14.4398C1.98525 14.4398 1.74075 14.4248 1.5 14.3978C2.91094 15.2908 4.54694 15.7637 6.21675 15.7613C11.877 15.7613 14.9715 11.1435 14.9715 7.13925L14.961 6.747C15.5646 6.32225 16.0861 5.79139 16.5 5.18025Z"
-          fill="white"
         />
       </symbol>
     </svg>
@@ -1171,7 +1203,6 @@
       >
         <path
           d="M17.235 1.22864C16.7467 0.333818 16.2169 0.169227 15.138 0.106636C14.0603 0.0312955 11.3501 0 9.00225 0C6.64987 0 3.93862 0.0312955 2.862 0.105477C1.78537 0.169227 1.25437 0.332659 0.761625 1.22864C0.25875 2.1223 0 3.66157 0 6.37152C0 6.37384 0 6.375 0 6.375C0 6.37732 0 6.37848 0 6.37848V6.3808C0 9.07916 0.25875 10.63 0.761625 11.5144C1.25437 12.4092 1.78425 12.5715 2.86087 12.6468C3.93863 12.7118 6.64987 12.75 9.00225 12.75C11.3501 12.75 14.0602 12.7117 15.1391 12.648C16.218 12.5727 16.7479 12.4104 17.2361 11.5156C17.7435 10.6312 18 9.08032 18 6.38195C18 6.38195 18 6.37848 18 6.37616C18 6.37616 18 6.37384 18 6.37268C18 3.66157 17.7435 2.1223 17.235 1.22864ZM6.75 9.85227V2.89773L12.375 6.375L6.75 9.85227Z"
-          fill="white"
         />
       </symbol>
     </svg>
@@ -1183,7 +1214,6 @@
       >
         <path
           d="M6.78449 4.39875V6.45975H5.27399V8.97975H6.78449V16.4692H9.88499V8.9805H11.9662C11.9662 8.9805 12.1612 7.77225 12.2557 6.45075H9.89774V4.72725C9.89774 4.47 10.2352 4.1235 10.5697 4.1235H12.2602V1.5H9.96224C6.70724 1.5 6.78449 4.02225 6.78449 4.39875Z"
-          fill="white"
         />
       </symbol>
     </svg>
