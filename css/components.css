@@ -8,14 +8,14 @@ button,
 .filebutton {
   /* Блочная модель */
   width: 100%;
-  padding: 10px 11px;
+  padding: 0.67em 0.55rem;
   /* Типографика */
-  font-size: 15px;
+  font-size: 0.75rem;
   color: var(--light-gray);
   /* Оформление */
   background-color: var(--light-light-gray);
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 0.6vw;
   outline: 0;
   /* Анимация */
   transition: 0.2s;
@@ -33,19 +33,17 @@ input[type="checkbox"] + label:hover::before {
   /* Оформление */
   background-color: var(--white);
   border: 1px solid var(--light-light-gray);
-  box-shadow: 0 0 0px 5px var(--transparent-green);
+  box-shadow: 0 0 0 5px var(--transparent-green);
 }
 
 /* ==================== ФОРМА ==================== */
 .feedback-form {
-  /* Блочная модель */
-  width: 344px;
 }
 
 /* ==================== ТЕКСТОВОЕ ПОЛЕ ==================== */
 input[type="textarea"],
 textarea {
-  height: 105px;
+  height: 7.8vw;
   resize: none;
 }
 
@@ -59,11 +57,11 @@ input[type="checkbox"] + label {
   /* Позиционирование */
   position: relative;
   /* Блочная модель */
-  padding-left: 23px;
-  padding-right: 5px;
+  padding-left: 1.15rem;
+  padding-right: 0.25rem;
   /* Типографика */
-  font-size: 10px;
-  line-height: 16px;
+  font-size: 0.5rem;
+  line-height: 1.3em;
   font-weight: 400;
   /* Оформление */
   color: var(--black);
@@ -80,11 +78,11 @@ input[type="checkbox"] + label::before {
   left: 0;
   top: 0;
   /* Блочная модель */
-  width: 14px;
-  height: 14px;
+  width: 1.4em;
+  height: 1.4em;
   /* Оформление */
   border: 1px solid var(--basic-green);
-  border-radius: 5px;
+  border-radius: 0.5vw;
   /* Анимация */
   transition: 0.2s;
 }
@@ -105,7 +103,7 @@ select {
   /* Блочная модель */
   width: auto;
   /* Типографика */
-  font-size: 12px;
+  font-size: 0.6rem;
   color: inherit;
   text-transform: uppercase;
   /* Оформление */
@@ -129,7 +127,7 @@ button,
   /* Блочная модель */
   display: inline-block;
   width: fit-content;
-  padding: 0.5em 30px;
+  padding: 0.5em 1.5rem;
   /* Типографика */
   font-weight: 500;
   line-height: 1em;
@@ -138,7 +136,7 @@ button,
   /* Оформление */
   background-color: var(--basic-green);
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 0.6vw;
 }
 button:hover,
 .filebutton:hover {
@@ -154,11 +152,11 @@ input[type="file"] {
 }
 .gift-to-everyone-button {
   /* Типографика */
-  font-size: 14px;
+  font-size: 0.7rem;
 }
 .gift-to-everyone__gift-to-everyone-button {
   /* Блочная модель */
-  margin-top: 29px;
+  margin-top: 0.73em;
 }
 .feedback-form-filebutton,
 .feedback-form-submit {
@@ -166,18 +164,20 @@ input[type="file"] {
   display: block;
   width: 100%;
   /* Типографика */
-  font-size: 20px;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .reguest-call {
   /* Блочная модель */
-  width: 130px;
-  height: 21px;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-left: 1.4rem;
+  padding-right: 0.3rem;
   /* Типографика */
   color: var(--black);
   /* Оформление */
   background-color: var(--white);
-  border-radius: 6px;
+  border-radius: 0.6vw;
 }
 .reguest-call:hover {
   /* Типографика */
@@ -189,24 +189,20 @@ input[type="file"] {
 .reguest-call__ico-phone {
   /* Позиционирование */
   position: absolute;
-  top: 5px;
-  left: 8px;
+  top: 0.34em;
+  left: 0.4rem;
   /* Блочная модель */
   padding: 1px;
 }
 .ico-phone {
   /* Блочная модель */
-  width: 10px;
-  height: 10px;
+  width: 0.67em;
+  height: 0.67em;
 }
 .reguest-call-label {
   /* Типографика */
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.6rem;
+  line-height: 1.3em;
 }
 .reguest-call__reguest-call-label {
-  /* Позиционирование */
-  position: absolute;
-  top: 3px;
-  left: 28px;
 }

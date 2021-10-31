@@ -3,6 +3,7 @@
   <!-- <html lang="ru"> -->
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Продажа билетов в кино в Иннополисе</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/abstracts.css" />
@@ -19,6 +20,11 @@
     <script defer src="js/films-table.js"></script>
   </head>
   <body>
+    <style>
+      * {
+        outline: 1px solid red;
+      }
+    </style>
     <header class="header">
       <div class="container header-container">
         <a href="#main"
@@ -26,7 +32,7 @@
             Перейти к контенту
           </div></a
         >
-        <div class="header-iu-logo header__header-iu-logo">
+        <div class="iu-logo header__iu-logo">
           <a
             href="https://innopolis.university/"
             title="Перейти на сайт innopolis.university"
@@ -133,15 +139,21 @@
         </nav>
         <div class="header-title-div header__header-title-div">
           <h1>
-            <span class="header-title header-title-div__header-title"
+            <span
+              class="header-title _text-centered header-title-div__header-title"
               >Закажите билет в кино</span
             >
-            <span class="header-subtitle header-title-div__header-subtitle"
+            <span
+              class="
+                header-subtitle
+                _text-centered
+                header-title-div__header-subtitle
+              "
               >Всем покупателям подарок!</span
             >
           </h1>
         </div>
-        <div class="triangle triangle_upward triangle_bottom-right"></div>
+        <!-- <div class="triangle triangle_upward triangle_bottom-right"></div> -->
       </div>
     </header>
     <main class="main">
@@ -163,7 +175,7 @@
           <h2 class="why-we__why-we-h2">Почему мы?</h2>
           <div class="why-we__why-we-table">
             <div class="why-we__why-we-row">
-              <div class="why-we-col why-we__why-we-col">
+              <div class="why-we-col _text-centered why-we__why-we-col">
                 <img
                   src="/images/why-we-large-screens.png"
                   alt="Большой киноэкран"
@@ -176,7 +188,7 @@
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div class="why-we-col why-we__why-we-col">
+              <div class="why-we-col _text-centered why-we__why-we-col">
                 <img
                   src="/images/why-we-surround-sound.png"
                   alt="Колонки по периметру кинозала, создающие объёмное звучание"
@@ -189,7 +201,7 @@
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div class="why-we-col why-we__why-we-col">
+              <div class="why-we-col _text-centered why-we__why-we-col">
                 <img
                   src="/images/why-we-comfortable-chairs.png"
                   alt="Пустой кинозал с большими мягкими креслами"
@@ -204,7 +216,7 @@
               </div>
             </div>
             <div class="why-we__why-we-row">
-              <div class="why-we-col why-we__why-we-col">
+              <div class="why-we-col _text-centered why-we__why-we-col">
                 <img
                   src="/images/why-we-cozy-atmosphere.png"
                   alt="Небольшой кинозал с мягкими диваном, ковром, игрушками и подушками и светильником"
@@ -217,7 +229,7 @@
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div class="why-we-col why-we__why-we-col">
+              <div class="why-we-col _text-centered why-we__why-we-col">
                 <img
                   src="/images/why-we-full-immersion.png"
                   alt="Люди в специальных очках вскинули руки от радости"
@@ -230,7 +242,7 @@
                   Ut enim ad minim veniam.
                 </p>
               </div>
-              <div class="why-we-col why-we__why-we-col">
+              <div class="why-we-col _text-centered why-we__why-we-col">
                 <img
                   src="/images/why-we-back-row-kisses.png"
                   alt="Парень целует девушку"
@@ -298,7 +310,13 @@
             </thead>
             <tbody id="movies_output"></tbody>
           </table>
-          <div class="choose-movie-text choose-movie__choose-movie-text">
+          <div
+            class="
+              choose-movie-text
+              _text-centered
+              choose-movie__choose-movie-text
+            "
+          >
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -313,7 +331,7 @@
           <img
             src="/images/present.png"
             alt="Подарок"
-            class="gift-to-everyone__present"
+            class="present gift-to-everyone__present"
           />
           <div class="gift-to-everyone__inner">
             <h2
@@ -658,7 +676,11 @@
                 />
                 <div class="trapezoid goods__trapezoid"></div>
                 <div class="goods-item-desc goods__goods-item-desc">
-                  <p class="goods-item-desc-p goods__item-desc-p">Coca-cola</p>
+                  <p
+                    class="goods-item-desc-p _text-centered goods__item-desc-p"
+                  >
+                    Coca-cola
+                  </p>
                 </div>
               </div>
               <div class="goods-col goods__goods-col">
@@ -669,7 +691,9 @@
                 />
                 <div class="trapezoid goods__trapezoid"></div>
                 <div class="goods-item-desc goods__goods-item-desc">
-                  <p class="goods-item-desc-p goods__item-desc-p">
+                  <p
+                    class="goods-item-desc-p _text-centered goods__item-desc-p"
+                  >
                     Брелок<br />
                     "Железный<br />человек"
                   </p>
@@ -683,7 +707,9 @@
                 />
                 <div class="trapezoid goods__trapezoid"></div>
                 <div class="goods-item-desc goods__goods-item-desc">
-                  <p class="goods-item-desc-p goods__item-desc-p">
+                  <p
+                    class="goods-item-desc-p _text-centered goods__item-desc-p"
+                  >
                     Постер<br />
                     "Мстители"
                   </p>
@@ -806,7 +832,9 @@
         </section>
         <section class="section feedback main-container__feedback">
           <div class="feedback-inner feedback__inner">
-            <h2 class="feedback-h2 feedback__feedback-h2">Обратная связь</h2>
+            <h2 class="feedback-h2 _text-centered feedback__feedback-h2">
+              Обратная связь
+            </h2>
             <form action="/order" class="feedback-form feedback__feedback-form">
               <input
                 type="text"
@@ -909,14 +937,14 @@
         </section>
         <section class="section how-to-get main-container__how-to-get">
           <h2 class="">Как добраться</h2>
-          <img src="/images/map_2.png" alt="Карта" class="how-to-get__map" />
+          <img src="/images/map_2.png" alt="Карта" class="map how-to-get__map" />
         </section>
       </div>
     </main>
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-inner-col1">
-          <div class="footer-iu-logo footer__footer-iu-logo">
+          <div class="iu-logo footer__iu-logo">
             <a
               href="https://innopolis.university/"
               title="Перейти на сайт innopolis.university"

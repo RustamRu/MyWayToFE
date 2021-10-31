@@ -44,6 +44,8 @@
 .owl-carousel .owl-item {
   min-height: 1px;
   float: left;
+  display: flex;
+  justify-content: center;
   -webkit-backface-visibility: hidden;
   -webkit-touch-callout: none;
 }
@@ -78,10 +80,10 @@
   padding: 0 !important;
   font: inherit;
    /* Чужой стиль { */
-  font-size: 50px;
-  margin: auto 154px;
+  font-size: 2.5rem;
+  margin: auto 11.8vw;
   position: relative;
-  bottom: 371px;
+  bottom: 29.8vw;
   /* } */
 }
 .owl-carousel.owl-loading {

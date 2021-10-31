@@ -1,7 +1,9 @@
 /* «Шаблонный» код - CSS-код, который приходится писать при создании нового проекта (типографские правила, анимации, утилиты, ...) */
 html {
   box-sizing: border-box;
+  font-size: 1.78vw;
 }
+
 *,
 *:before,
 *:after {
@@ -9,51 +11,46 @@ html {
 }
 
 /* ==================== ЗАГОЛОВКИ ==================== */
-h2 {
-  /* Типографика */
-  font-size: 48px;
-  line-height: 62px;
-  font-weight: 500;
-  color: var(--basic-green);
-}
-h3 {
-  font-weight: 600;
-  color: inherit;
-}
 .header-title {
   /* Блочная модель */
   width: 100%;
-  height: 88px;
   /* Типографика */
-  font-size: 68px;
-  line-height: 88px;
+  font-size: 3.4rem;
+  line-height: 1.3em;
   font-weight: 100;
-  text-align: center;
   color: inherit;
 }
 .header-subtitle {
   /* Блочная модель */
   width: 100%;
-  height: 53px;
   /* Типографика */
-  font-size: 41px;
-  line-height: 53px;
+  font-size: 2.05rem;
+  line-height: 1.3em;
   font-weight: 400;
-  text-align: center;
+  color: inherit;
+}
+h2 {
+  /* Типографика */
+  font-size: 2.4rem;
+  line-height: 1.3em;
+  font-weight: 500;
+  color: var(--basic-green);
+}
+h3 {
+  /* Типографика */
+  line-height: 1.3em;
+  font-weight: 600;
   color: inherit;
 }
 .welcome-h2 {
   /* Типографика */
-  font-size: 33px;
-  line-height: 43px;
+  font-size: 1.65rem;
   font-weight: 600;
   color: inherit;
 }
 .feedback-h2 {
   /* Типографика */
-  font-size: 25px;
-  line-height: 32px;
-  text-align: center;
+  font-size: 1.25rem;
 }
 .gift-to-everyone-h2 {
   /* Типографика */
@@ -61,23 +58,19 @@ h3 {
 }
 .why-we-h3 {
   /* Типографика */
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 1rem;
 }
 .movies-item-desc-h3 {
   /* Оформление */
-  font-size: 29px;
-  line-height: 38px;
+  font-size: 1.45rem;
 }
 .reviews-item-h3 {
   /* Типографика */
-  font-size: 15px;
-  line-height: 19px;
+  font-size: 0.75rem;
 }
 .reviews-item-h3_active {
   /* Типографика */
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 0.9rem;
 }
 .footer-nav-contacts-h3,
 .footer-nav-menu-h3 {
@@ -87,55 +80,50 @@ h3 {
 
 /* ==================== ТЕКСТ ==================== */
 p {
-  margin-top: 13px;
+  margin-top: 0.65em;
   /* Типографика */
-  font-size: 11px;
-  line-height: 14px;
+  font-size: 0.55rem;
+  line-height: 1.3em;
   font-weight: 400;
   color: inherit;
 }
+._text-centered {
+  text-align: center;
+}
 .movies-item-desc-p {
   /* Блочная модель */
-  margin-top: 13px;
+  margin-top: 1.19em;
 }
 .goods-item-desc-p {
   /* Типографика */
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 1rem;
   font-weight: 600;
-  text-align: center;
 }
 .reviews-item-p {
   /* Типографика */
-  font-size: 10px;
-  line-height: 13px;
+  font-size: 0.5rem;
 }
 .reviews-item-p_active {
   /* Типографика */
-  font-size: 11px;
-  line-height: 14px;
+  font-size: 0.55rem;
 }
 .reviews-item-date {
   /* Типографика */
-  font-size: 8px;
-  line-height: 10px;
+  font-size: 0.4rem;
   font-weight: 300;
   text-align: right;
 }
 .reviews-item-date_active {
   /* Типографика */
-  font-size: 9px;
-  line-height: 12px;
+  font-size: 0.45rem;
 }
 .footer-text-p {
   /* Типографика */
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.7rem;
 }
 .footer-copyright-text-p {
   /* Типографика */
-  font-size: 15px;
-  line-height: 19px;
+  font-size: 0.75rem;
 }
 .sr-only {
   position: absolute;
@@ -172,30 +160,30 @@ a {
   /* Блочная модель */
   display: block;
 }
+.iu-logo a{
+  /* Блочная модель */
+  display: block;
+  height: 100%;
+}
 
 /* ==================== ЛОГОТИП ==================== */
-.header-iu-logo {
+.iu-logo {
   /* Блочная модель */
-  width: 156px;
-  height: 40px;
-}
-.footer-iu-logo {
-  /* Блочная модель */
-  width: 161px;
-  height: 42px;
+  width: 13.9vw;
+  height: 3.7vw;
 }
 
 /* ==================== ИЗОБРАЖЕНИЯ ==================== */
 .why-we-img {
   /* Блочная модель */
-  width: 245px;
-  height: 169px;
+  width: 21.8vw;
+  height: 15.1vw;
 }
 .goods-item-img {
   /* Блочная модель */
   display: block;
-  width: 100%;
-  height: 331px;
+  width: 21.8vw;
+  height: 29.5vw;
   /* Оформление */
   border: 0;
 }
@@ -212,7 +200,7 @@ a {
   /* Оформление */
   border-style: solid;
   border-color: var(--white);
-  border-width: 128px 1124px;
+  border-width: 11.4vw 98vw;
 }
 .triangle_upward {
   /* Оформление */
@@ -233,28 +221,28 @@ a {
 .triangle_top-left {
   /* Позиционирование */
   position: absolute;
-  top: -1px;
-  left: -1px;
+  top: 0;
+  left: 0;
 }
 .triangle_bottom-right {
   /* Позиционирование */
   position: absolute;
-  right: -1px;
-  bottom: -1px;
+  right: 0;
+  bottom: 0;
 }
 .circle {
   /* Блочная модель */
-  width: 31px;
-  height: 31px;
+  width: 2.8vw;
+  height: 2.8vw;
   /* Оформление */
   background-color: var(--transparent-green);
   border-radius: 50%;
 }
 .trapezoid {
   /* Оформление */
-  border-right: 245px solid var(--transparent-green);
-  border-bottom: 88px solid var(--transparent-green);
-  border-top: 65px solid transparent;
+  border-right: 21.8vw solid var(--transparent-green);
+  border-bottom: 7.9vw solid var(--transparent-green);
+  border-top: 5.8vw solid transparent;
 }
 /* ==================== ВЕКТОРНЫЕ ИЗОБРАЖЕНИЯ ==================== */
 .logo {
@@ -268,12 +256,12 @@ a {
 }
 .arrow {
   /* Блочная модель */
-  width: 9px;
-  height: 9px;
+  width: 0.45em;
+  height: 0.45em;
   margin-bottom: 0.1em;
 }
 .ico-smm {
   /* Блочная модель */
-  width: 18px;
-  height: 18px;
+  width: 1.7vw;
+  height: 1.7vw;
 }
