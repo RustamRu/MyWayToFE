@@ -1,4 +1,4 @@
-movies = [
+const movies = [
   {
     starttime: '10:00',
     title: 'Человек-паук',
@@ -45,9 +45,9 @@ movies = [
   }
 ]
 
-const renderMoviesTable = { /* filmHelper */
+const MoviesTable = { 
   getMovieId() {
-    return this.id || `${movies[index].title.replaceAll(" ", "")}-${movies[index].starttime}`;
+    return this.id || `${this.title.replaceAll(" ", "")}-${this.starttime}`; // id нужно для идентификации записи, будет добавлено позже
   },
   getMovieStartTime() {
     return this.starttime;
@@ -67,33 +67,33 @@ const outputTBody = document.getElementById("movies_output");
 let output = '';
 
 let index_last = movies.length - 1;
-for (index in movies) {
-  if (!renderMoviesTable.getIsForAdults.apply(movies[index])) {
-    output += renderMoviesTableRow(movies, index);
+for (let index in movies) {
+  if (!MoviesTable.getIsForAdults.apply(movies[index])) {
+    output += renderMoviesTableRow(movies[index]);
   }
 }
 
 outputTBody.innerHTML = output;
 
-function renderMoviesTableRow(movies, index) {
+function renderMoviesTableRow(movie) {
   return `<tr class="choose-movie-tr">
-<td class="choose-movie-td choose-movie__choose-movie-td">
+<td class="choose-movie-td _text-centered choose-movie__choose-movie-td">
 <input
   type="checkbox"
   class="choose-movie__checkbox"
-  id="${renderMoviesTable.getMovieId.apply(movies[index])}"
+  id="${MoviesTable.getMovieId.apply(movie)}"
 />
-<label for="${renderMoviesTable.getMovieId.apply(movies[index])}">
+<label for="${MoviesTable.getMovieId.apply(movie)}">
 </label>
 </td>
 <td class="choose-movie-td choose-movie__choose-movie-td">
-  ${renderMoviesTable.getMovieStartTime.apply(movies[index])}
+  ${MoviesTable.getMovieStartTime.apply(movie)}
 </td>
 <td class="choose-movie-td choose-movie__choose-movie-td">
-  ${renderMoviesTable.getMovieTitle.apply(movies[index])}
+  ${MoviesTable.getMovieTitle.apply(movie)}
 </td>
 <td class="choose-movie-td choose-movie__choose-movie-td">
-  ${renderMoviesTable.getMovieGenres.apply(movies[index])}
+  ${MoviesTable.getMovieGenres.apply(movie)}
 </td>
 </tr>`;
 };
