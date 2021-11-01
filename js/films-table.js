@@ -66,10 +66,9 @@ const MoviesTable = {
 const outputTBody = document.getElementById("movies_output");
 let output = '';
 
-let index_last = movies.length - 1;
-for (let index in movies) {
-  if (!MoviesTable.getIsForAdults.apply(movies[index])) {
-    output += renderMoviesTableRow(movies[index]);
+for (const movie of movies) {
+  if (!MoviesTable.getIsForAdults.apply(movie)) {
+    output += renderMoviesTableRow(movie);
   }
 }
 
