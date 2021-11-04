@@ -116,7 +116,7 @@ body {
   flex-wrap: wrap;
 }
 .why-we__why-we-container {
-  /* Блочная модель */    
+  /* Блочная модель */
   margin: 5.1vw -2.1vw 0;
 }
 .why-we-item {
@@ -276,8 +276,12 @@ body {
 .movies-container {
   /* Блочная модель */
   width: 75.7vw;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas:
+    "movie-item01 movie-item02 movie-item03"
+    "movie-item04 movie-item05 movie-item06"
+    "movie-item07 movie-item08 movie-item09";
+  grid-template-columns: repeat(3, 1fr);
 }
 .movies__movies-container {
   /* Блочная модель */
@@ -285,12 +289,14 @@ body {
 }
 .movies-item {
   /* Блочная модель */
-  flex: 0 0 33.33%;
   overflow: hidden;
 }
 .movies__movies-item {
   /* Позиционирование */
   position: relative;
+}
+.movies-item_empty {
+  grid-area: movie-item05;
 }
 .movies-text {
 }
