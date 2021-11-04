@@ -45,7 +45,7 @@ const movies = [
   }
 ]
 
-const MoviesTable = { 
+const MoviesTable = {
   getMovieId() {
     return this.id || `${this.title.replaceAll(" ", "")}-${this.starttime}`; // id нужно для идентификации записи, будет добавлено позже
   },
@@ -64,13 +64,11 @@ const MoviesTable = {
 }
 
 const outputTBody = document.getElementById("movies_output");
-let output = '';
-
-for (const movie of movies) {
-  if (!MoviesTable.getIsForAdults.apply(movie)) {
-    output += renderMoviesTableRow(movie);
-  }
-}
+const output = movies.reduce((acc, movie) =>
+  MoviesTable.getIsForAdults.apply(movie) ?
+    acc :
+    `${acc}${renderMoviesTableRow(movie)}`,
+  '');
 
 outputTBody.innerHTML = output;
 

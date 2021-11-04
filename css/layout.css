@@ -110,6 +110,24 @@ body {
   margin-top: 2.4em;
   margin-bottom: 1.6em; /* Исправить на margin-top */
 }
+.why-we-container {
+  /* Блочная модель */
+  display: flex;
+  flex-wrap: wrap;
+}
+.why-we__why-we-container {
+  /* Блочная модель */    
+  margin: 5.1vw -2.1vw 0;
+}
+.why-we-item {
+  /* Блочная модель */
+  width: 33.33%;
+  overflow: hidden;
+}
+.why-we__why-we-item {
+  /* Блочная модель */
+  padding: 1.35em 1.25rem;
+}
 /* ==================== Секция "Выберите фильм" ==================== */
 .main-container__choose-movie {
   /* Блочная модель */
@@ -255,6 +273,25 @@ body {
   /* Блочная модель */
   margin-left: 2px;
 }
+.movies-container {
+  /* Блочная модель */
+  width: 75.7vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.movies__movies-container {
+  /* Блочная модель */
+  margin: 3.2em 0 0;
+}
+.movies-item {
+  /* Блочная модель */
+  flex: 0 0 33.33%;
+  overflow: hidden;
+}
+.movies__movies-item {
+  /* Позиционирование */
+  position: relative;
+}
 .movies-text {
 }
 .movies__movies-text {
@@ -272,8 +309,8 @@ body {
 }
 .movies__movies-item-cover {
   /* Позиционирование */
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: -100%;
   left: 0;
 }
 .movies-item-desc {
@@ -576,53 +613,6 @@ body {
 }
 
 /* ТАБЛИЧНАЯ ВЕРСТКА */
-.why-we__why-we-table {
-  /* Блочная модель */
-  margin-top: 5.1vw;
-}
-.why-we__why-we-row {
-  /* Блочная модель */
-  margin: 0 -2.1vw auto;
-  overflow: hidden;
-}
-.why-we-col {
-  /* Блочная модель */
-  float: left;
-  width: 33.33%;
-  height: 32.7vw;
-  overflow: hidden;
-}
-.why-we__why-we-col {
-  /* Блочная модель */
-  padding: 1.35em 1.25rem;
-}
-
-.movies-table {
-  /* Блочная модель */
-  width: 75.7vw;
-  height: 75.7vw;
-}
-.movies__movies-table {
-  /* Блочная модель */
-  margin: 3.2em 0 0 4px;
-}
-.movies-row {
-  /* Блочная модель */
-  height: 33.33%;
-  /* overflow: hidden; */
-}
-.movies-col {
-  /* Блочная модель */
-  width: 33.33%;
-  height: 100%;
-  float: left;
-  overflow: hidden;
-}
-.movies__movies-col {
-  /* Позиционирование */
-  position: relative;
-}
-
 .goods-table {
   /* Блочная модель */
   width: 100%;
