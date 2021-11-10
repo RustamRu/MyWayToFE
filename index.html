@@ -14,10 +14,16 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="lib/owlcarousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/css/mediarules.css" />
     <script defer src="lib/jquery/jquery.min.js"></script>
     <script defer src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script defer src="js/main.js"></script>
     <script defer src="js/films-table.js"></script>
+    <!-- <style>
+      * {
+        outline: 1px solid red;
+      }
+    </style> -->
   </head>
   <body>
     <header class="header">
@@ -38,100 +44,128 @@
             </svg>
           </a>
         </div>
-        <nav
-          class="header-nav-contacts header__header-nav-contacts"
-          aria-label="Контакты, верхнее меню"
-        >
-          <ul class="header-nav-contacts__ul">
-            <li
-              class="
-                header-nav-contacts-li
-                header-nav-contacts__header-nav-contacts-li
-              "
-            >
-              <a href="tel:+78003551256" class="header__link"
-                >+7 (800) 355 12-56</a
-              >
-            </li>
-            <li
-              class="
-                header-nav-contacts-li
-                header-nav-contacts__header-nav-contacts-li
-              "
-            >
-              <a
-                aria-label="Написать электронное письмо на адрес kino@innopolis.ru"
-                href="mailto:kino@innopolis.ru"
-                class="link link_underline header__link"
-                >kino@innopolis.ru</a
-              >
-            </li>
-            <li
-              class="
-                header-nav-contacts-li
-                header-nav-contacts__header-nav-contacts-li
-              "
-            >
-              <a href="#how-to-get" class="header__link"
-                >ул. Спортивная, д. 1</a
-              >
-            </li>
-            <li
-              class="
-                header-nav-contacts-li
-                header-nav-contacts__header-nav-contacts-li
-              "
-            >
-              <button class="reguest-call header-nav-contacts__reguest-call">
-                <svg class="ico-phone reguest-call__ico-phone">
-                  <use xlink:href="#ico-phone" />
-                </svg>
-                <span
-                  class="reguest-call-label reguest-call__reguest-call-label"
-                  >Заказать звонок</span
+        <div
+          class="viewport-cover header__viewport-cover"
+          id="viewport-cover"
+        ></div>
+        <div class="nav-wrapper header__nav-wrapper" id="nav-wrapper">
+          <div class="close-cross header__close-cross" id="close-cross" >
+            <a onclick="hideHeaderMenu()">
+              <svg class="svg svg-close-cross">
+                <use xlink:href="#ico-close-cross"></use>
+              </svg>
+            </a>
+          </div>
+          <nav
+            class="header-nav-lang header__header-nav-lang"
+            aria-label="Язык, верхнее меню"
+          >
+                <select
+                  name="lang"
+                  id="lang"
+                  class="lang"
+                  aria-label="Выберите язык страницы"
                 >
-              </button>
-            </li>
-            <li
-              class="
-                header-nav-contacts-li
-                header-nav-contacts__header-nav-contacts-li
-              "
-            >
-              <select
-                name="lang"
-                id="lang"
-                class="lang header-nav-contacts__lang"
-                aria-label="Выберите язык страницы"
+                  <option value="RU" selected>ru</option>
+                  <option value="EN">en</option>
+                </select>
+          </nav>
+          <nav
+            class="header-nav-menu header__header-nav-menu"
+            aria-label="Верхнее меню"
+          >
+            <ul class="header-nav-menu__ul">
+              <li
+                class="header-nav-menu-li header-nav-menu__header-nav-menu-li"
               >
-                <option value="RU" selected>ru</option>
-                <option value="EN">en</option>
-              </select>
-            </li>
-          </ul>
-        </nav>
-        <nav
-          class="header-nav-menu header__header-nav-menu"
-          aria-label="Верхнее меню"
-        >
-          <ul class="header-nav-menu__ul">
-            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
-              <a href="#why-we" class="header__link">Почему мы?</a>
-            </li>
-            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
-              <a href="#choose-movie" class="header__link">Выберите фильм</a>
-            </li>
-            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
-              <a href="#movies" class="header__link">Фильмы</a>
-            </li>
-            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
-              <a href="#goods" class="header__link">Товары</a>
-            </li>
-            <li class="header-nav-menu-li header-nav-menu__header-nav-menu-li">
-              <a href="#reviews" class="header__link">Отзывы</a>
-            </li>
-          </ul>
-        </nav>
+                <a href="#why-we" class="header__link">Почему мы?</a>
+              </li>
+              <li
+                class="header-nav-menu-li header-nav-menu__header-nav-menu-li"
+              >
+                <a href="#choose-movie" class="header__link">Выберите фильм</a>
+              </li>
+              <li
+                class="header-nav-menu-li header-nav-menu__header-nav-menu-li"
+              >
+                <a href="#movies" class="header__link">Фильмы</a>
+              </li>
+              <li
+                class="header-nav-menu-li header-nav-menu__header-nav-menu-li"
+              >
+                <a href="#goods" class="header__link">Товары</a>
+              </li>
+              <li
+                class="header-nav-menu-li header-nav-menu__header-nav-menu-li"
+              >
+                <a href="#reviews" class="header__link">Отзывы</a>
+              </li>
+            </ul>
+          </nav>
+          <nav
+            class="header-nav-contacts header__header-nav-contacts"
+            aria-label="Контакты, верхнее меню"
+          >
+            <ul class="header-nav-contacts__ul">
+              <li
+                class="
+                  header-nav-contacts-li
+                  header-nav-contacts__header-nav-contacts-li
+                "
+              >
+                <a href="tel:+78003551256" class="header__link"
+                  >+7 (800) 355 12-56</a
+                >
+              </li>
+              <li
+                class="
+                  header-nav-contacts-li
+                  header-nav-contacts__header-nav-contacts-li
+                "
+              >
+                <a
+                  aria-label="Написать электронное письмо на адрес kino@innopolis.ru"
+                  href="mailto:kino@innopolis.ru"
+                  class="link link_underline header__link"
+                  >kino@innopolis.ru</a
+                >
+              </li>
+              <li
+                class="
+                  header-nav-contacts-li
+                  header-nav-contacts__header-nav-contacts-li
+                "
+              >
+                <a href="#how-to-get" class="header__link"
+                  >ул. Спортивная, д. 1</a
+                >
+              </li>
+              <li
+                class="
+                  header-nav-contacts-li
+                  header-nav-contacts__header-nav-contacts-li
+                "
+              >
+                <button class="request-call header-nav-contacts__request-call">
+                  <svg class="ico-phone request-call__ico-phone">
+                    <use xlink:href="#ico-phone" />
+                  </svg>
+                  <span
+                    class="request-call-label request-call__request-call-label"
+                    >Заказать звонок</span
+                  >
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="burger-menu header__burger-menu" id="burger-menu">
+          <a onclick="showHeaderMenu()">
+            <svg class="svg-burger-menu svg svg_white">
+              <use xlink:href="#ico-burger-menu"></use>
+            </svg>
+          </a>
+        </div>
         <div class="header-title-div header__header-title-div">
           <h1>
             <span
@@ -147,7 +181,7 @@
               >Всем покупателям подарок!</span
             >
           </h1>
-        </div>        
+        </div>
       </div>
     </header>
     <main class="main">
@@ -252,54 +286,56 @@
         </section>
         <section class="section choose-movie main-container__choose-movie">
           <h2 class="choose-movie__choose-movie-h2">Выберите фильм</h2>
-          <table class="choose-movie-table choose-movie__choose-movie-table">
-            <thead>
-              <tr class="choose-movie-tr">
-                <th
-                  class="
-                    choose-movie-th
-                    choose-movie__choose-movie-th
-                    choose-movie-th_narrow
-                  "
-                  aria-label="Столбец галочек"
-                >
-                  <span class="sr-only">Галочка</span>
-                </th>
-                <th
-                  class="
-                    choose-movie-th
-                    choose-movie__choose-movie-th
-                    choose-movie-th_wide
-                  "
-                >
-                  <a href="#" class="choose-movie__link"
-                    >Начало сеанса
-                    <svg class="arrow svg svg_white">
-                      <use xlink:href="#ico-arrow-up"></use>
-                    </svg>
-                  </a>
-                </th>
-                <th
-                  class="
-                    choose-movie-th
-                    choose-movie__choose-movie-th
-                    choose-movie-th_wide
-                  "
-                >
-                  <a href="#" class="choose-movie__link"
-                    >Название фильма
-                    <svg class="arrow svg svg_white">
-                      <use xlink:href="#ico-arrow-down"></use>
-                    </svg>
-                  </a>
-                </th>
-                <th class="choose-movie-th choose-movie__choose-movie-th">
-                  Жанр
-                </th>
-              </tr>
-            </thead>
-            <tbody id="movies_output"></tbody>
-          </table>
+          <div class="choose-movie-wrapper choose-movie__choose-movie-wrapper">
+            <table class="choose-movie-table choose-movie__choose-movie-table">
+              <thead>
+                <tr class="choose-movie-tr">
+                  <th
+                    class="
+                      choose-movie-th
+                      choose-movie__choose-movie-th
+                      choose-movie-th_narrow
+                    "
+                    aria-label="Столбец галочек"
+                  >
+                    <span class="sr-only">Галочка</span>
+                  </th>
+                  <th
+                    class="
+                      choose-movie-th
+                      choose-movie__choose-movie-th
+                      choose-movie-th_wide
+                    "
+                  >
+                    <a href="#" class="choose-movie__link"
+                      >Начало сеанса
+                      <svg class="arrow svg svg_white">
+                        <use xlink:href="#ico-arrow-up"></use>
+                      </svg>
+                    </a>
+                  </th>
+                  <th
+                    class="
+                      choose-movie-th
+                      choose-movie__choose-movie-th
+                      choose-movie-th_wide
+                    "
+                  >
+                    <a href="#" class="choose-movie__link"
+                      >Название фильма
+                      <svg class="arrow svg svg_white">
+                        <use xlink:href="#ico-arrow-down"></use>
+                      </svg>
+                    </a>
+                  </th>
+                  <th class="choose-movie-th choose-movie__choose-movie-th">
+                    Жанр
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="movies_output"></tbody>
+            </table>
+          </div>
           <div
             class="
               choose-movie-text
@@ -323,16 +359,12 @@
             alt="Подарок"
             class="present gift-to-everyone__present"
           />
+          <h2
+            class="h2 gift-to-everyone-h2 gift-to-everyone__gift-to-everyone-h2"
+          >
+            Подарок каждому!
+          </h2>
           <div class="gift-to-everyone__inner">
-            <h2
-              class="
-                h2
-                gift-to-everyone-h2
-                gift-to-everyone__gift-to-everyone-h2
-              "
-            >
-              Подарок каждому!
-            </h2>
             <p class="gift-to-everyone__gift-to-everyone-p">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
@@ -394,20 +426,10 @@
                     Выживший
                   </h3>
                   <p class="movies-item-desc-p">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel
-                    quam elementum pulvinar etiam non quam. Ut pharetra sit amet
-                    aliquam id diam maecenas. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Nibh mauris
-                    cursus mattis molestie a iaculis at. Vel quam elementum
-                    pulvinar etiam non quam. Ut pharetra sit amet aliquam id
-                    diam maecenas. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Nibh mauris cursus mattis molestie a
-                    iaculis at. Vel quam elementum pulvinar etiam non quam. Ut
-                    pharetra sit amet aliquam id diam maecenas.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum enim id quia ipsa quidem molestias eos, ad cumque
+                    porro adipisci distinctio tempora quibusdam repellendus
+                    ratione sint aut officia nihil. Corporis!
                   </p>
                 </div>
               </a>
@@ -594,9 +616,32 @@
                 </div>
               </a>
             </div>
-            <div
-              class="movies-item movies__movies-item movies-item_empty"
-            ></div>
+            <div class="movies-item movies__movies-item">
+              <a
+                href="https://www.kinopoisk.ru/movie/966995/"
+                target="_blank"
+                title="Живое"
+              >
+                <img
+                  src="/images/movies/poster-zhivoe.png"
+                  alt='Постер фильма "Живое"'
+                  class="movies-img movies__movies-img"
+                />
+                <div class="movies-item-cover movies__movies-item-cover"></div>
+                <div class="movies-item-desc movies__movies-item-desc">
+                  <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
+                    Живое
+                  </h3>
+                  <p class="movies-item-desc-p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel
+                    quam elementum pulvinar etiam non quam. Ut pharetra sit amet
+                    aliquam id diam maecenas.
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </section>
         <section class="section goods main-container__goods">
@@ -609,54 +654,46 @@
               pulvinar etiam non quam.
             </p>
           </div>
-          <div class="goods-table goods__goods-table">
-            <div class="goods-row goods__goods-row">
-              <div class="goods-col goods__goods-col">
-                <img
-                  src="/images/goods-cocacola.png"
-                  alt="Напиток Coca-cola"
-                  class="goods-item-img goods__goods-item-img"
-                />
-                <div class="trapezoid goods__trapezoid"></div>
-                <div class="goods-item-desc goods__goods-item-desc">
-                  <p
-                    class="goods-item-desc-p _text-centered goods__item-desc-p"
-                  >
-                    Coca-cola
-                  </p>
-                </div>
+          <div class="goods-container goods__goods-container">
+            <div class="goods-item goods__goods-item">
+              <img
+                src="/images/goods-cocacola.png"
+                alt="Напиток Coca-cola"
+                class="goods-item-img goods__goods-item-img"
+              />
+              <div class="trapezoid goods__trapezoid"></div>
+              <div class="goods-item-desc goods__goods-item-desc">
+                <p class="goods-item-desc-p _text-centered goods__item-desc-p">
+                  Coca-cola
+                </p>
               </div>
-              <div class="goods-col goods__goods-col">
-                <img
-                  src="/images/goods-keychain-iron-man.png"
-                  alt="3 брелка в виде головы Железного человека"
-                  class="goods-item-img goods__goods-item-img"
-                />
-                <div class="trapezoid goods__trapezoid"></div>
-                <div class="goods-item-desc goods__goods-item-desc">
-                  <p
-                    class="goods-item-desc-p _text-centered goods__item-desc-p"
-                  >
-                    Брелок<br />
-                    "Железный<br />человек"
-                  </p>
-                </div>
+            </div>
+            <div class="goods-item goods__goods-item">
+              <img
+                src="/images/goods-keychain-iron-man.png"
+                alt="3 брелка в виде головы Железного человека"
+                class="goods-item-img goods__goods-item-img"
+              />
+              <div class="trapezoid goods__trapezoid"></div>
+              <div class="goods-item-desc goods__goods-item-desc">
+                <p class="goods-item-desc-p _text-centered goods__item-desc-p">
+                  Брелок<br />
+                  "Железный<br />человек"
+                </p>
               </div>
-              <div class="goods-col goods__goods-col">
-                <img
-                  src="/images/goods-poster-avengers.png"
-                  alt="Постер с изображением мстителей"
-                  class="goods-item-img goods__goods-item-img"
-                />
-                <div class="trapezoid goods__trapezoid"></div>
-                <div class="goods-item-desc goods__goods-item-desc">
-                  <p
-                    class="goods-item-desc-p _text-centered goods__item-desc-p"
-                  >
-                    Постер<br />
-                    "Мстители"
-                  </p>
-                </div>
+            </div>
+            <div class="goods-item goods__goods-item">
+              <img
+                src="/images/goods-poster-avengers.png"
+                alt="Постер с изображением мстителей"
+                class="goods-item-img goods__goods-item-img"
+              />
+              <div class="trapezoid goods__trapezoid"></div>
+              <div class="goods-item-desc goods__goods-item-desc">
+                <p class="goods-item-desc-p _text-centered goods__item-desc-p">
+                  Постер<br />
+                  "Мстители"
+                </p>
               </div>
             </div>
           </div>
@@ -673,7 +710,10 @@
             </p>
           </div>
           <div
-            class="reviews-table reviews__reviews-table owl-carousel owl-theme"
+            class="
+              reviews-container reviews__reviews-container
+              owl-carousel owl-theme
+            "
           >
             <div class="item reviews-item reviews__reviews-item">
               <img
@@ -774,108 +814,113 @@
           <div class="triangle triangle_upward triangle_bottom-right"></div>
         </section>
         <section class="section feedback main-container__feedback">
-          <div class="feedback-inner feedback__inner">
-            <h2 class="feedback-h2 _text-centered feedback__feedback-h2">
-              Обратная связь
-            </h2>
-            <form action="/order" class="feedback-form feedback__feedback-form">
-              <input
-                type="text"
-                placeholder="Полное имя"
-                aria-label="Ввести полное имя"
-                required
-                class="feedback-form-item feedback__feedback-form-item"
-              />
-              <select
-                name="nomer-mesta"
-                aria-label="Выбрать из списка номер места"
-                required
-                class="
-                  feedback-form-item
-                  feedback__feedback-form-item
-                  feedback__feedback-form-select-seat
-                "
-              >
-                <option label="Номер места" disabled selected></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-              <input
-                type="email"
-                placeholder="Электронный адрес"
-                aria-label="Ввести электронный адрес"
-                required
-                class="feedback-form-item feedback__feedback-form-item"
-              />
-              <textarea
-                name="otzyv"
-                cols="30"
-                rows="10"
-                placeholder="Напишите свой отзыв"
-                aria-label="Ввести свой отзыв"
-                class="
-                  feedback-form-item
-                  feedback__feedback-form-item
-                  feedback-form-textarea
-                  feedback__feedback-form-textarea
-                "
-              ></textarea>
-              <label
-                class="
-                  feedback-form-item feedback__feedback-form-item
-                  filebutton
-                  feedback-form-filebutton feedback__feedback-form-filebutton
-                "
+          <div class="feedback__inner">
+            <div class="feedback__form-inner">
+              <h2 class="feedback-h2 _text-centered feedback__feedback-h2">
+                Обратная связь
+              </h2>
+              <form
+                action="/order"
+                class="feedback-form feedback__feedback-form"
               >
                 <input
-                  type="file"
-                  name="feedback-file"
-                  aria-label="Прикрепите файл"
+                  type="text"
+                  placeholder="Полное имя"
+                  aria-label="Ввести полное имя"
+                  required
+                  class="feedback-form-item feedback__feedback-form-item"
                 />
-                <span>Выберите файл</span>
-              </label>
-              <div class="feedback__feedback-form-item">
-                <input
-                  type="checkbox"
-                  name="pers_data_proc_agree"
-                  id="pers_data_proc_agree"
+                <select
+                  name="nomer-mesta"
+                  aria-label="Выбрать из списка номер места"
                   required
                   class="
-                    feedback-form-checkbox feedback__feedback-form-checkbox
+                    feedback-form-item
+                    feedback__feedback-form-item
+                    feedback__feedback-form-select-seat
                   "
-                />
-                <label
-                  for="pers_data_proc_agree"
-                  class="
-                    feedback-form-checkbox-label
-                    feedback__feedback-form-checkbox-label
-                  "
-                  >Я согласен на обработку своих персональных данных</label
                 >
-              </div>
-              <button
-                type="submit"
-                name="feedback-inner-submit-btn1"
-                title="Отправить форму обратной связи"
-                aria-label="Отправить форму обратной связи"
-                class="
-                  feedback-form-item
-                  feedback__feedback-form-item
-                  feedback-form-submit
-                  feedback__feedback-form-submit
-                "
-              >
-                Заказать
-              </button>
-            </form>
+                  <option label="Номер места" disabled selected></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <input
+                  type="email"
+                  placeholder="Электронный адрес"
+                  aria-label="Ввести электронный адрес"
+                  required
+                  class="feedback-form-item feedback__feedback-form-item"
+                />
+                <textarea
+                  name="otzyv"
+                  cols="30"
+                  rows="10"
+                  placeholder="Напишите свой отзыв"
+                  aria-label="Ввести свой отзыв"
+                  class="
+                    feedback-form-item
+                    feedback__feedback-form-item
+                    feedback-form-textarea
+                    feedback__feedback-form-textarea
+                  "
+                ></textarea>
+                <label
+                  class="
+                    feedback-form-item feedback__feedback-form-item
+                    filebutton
+                    feedback-form-filebutton feedback__feedback-form-filebutton
+                  "
+                >
+                  <input
+                    type="file"
+                    name="feedback-file"
+                    aria-label="Прикрепите файл"
+                  />
+                  <span>Выберите файл</span>
+                </label>
+                <div class="feedback__feedback-form-item">
+                  <input
+                    type="checkbox"
+                    name="pers_data_proc_agree"
+                    id="pers_data_proc_agree"
+                    required
+                    class="
+                      feedback-form-checkbox feedback__feedback-form-checkbox
+                    "
+                  />
+                  <label
+                    for="pers_data_proc_agree"
+                    class="
+                      feedback-form-checkbox-label
+                      feedback__feedback-form-checkbox-label
+                    "
+                    >Я согласен на обработку своих персональных данных</label
+                  >
+                </div>
+                <button
+                  type="submit"
+                  name="feedback-inner-submit-btn1"
+                  title="Отправить форму обратной связи"
+                  aria-label="Отправить форму обратной связи"
+                  class="
+                    feedback-form-item
+                    feedback__feedback-form-item
+                    feedback-form-submit
+                    feedback__feedback-form-submit
+                  "
+                >
+                  Заказать
+                </button>
+              </form>
+            </div>
           </div>
         </section>
         <section class="section how-to-get main-container__how-to-get">
@@ -1189,6 +1234,31 @@
       >
         <path
           d="M6.78449 4.39875V6.45975H5.27399V8.97975H6.78449V16.4692H9.88499V8.9805H11.9662C11.9662 8.9805 12.1612 7.77225 12.2557 6.45075H9.89774V4.72725C9.89774 4.47 10.2352 4.1235 10.5697 4.1235H12.2602V1.5H9.96224C6.70724 1.5 6.78449 4.02225 6.78449 4.39875Z"
+        />
+      </symbol>
+    </svg>
+    <svg style="display: none">
+      <symbol
+        id="ico-burger-menu"
+        viewBox="0 0 47 22"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="0.0400391" width="46" height="3" />
+        <rect x="0.0400391" y="19" width="46" height="3" />
+        <rect x="0.0400391" y="9" width="46" height="3" />
+      </symbol>
+    </svg>
+    <svg style="display: none">
+      <symbol
+        id="ico-close-cross"
+        viewBox="0 0 27 27"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.38838 27C1.03272 27 0.677068 26.8647 0.406851 26.5925C-0.135617 26.05 -0.135617 25.1705 0.406851 24.6281L24.6281 0.406851C25.1705 -0.135617 26.05 -0.135617 26.5925 0.406851C27.1349 0.949319 27.1349 1.8288 26.5925 2.3716L2.3716 26.5925C2.09935 26.863 1.7437 27 1.38838 27Z"
+        />
+        <path
+          d="M25.6113 27C25.2556 27 24.9003 26.8647 24.6298 26.5925L0.406851 2.3716C-0.135617 1.8288 -0.135617 0.949319 0.406851 0.406851C0.94932 -0.135617 1.8288 -0.135617 2.3716 0.406851L26.5925 24.6281C27.1349 25.1705 27.1349 26.05 26.5925 26.5925C26.3202 26.863 25.9649 27 25.6113 27Z"
         />
       </symbol>
     </svg>

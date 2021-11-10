@@ -37,13 +37,11 @@ input[type="checkbox"] + label:hover::before {
 }
 
 /* ==================== ФОРМА ==================== */
-.feedback-form {
-}
 
 /* ==================== ТЕКСТОВОЕ ПОЛЕ ==================== */
 input[type="textarea"],
 textarea {
-  height: 7.8vw;
+  height: 6rem;
   resize: none;
 }
 
@@ -167,11 +165,11 @@ input[type="file"] {
   font-size: 1rem;
   text-transform: uppercase;
 }
-.reguest-call {
+.request-call {
   /* Блочная модель */
   padding-top: 0.1em;
   padding-bottom: 0.1em;
-  padding-left: 1.4rem;
+  padding-left: 0.4rem;
   padding-right: 0.3rem;
   /* Типографика */
   color: var(--black);
@@ -179,30 +177,20 @@ input[type="file"] {
   background-color: var(--white);
   border-radius: 0.6vw;
 }
-.reguest-call:hover {
+.request-call:hover {
   /* Типографика */
   color: var(--white);
   /* Оформление */
   background-color: var(--basic-green);
   fill: var(--white);
 }
-.reguest-call__ico-phone {
-  /* Позиционирование */
-  position: absolute;
-  top: 0.34em;
-  left: 0.4rem;
-  /* Блочная модель */
-  padding: 1px;
-}
 .ico-phone {
   /* Блочная модель */
   width: 0.67em;
   height: 0.67em;
 }
-.reguest-call-label {
+.request-call-label {
   /* Типографика */
   font-size: 0.6rem;
   line-height: 1.3em;
-}
-.reguest-call__reguest-call-label {
 }

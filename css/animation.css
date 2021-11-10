@@ -17,14 +17,16 @@
   }
 }
 
-.movies-item > a:hover .movies-item-cover, .movies-item-desc {
+.movies-item > a:hover .movies-item-cover,
+.movies-item-desc {
   /* Анимация */
   animation-delay: 0.5s;
   animation: slideDown;
   animation-duration: 0.4s;
   transform: translateY(100%);
 }
-.movies-item > a:hover .movies-item-desc, .movies-item-cover {
+.movies-item > a:hover .movies-item-desc,
+.movies-item-cover {
   /* Анимация */
   animation: slideUp;
   animation-duration: 0.5s;
@@ -60,4 +62,15 @@
   animation: scaleUp_107pc;
   animation-duration: 0.3s;
   transform: scale(107%);
+}
+.burger-menu:hover .svg-burger-menu {
+  cursor: pointer;
+  fill: var(--basic-green);
+}
+.close-cross:hover .svg-close-cross {
+  cursor: pointer;
+  fill: var(--basic-green);
+}
+.burger-menu:focus + #viewport-cover {
+  visibility: visible;
 }

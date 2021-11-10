@@ -1,0 +1,119 @@
+@media screen and (max-width: 768px) {
+  .burger-menu,
+  .close-cross,
+  .viewport-cover {
+    visibility: visible;
+  }
+  .nav-wrapper {
+    /* Блочная модель */
+    display: none;
+    height: 100vh;
+    /* Оформление */
+    background: var(--white);
+  }
+  .header__nav-wrapper {
+    /* Позиционирование */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    z-index: 1000;
+    /* Оформление */
+    box-shadow: -0.35rem 0 2rem var(--transparent-black);
+  }
+  .header-nav-lang {
+    /* Блочная модель */
+    margin: 1.5em 2.35rem 0;
+    /* Типографика */
+    color: var(--black);
+  }
+  .header__header-nav-lang {
+    /* Позиционирование */
+    position: static;
+  }
+  .header-nav-menu,
+  .header-nav-contacts {
+    /* Блочная модель */
+    float: none;
+  }
+  .header__header-nav-menu {
+    /* Позиционирование */
+    position: static;
+  }
+  .header__header-nav-contacts {
+    /* Позиционирование */
+    position: static;
+    /* Блочная модель */
+    margin-top: 7.3vw/* 5em */;
+  }
+  .header-nav-menu-li {
+    /* Блочная модель */
+    display: table;
+    margin: 1.5em 2.35rem 0;
+    /* Типографика */
+    font-size: 1rem;
+    color: var(--black);
+  }
+  .header-nav-contacts-li {
+    /* Блочная модель */
+    display: table;
+    margin: 0.5em 2.35rem 0;
+    /* Типографика */
+    font-size: 1rem;
+    color: var(--light-gray);
+  }
+  .header-nav-contacts__request-call {
+    /* Позиционирование */
+    margin-top: 4.5vw/* 2.45rem */;
+  }
+  .request-call {
+    /* Блочная модель */
+    padding-top: 0.34em;
+    padding-bottom: 0.34em;
+    padding-left: 1.375rem;
+    padding-right: 1.275rem;
+    /* Типографика */
+    color: var(--white);
+    /* Оформление */
+    background-color: var(--basic-green);
+    border-radius: 0.6vw;
+    fill: var(--white);
+  }
+  .request-call:hover {
+    /* Типографика */
+    color: var(--basic-green);
+    /* Оформление */
+    background-color: var(--white);
+    border-color: var(--transparent-green);
+    box-shadow: 0 2px 9px var(--transparent-darkgreen);
+    fill: var(--basic-green);
+  }
+  .request-call-label {
+    /* Типографика */
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header-nav-contacts-li,
+  .header-nav-menu-li {
+    /* Типографика */
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-container__feedback {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  button,
+  .filebutton {
+    padding: 0.1rem;
+  }
+  .main-container__how-to-get {
+    padding-left: 12.1vw;
+    padding-right: 12.1vw;
+  }
+}

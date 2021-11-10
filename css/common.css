@@ -1,7 +1,7 @@
 /* «Шаблонный» код - CSS-код, который приходится писать при создании нового проекта (типографские правила, анимации, утилиты, ...) */
 html {
   box-sizing: border-box;
-  font-size: 1.78vw;
+  font-size: var(--basic-font-size);
 }
 
 *,
@@ -160,7 +160,7 @@ a {
   /* Блочная модель */
   display: block;
 }
-.iu-logo a{
+.iu-logo a {
   /* Блочная модель */
   display: block;
   height: 100%;
@@ -180,11 +180,9 @@ a {
 }
 .goods-item-img {
   /* Блочная модель */
-  display: block;
-  width: 21.8vw;
-  height: 29.5vw;
-  /* Оформление */
-  border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .reviews-item-img {
   /* Блочная модель */
@@ -194,28 +192,19 @@ a {
 /* ==================== CSS-графика ==================== */
 .triangle {
   /* Блочная модель */
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 11.4vw;
+  max-height: 128px;
   /* Оформление */
-  border-style: solid;
-  border-color: var(--white);
-  border-width: 11.4vw 98vw;
+  background-color: var(--white);
 }
 .triangle_upward {
-  /* Оформление */
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-bottom-width: 0;
-  border-left-width: 0;
+  /* Разное */
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 .triangle_downward {
-  /* Оформление */
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-top-width: 0;
-  border-right-width: 0;
+  /* Разное */
+  clip-path: polygon(0 0, 0 100%, 100% 0);
 }
 .triangle_top-left {
   /* Позиционирование */
@@ -238,14 +227,26 @@ a {
   border-radius: 50%;
 }
 .trapezoid {
+  /* Позиционирование */
+  position: absolute;
+  bottom: 0;
+  /* Блочная модель */
+  width: 100%;
+  height: 46%;
+  /* Типографика */
+  color: var(--white);
   /* Оформление */
-  border-right: 21.8vw solid var(--transparent-green);
-  border-bottom: 7.9vw solid var(--transparent-green);
-  border-top: 5.8vw solid transparent;
+  background-color: var(--transparent-green);
+  /* Разное */
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 42%);
 }
 /* ==================== ВЕКТОРНЫЕ ИЗОБРАЖЕНИЯ ==================== */
 .logo {
   /* Блочная модель */
+  width: 100%;
+  height: 100%;
+}
+.svg {
   width: 100%;
   height: 100%;
 }
