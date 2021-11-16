@@ -21,8 +21,8 @@
     <script defer src="js/main.js"></script>
     <script defer src="js/film.js"></script>
     <script defer src="js/films-table.js"></script>
-    <!-- <script defer src="js/popup.js"></script>
-    <script defer src="js/forms.js"></script> -->
+    <script defer src="js/popup.js"></script>
+    <script defer src="js/forms.js"></script>
   </head>
   <body>
     <header class="header">
@@ -821,7 +821,7 @@
               </h2>
               <form action="/order" id="feedback-form" class="form feedback__form">
                 <div class="form-item-wrap">
-                  <label class="input ">
+                  <label class="input input_filled input_error">
                     <input
                       type="text"
                       name="name"
@@ -834,7 +834,7 @@
                   </label>
                 </div>
                 <div class="form-item-wrap">
-                  <label class="input ">
+                  <label class="input input_filled input_error">
                     <select
                       name="seat-number"
                       aria-label="Выбрать из списка номер места"
@@ -864,7 +864,7 @@
                   >
                 </div>
                 <div class="form-item-wrap">
-                  <label class="input ">
+                  <label class="input input_filled input_error">
                     <p class="input__label">Напишите свой отзыв</p>
                     <textarea
                       name="feedbackText"
@@ -877,7 +877,7 @@
                   </label>
                 </div>
                 <div class="form-item-wrap">
-                  <label class="checkbox ">
+                  <label class="checkbox checkbox_filled checkbox_error">
                     <input
                       type="checkbox"
                       name="feedback-pers_data_proc_agree"
@@ -1302,7 +1302,7 @@
           "
         >
           <div class="form-item-wrap">
-            <label class="input ">
+            <label class="input input_filled input_error">
               <p class="input__label">Полное имя</p>
               <input
                 type="text"
@@ -1315,7 +1315,7 @@
             </label>
           </div>
           <div class="form-item-wrap">
-            <label class="input ">
+            <label class="input input_filled input_error">
               <p class="input__label">Электронный адрес</p>
               <input
                 type="email"
@@ -1328,7 +1328,7 @@
             </label>
           </div>
           <div class="form-item-wrap">
-            <label class="input ">
+            <label class="input input_filled input_error">
               <select
                 name="gift-list"
                 aria-label="Выбрать из списка подарок"
@@ -1349,7 +1349,7 @@
             </label>
           </div>
           <div class="form-item-wrap">
-            <label class="checkbox ">
+            <label class="checkbox checkbox_filled checkbox_error">
               <input
                 type="checkbox"
                 name="gift-to-every-one-popup-pers_data_proc_agree"
