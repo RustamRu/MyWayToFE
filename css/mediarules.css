@@ -1,4 +1,7 @@
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  .header-container {
+    height: 100vh;
+  }
   .burger-menu,
   .close-cross,
   .viewport-cover {
@@ -45,7 +48,7 @@
     /* Позиционирование */
     position: static;
     /* Блочная модель */
-    margin-top: 7.3vw/* 5em */;
+    margin-top: 7.3vw /* 5em */;
   }
   .header-nav-menu-li {
     /* Блочная модель */
@@ -65,7 +68,7 @@
   }
   .header-nav-contacts__request-call {
     /* Позиционирование */
-    margin-top: 4.5vw/* 2.45rem */;
+    margin-top: 4.5vw /* 2.45rem */;
   }
   .request-call {
     /* Блочная модель */
@@ -93,6 +96,14 @@
     /* Типографика */
     font-size: 0.75rem;
   }
+
+  .movies-container {
+    /* Блочная модель */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .movies-item-desc {
+    transform: none;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -115,5 +126,14 @@
   .main-container__how-to-get {
     padding-left: 12.1vw;
     padding-right: 12.1vw;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    margin-left: 4.65rem;
+    bottom: 1rem;
+  }
+  .owl-carousel .owl-nav button.owl-prev {
+    margin-right: 4.65rem;
+    bottom: 1rem;
   }
 }

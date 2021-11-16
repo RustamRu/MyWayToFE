@@ -1,4 +1,4 @@
-/* Стили элементов макетов страниц (шапка и подвал страницы, навигационная область, различные разделы страницы, сетка, ...) */
+/* Animation */
 /* ==================== Секция "Фильмы" ==================== */
 @keyframes slideUp {
   0% {
@@ -73,4 +73,12 @@
 }
 .burger-menu:focus + #viewport-cover {
   visibility: visible;
+}
+
+.gift-to-every-one-popup-close-cross:hover {
+  /* Оформление */
+  background-color: var(--white);
+}
+.gift-to-every-one-popup-close-cross:hover .svg {
+  fill: var(--basic-green);
 }

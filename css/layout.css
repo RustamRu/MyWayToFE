@@ -1,4 +1,4 @@
-/* Стили элементов макетов страниц (шапка и подвал страницы, навигационная область, различные разделы страницы, сетка, ...) */
+/* The layout/ folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar…), the grid system or even CSS styles for all the forms. */
 /* ==================== ОБЩИЕ ==================== */
 body {
   /* background-color:var(--light-light-gray); */
@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: /* 59.5vw */ 100vh;
+  /* height: 59.5vw 100vh; */
   /* Типографика */
   color: var(--white);
   /* Оформление */
@@ -59,6 +59,11 @@ body {
   top: 4.45vw;
   left: 7.9vw;
   z-index: 1;
+}
+.header-title-div {
+  /* Блочная модель */
+  padding-top: 12.75em;
+  padding-bottom: 12.75em;
 }
 .header-title-div__header-title {
   /* Блочная модель */
@@ -149,7 +154,6 @@ body {
 .choose-movie-table {
   /* Блочная модель */
   width: 100%;
-  min-height: 80vh;
   /* Оформление */
   border: none;
   border-collapse: separate;
@@ -280,7 +284,7 @@ body {
 .movies-container {
   /* Блочная модель */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(190px, 1fr));
 }
 .movies__movies-container {
   /* Блочная модель */
@@ -336,7 +340,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
   /* Блочная модель */
   padding: 0.85em 1.15rem;
 }
@@ -429,6 +432,10 @@ body {
   /* Блочная модель */
   margin-left: 4px;
 }
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 .reviews__reviews-container {
   /* Позиционирование */
   position: relative;
@@ -436,8 +443,7 @@ body {
 .reviews-item {
   /* Блочная модель */
   float: left;
-  width: 18.7vw;
-  height: 25.3vw;
+  width: 10.5rem;
   /* Типографика */
   text-align: left;
   color: var(--white);
@@ -478,18 +484,19 @@ body {
 }
 .reviews__reviews-item-text {
   /* Блочная модель */
-  margin-top: 0.9em;
-  padding: 0 0.55rem 0 0.4rem;
+  margin-top: 0.55em;
+  padding: 0.35em 0.55rem 0.35em 0.4rem;
 }
 .reviews__reviews-item-text_active {
   /* Блочная модель */
   margin-top: 18px;
-  padding: 0 0.7rem 0 0.85rem;
+  padding: 0.35em 0.7rem 0.35em 0.85rem;
 }
 
 /* ==================== Секция "Обратная связь" ==================== */
 .feedback {
   /* Блочная модель */
+  max-width: 767px;
   padding: 0;
   overflow: hidden;
   /* Оформление */
@@ -498,7 +505,7 @@ body {
 }
 .main-container__feedback {
   /* Блочная модель */
-  margin: 3.9vw 15.9vw 0;
+  margin: 3.9vw auto 0;
   clear: both;
 }
 .feedback::after {
@@ -537,12 +544,12 @@ body {
   /* Разное */
   content: "";
 }
-.feedback__feedback-form {
+.feedback__form {
   /* Блочная модель */
   margin-top: 5px;
 }
-.feedback__feedback-form-item {
-  margin: 0.94em auto 0;
+.form-item-wrap {
+  margin: 1em auto 0;
 }
 /* ==================== Секция "Как добраться" ==================== */
 .main-container__how-to-get {
@@ -574,12 +581,13 @@ body {
 .footer-inner-col1 {
   /* Блочная модель */
   float: left;
-  width: 36.1vw;
+}
+.footer-text {
+  max-width: 269px;
 }
 .footer__footer-text {
   /* Блочная модель */
   margin-top: 0.7em;
-  padding-right: 7.5rem;
 }
 .footer__iu-logo {
   /* Блочная модель */
@@ -676,7 +684,6 @@ body {
 }
 .footer__smm-bar {
   /* Блочная модель */
-  margin-top: 1.25em;
   margin-left: -1.55rem;
 }
 .ico-smm-bg {
@@ -687,6 +694,7 @@ body {
   float: left;
 }
 .footer__ico-smm-bg {
+  margin-top: 1.25rem;
   margin-left: 1.55rem;
 }
 .ico-smm-bg:hover {
@@ -730,8 +738,6 @@ body {
   position: absolute;
   top: 4.45vw;
   right: 4.1vw;
-  /* Разное */
-  content: "";
 }
 .burger-menu a {
   /* Блочная модель */
@@ -739,17 +745,59 @@ body {
   width: 100%;
   height: 100%;
 }
-.close-cross {
-  /* Блочная модель */
-  visibility: hidden;
-  width: 2.5vw;
-  height: 2.5vw;
-}
 .header__close-cross {
   /* Позиционирование */
   position: absolute;
   top: 4.3vw;
   right: 4.5vw;
-  /* Разное */
-  content: "";
+  visibility: hidden;
+}
+
+/* ==================== МОДАЛЬНЫЕ ОКНА ==================== */
+.gift-to-every-one-popup {
+  /* Блочная модель */
+  /* Оформление */
+  background: var(--transparent-gray);
+}
+.gift-to-every-one__gift-to-every-one-popup {
+  /* Позиционирование */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+.gift-to-every-one-popup-form-wrapper {
+  /* Блочная модель */
+  padding: 2rem;
+  /* Оформление */
+  background: var(--white);
+  border-radius: 2rem;
+}
+.gift-to-every-one-popup__gift-to-every-one-popup-form-wrapper {
+  /* Позиционирование */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gift-to-every-one-popup__gift-to-every-one-popup-form {
+  /* Блочная модель */
+  margin-top: 0.2rem;
+}
+.gift-to-every-one-popup-form-item {
+  background: transparent;
+  box-sizing: none;
+  border: 0;
+}
+.gift-to-every-one-popup__gift-to-every-one-popup-form-item {
+  margin: 1.8em auto 0;
+}
+.gift-to-every-one-popup__gift-to-every-one-popup-close-cross {
+  margin-left: auto;
+}
+.gift-to-every-one-popup-form-item__label {
+  position: absolute;
+  background: var(--light-light-gray);
 }

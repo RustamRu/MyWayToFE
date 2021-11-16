@@ -3,7 +3,7 @@ const movies = [
     starttime: '10:00',
     title: 'Человек-паук',
     genres: ['фантастика', 'боевик', 'приключения'],
-    isForAdults: true
+    rate: "NC-17"
   },
   {
     starttime: '12:00',
@@ -19,7 +19,7 @@ const movies = [
     starttime: '16:00',
     title: 'Люди в чёрном: Интэрнэшнл',
     genres: ['фантастика', 'боевик', 'комедия'],
-    isForAdults: true
+    rate: "R"
   },
   {
     starttime: '14:00',
@@ -30,7 +30,7 @@ const movies = [
     starttime: '16:00',
     title: 'Люди в чёрном: Интэрнэшнл',
     genres: ['фантастика', 'боевик', 'комедия'],
-    isForAdults: true
+    rate: "R"
   },
   {
     starttime: '14:00',
@@ -41,56 +41,17 @@ const movies = [
     starttime: '16:00',
     title: 'Люди в чёрном: Интэрнэшнл',
     genres: ['фантастика', 'боевик', 'комедия'],
-    isForAdults: true
+    rate: "R"
   }
 ]
 
-const MoviesTable = {
-  getMovieId() {
-    return this.id || `${this.title.replaceAll(" ", "")}-${this.starttime}`; // id нужно для идентификации записи, будет добавлено позже
-  },
-  getMovieStartTime() {
-    return this.starttime;
-  },
-  getMovieTitle() {
-    return this.title;
-  },
-  getMovieGenres() {
-    return this.genres.join(', ');
-  },
-  getIsForAdults() {
-    return this.isForAdults;
-  }
-}
-
 const outputTBody = document.getElementById("movies_output");
-const output = movies.reduce((acc, movie) =>
-  MoviesTable.getIsForAdults.apply(movie) ?
+const output = movies.reduce((acc, movie) => {
+  const movie_ex = new Film(movie);  
+  return movie_ex.isNotForAdult() ?
     acc :
-    `${acc}${renderMoviesTableRow(movie)}`,
+    `${acc}${movie_ex.renderFilmTableItem()}`
+},
   '');
 
 outputTBody.innerHTML = output;
-
-function renderMoviesTableRow(movie) {
-  return `<tr class="choose-movie-tr">
-<td class="choose-movie-td _text-centered choose-movie__choose-movie-td">
-<input
-  type="checkbox"
-  class="choose-movie__checkbox"
-  id="${MoviesTable.getMovieId.apply(movie)}"
-/>
-<label for="${MoviesTable.getMovieId.apply(movie)}">
-</label>
-</td>
-<td class="choose-movie-td choose-movie__choose-movie-td">
-  ${MoviesTable.getMovieStartTime.apply(movie)}
-</td>
-<td class="choose-movie-td choose-movie__choose-movie-td">
-  ${MoviesTable.getMovieTitle.apply(movie)}
-</td>
-<td class="choose-movie-td choose-movie__choose-movie-td">
-  ${MoviesTable.getMovieGenres.apply(movie)}
-</td>
-</tr>`;
-};

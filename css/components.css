@@ -1,60 +1,116 @@
-/* Стили компонентов, используемых для сборки страниц (кнопки, формы, всяческие слайдеры, всплывающие окна, ...) */
+/* For smaller components, there is the components/ folder. While layout/ is macro (defining the global wireframe), components/ is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. There are usually a lot of files in components/ since the whole site/application should be mostly composed of tiny modules. */
 
 /* ==================== ОБЩИЕ ==================== */
-input,
-textarea,
-select,
+.input,
+.textarea,
+.select,
 button,
 .filebutton {
+  display: block;
+  position: relative;
   /* Блочная модель */
-  width: 100%;
-  padding: 0.67em 0.55rem;
-  /* Типографика */
-  font-size: 0.75rem;
-  color: var(--light-gray);
-  /* Оформление */
-  background-color: var(--light-light-gray);
   border: 1px solid transparent;
   border-radius: 0.6vw;
   outline: 0;
   /* Анимация */
   transition: 0.2s;
-  /* Другие */
-  cursor: pointer;
+  /* Оформление */
+  background-color: var(--light-light-gray);
+}
+.input__label,
+.select__label,
+.textarea__label {
+  position: absolute;
+  padding: 0 0.5rem;
+  top: 0.4rem;
+  left: 0.75em;
+  /* Типографика */
+  font-size: 0.75rem;
+  line-height: 1.3em;
+  color: var(--light-gray);
+  cursor: text;
+}
+.input_filled .input__label,
+.select_filled .select__label,
+.textarea_filled .textarea__label {
+  top: -1.25rem;
+  padding: 0 0.5rem;
+  background-color: var(--white);
+  /* Анимация */
+  transition: inherit;
+}
+.input__input,
+.select__select,
+.textarea__textarea {
+  display: block;
+  width: 100%;
+  padding: 0.67em 0.55rem;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  border-radius: inherit;
 }
 
-input:hover,
-textarea:hover,
-select:hover,
+.input:hover,
+.textarea:hover,
+.select:hover,
 button:hover,
 .filebutton:hover,
 input[type="radio"] + label:hover::before,
-input[type="checkbox"] + label:hover::before {
+.checkbox:hover::before,
+.input_filled,
+.select_filled,
+.textarea_filled {
   /* Оформление */
   background-color: var(--white);
-  border: 1px solid var(--light-light-gray);
-  box-shadow: 0 0 0 5px var(--transparent-green);
+  box-shadow: 0 0 0 0.25rem var(--transparent-green);
 }
 
+.input__err-msg,
+.select__err-msg,
+.textarea__err-msg {
+  display: none;
+  position: absolute;
+  padding: 0 0.5rem;
+  bottom: 0;
+  left: 0.95em;
+  /* Типографика */
+  font-size: 0.6rem;
+  line-height: 1.3em;
+  color: var(--transparent-red);
+}
+.input_error,
+.select_error,
+.textarea_error {
+  box-shadow: 0 0 0 0.25rem var(--transparent-red);
+}
+.input_error .input__err-msg,
+.select_error .select__err-msg,
+.textarea_error .textarea__err-msg {
+  display: block;
+}
 /* ==================== ФОРМА ==================== */
 
-/* ==================== ТЕКСТОВОЕ ПОЛЕ ==================== */
+/* ==================== Input ==================== */
+/* ==================== Textarea ==================== */
 input[type="textarea"],
 textarea {
   height: 6rem;
   resize: none;
 }
 
-/* ==================== ФЛАЖОК ==================== */
+/* ==================== Checkbox, Radio ==================== */
 input[type="radio"],
 input[type="checkbox"] {
   display: none;
 }
 input[type="radio"] + label,
-input[type="checkbox"] + label {
+.checkbox {
   /* Позиционирование */
   position: relative;
   /* Блочная модель */
+  padding-top: 0.67em;
+  padding-bottom: 1.5em;
   padding-left: 1.15rem;
   padding-right: 0.25rem;
   /* Типографика */
@@ -68,19 +124,20 @@ input[type="checkbox"] + label {
   /* Другие */
   cursor: pointer;
 }
+
 input[type="radio"] + label::before,
-input[type="checkbox"] + label::before {
+.checkbox::before {
   content: "";
   /* Позиционирование */
   position: absolute;
   left: 0;
-  top: 0;
+  top: 0.25rem;
   /* Блочная модель */
   width: 1.4em;
   height: 1.4em;
   /* Оформление */
   border: 1px solid var(--basic-green);
-  border-radius: 0.5vw;
+  border-radius: 0.5em;
   /* Анимация */
   transition: 0.2s;
 }
@@ -89,7 +146,15 @@ input[type="radio"] + label::before {
   border-radius: 100%;
 }
 
-/* ==================== ВЫПАДАЮЩИЕ СПИСКИ ==================== */
+.checkbox > input[type="checkbox"]:checked + .svg-checkmark {
+  display: block;
+}
+.checkbox_error::before {  
+  border-color: var(--white);
+  box-shadow: 0 0 0 0.25rem var(--transparent-red);
+}
+
+/* ==================== Select ==================== */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -135,6 +200,7 @@ button,
   background-color: var(--basic-green);
   border: 1px solid transparent;
   border-radius: 0.6vw;
+  cursor: pointer;
 }
 button:hover,
 .filebutton:hover {
@@ -165,6 +231,10 @@ input[type="file"] {
   font-size: 1rem;
   text-transform: uppercase;
 }
+.gift-to-every-one-popup-form-submit {
+  /* Блочная модель */
+  width: 100%;
+}
 .request-call {
   /* Блочная модель */
   padding-top: 0.1em;
@@ -193,4 +263,15 @@ input[type="file"] {
   /* Типографика */
   font-size: 0.6rem;
   line-height: 1.3em;
+}
+
+.gift-to-every-one-popup-close-cross {
+  /* Блочная модель */
+  /* visibility: hidden; */
+  width: fit-content;
+  padding: 0.5rem;
+  /* Оформление */
+  border-radius: 50%;
+  background-color: var(--basic-green);
+  fill: var(--white);
 }

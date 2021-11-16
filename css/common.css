@@ -10,6 +10,10 @@ html {
   box-sizing: inherit;
 }
 
+.hidden {
+  display: none;
+}
+
 /* ==================== ЗАГОЛОВКИ ==================== */
 .header-title {
   /* Блочная модель */
@@ -160,7 +164,8 @@ a {
   /* Блочная модель */
   display: block;
 }
-.iu-logo a {
+.iu-logo a,
+.close-cross a {
   /* Блочная модель */
   display: block;
   height: 100%;
@@ -169,8 +174,7 @@ a {
 /* ==================== ЛОГОТИП ==================== */
 .iu-logo {
   /* Блочная модель */
-  width: 13.9vw;
-  height: 3.7vw;
+  width: 7.8rem;
 }
 
 /* ==================== ИЗОБРАЖЕНИЯ ==================== */
@@ -220,8 +224,8 @@ a {
 }
 .circle {
   /* Блочная модель */
-  width: 2.8vw;
-  height: 2.8vw;
+  width: 1.55rem;
+  height: 1.55rem;
   /* Оформление */
   background-color: var(--transparent-green);
   border-radius: 50%;
@@ -254,6 +258,10 @@ a {
   /* Оформление */
   fill: var(--white);
 }
+.svg-close-cross {
+  width: 1rem;
+  height: 1rem;
+}
 .arrow {
   /* Блочная модель */
   width: 0.45em;
@@ -262,6 +270,15 @@ a {
 }
 .ico-smm {
   /* Блочная модель */
-  width: 1.7vw;
-  height: 1.7vw;
+  width: 50%;
+}
+.svg-checkmark {
+  display: none;
+  width: 1.4em;
+  height: 1.4em;
+  position: absolute;
+  left:0;
+  top: 0.25rem;
+  /* Оформление */
+  fill: var(--basic-green);
 }

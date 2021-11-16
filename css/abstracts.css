@@ -1,4 +1,5 @@
-/* ==================== ЦВЕТА ==================== */
+/* The abstracts/ folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here. */
+/* ==================== Variables ==================== */
 :root {
     /* белый */
     --white: rgb(255, 255, 255);
@@ -7,6 +8,8 @@
     --transparent-green: rgba(170, 243, 77, 0.52);
     --transparent-darkgreen: rgba(97, 125, 33, 0.8);
     --shadow-green: rgba(163, 204, 64, 0.18);
+    /* зеленый */
+    --transparent-red: rgb(157, 42, 42, 0.52);
     /* серый */
     --light-light-gray: rgb(222, 222, 222);
     --shadow-light-gray: rgba(185, 185, 185, 0.37);

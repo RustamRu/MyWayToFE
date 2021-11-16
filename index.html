@@ -17,13 +17,12 @@
     <link rel="stylesheet" href="/css/mediarules.css" />
     <script defer src="lib/jquery/jquery.min.js"></script>
     <script defer src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script defer src="js/utils.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/film.js"></script>
     <script defer src="js/films-table.js"></script>
-    <!-- <style>
-      * {
-        outline: 1px solid red;
-      }
-    </style> -->
+    <!-- <script defer src="js/popup.js"></script>
+    <script defer src="js/forms.js"></script> -->
   </head>
   <body>
     <header class="header">
@@ -49,7 +48,7 @@
           id="viewport-cover"
         ></div>
         <div class="nav-wrapper header__nav-wrapper" id="nav-wrapper">
-          <div class="close-cross header__close-cross" id="close-cross" >
+          <div class="close-cross header__close-cross" id="close-cross">
             <a onclick="hideHeaderMenu()">
               <svg class="svg svg-close-cross">
                 <use xlink:href="#ico-close-cross"></use>
@@ -60,15 +59,15 @@
             class="header-nav-lang header__header-nav-lang"
             aria-label="Язык, верхнее меню"
           >
-                <select
-                  name="lang"
-                  id="lang"
-                  class="lang"
-                  aria-label="Выберите язык страницы"
-                >
-                  <option value="RU" selected>ru</option>
-                  <option value="EN">en</option>
-                </select>
+            <select
+              name="lang"
+              id="lang"
+              class="lang"
+              aria-label="Выберите язык страницы"
+            >
+              <option value="RU" selected>ru</option>
+              <option value="EN">en</option>
+            </select>
           </nav>
           <nav
             class="header-nav-menu header__header-nav-menu"
@@ -388,6 +387,7 @@
               facilisi nullam vehicula ipsum.
             </p>
             <button
+              id="gift-to-every-one-popup-open"
               class="
                 gift-to-everyone-button
                 gift-to-everyone__gift-to-everyone-button
@@ -819,106 +819,97 @@
               <h2 class="feedback-h2 _text-centered feedback__feedback-h2">
                 Обратная связь
               </h2>
-              <form
-                action="/order"
-                class="feedback-form feedback__feedback-form"
-              >
-                <input
-                  type="text"
-                  placeholder="Полное имя"
-                  aria-label="Ввести полное имя"
-                  required
-                  class="feedback-form-item feedback__feedback-form-item"
-                />
-                <select
-                  name="nomer-mesta"
-                  aria-label="Выбрать из списка номер места"
-                  required
-                  class="
-                    feedback-form-item
-                    feedback__feedback-form-item
-                    feedback__feedback-form-select-seat
-                  "
-                >
-                  <option label="Номер места" disabled selected></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-                <input
-                  type="email"
-                  placeholder="Электронный адрес"
-                  aria-label="Ввести электронный адрес"
-                  required
-                  class="feedback-form-item feedback__feedback-form-item"
-                />
-                <textarea
-                  name="otzyv"
-                  cols="30"
-                  rows="10"
-                  placeholder="Напишите свой отзыв"
-                  aria-label="Ввести свой отзыв"
-                  class="
-                    feedback-form-item
-                    feedback__feedback-form-item
-                    feedback-form-textarea
-                    feedback__feedback-form-textarea
-                  "
-                ></textarea>
-                <label
-                  class="
-                    feedback-form-item feedback__feedback-form-item
-                    filebutton
-                    feedback-form-filebutton feedback__feedback-form-filebutton
-                  "
-                >
-                  <input
-                    type="file"
-                    name="feedback-file"
-                    aria-label="Прикрепите файл"
-                  />
-                  <span>Выберите файл</span>
-                </label>
-                <div class="feedback__feedback-form-item">
-                  <input
-                    type="checkbox"
-                    name="pers_data_proc_agree"
-                    id="pers_data_proc_agree"
-                    required
-                    class="
-                      feedback-form-checkbox feedback__feedback-form-checkbox
-                    "
-                  />
-                  <label
-                    for="pers_data_proc_agree"
-                    class="
-                      feedback-form-checkbox-label
-                      feedback__feedback-form-checkbox-label
-                    "
-                    >Я согласен на обработку своих персональных данных</label
+              <form action="/order" id="feedback-form" class="form feedback__form">
+                <div class="form-item-wrap">
+                  <label class="input ">
+                    <input
+                      type="text"
+                      name="name"
+                      aria-label="Ввести полное имя"
+                      required
+                      class="input__input"
+                    />
+                    <p class="input__label">Полное имя</p>
+                    <p class="input__err-msg">Введите корректные данные!</p>
+                  </label>
+                </div>
+                <div class="form-item-wrap">
+                  <label class="input ">
+                    <select
+                      name="seat-number"
+                      aria-label="Выбрать из списка номер места"
+                      required
+                      class="input__input"
+                    >
+                      <option
+                        value="none"
+                        label="Выберите место"
+                        disabled
+                        selected
+                      ></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                    <p class="input__err-msg">
+                      Введите корректные данные!
+                    </p></label
                   >
                 </div>
-                <button
-                  type="submit"
-                  name="feedback-inner-submit-btn1"
-                  title="Отправить форму обратной связи"
-                  aria-label="Отправить форму обратной связи"
-                  class="
-                    feedback-form-item
-                    feedback__feedback-form-item
-                    feedback-form-submit
-                    feedback__feedback-form-submit
-                  "
-                >
-                  Заказать
-                </button>
+                <div class="form-item-wrap">
+                  <label class="input ">
+                    <p class="input__label">Напишите свой отзыв</p>
+                    <textarea
+                      name="feedbackText"
+                      cols="30"
+                      rows="10"
+                      aria-label="Ввести свой отзыв"
+                      class="input__input"
+                    ></textarea>
+                    <p class="input__err-msg">Введите корректные данные!</p>
+                  </label>
+                </div>
+                <div class="form-item-wrap">
+                  <label class="checkbox ">
+                    <input
+                      type="checkbox"
+                      name="feedback-pers_data_proc_agree"
+                      required
+                      class="input__input"
+                    />
+                    Я согласен на обработку своих персональных данных
+                    <svg class="svg-checkmark svg">
+                      <use xlink:href="#ico-check-mark"></use>
+                    </svg>
+                    <p class="input__err-msg">
+                      Введите корректные данные!
+                    </p></label
+                  >
+                </div>
+                <div class="form-item-wrap">
+                  <button
+                    id="feedback-submit-btn"
+                    type="button"
+                    name="feedback-submit-btn"
+                    title="Отправить форму обратной связи"
+                    aria-label="Отправить форму обратной связи"
+                    class="
+                      feedback-form-item
+                      feedback__feedback-form-item
+                      feedback-form-submit
+                      feedback__feedback-form-submit
+                    "
+                  >
+                    Заказать
+                  </button>
+                </div>
               </form>
             </div>
           </div>
@@ -983,7 +974,7 @@
           </div>
           <div class="footer-copyright-text footer__footer-copyright-text">
             <p class="footer-copyright-text-p">
-              Copyright @ 2020 Innopolis University . All Rights Reserved.
+              Copyright @ 2020 Innopolis University. All Rights Reserved.
             </p>
           </div>
         </div>
@@ -1091,7 +1082,7 @@
     <svg style="display: none">
       <symbol
         id="ico-logo"
-        viewBox="0 0 156 40"
+        viewBox="0 0 156 39"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -1262,5 +1253,130 @@
         />
       </symbol>
     </svg>
+    <svg style="display: none">
+      <symbol
+        id="ico-check-mark"
+        viewBox="0 0 11 9"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z"
+        />
+      </symbol>
+    </svg>
+    <div
+      id="gift-to-every-one-popup"
+      class="
+        gift-to-every-one-popup
+        gift-to-every-one__gift-to-every-one-popup
+        hidden
+      "
+    >
+      <div
+        class="
+          gift-to-every-one-popup-form-wrapper
+          gift-to-every-one-popup__gift-to-every-one-popup-form-wrapper
+        "
+      >
+        <div
+          class="
+            close-cross
+            gift-to-every-one-popup-close-cross
+            gift-to-every-one-popup__gift-to-every-one-popup-close-cross
+          "
+        >
+          <a id="gift-to-every-one-popup-close">
+            <svg class="svg svg-close-cross">
+              <use xlink:href="#ico-close-cross"></use>
+            </svg>
+          </a>
+        </div>
+        <form
+          id="gift-to-every-one-popup-form"
+          action=""
+          class="
+            gift-to-every-one-popup-form
+            gift-to-every-one-popup__gift-to-every-one-popup-form
+          "
+        >
+          <div class="form-item-wrap">
+            <label class="input ">
+              <p class="input__label">Полное имя</p>
+              <input
+                type="text"
+                name="name"
+                aria-label="Ввести полное имя"
+                required
+                class="input__input"
+              />
+              <p class="input__err-msg">Введите корректные данные!</p>
+            </label>
+          </div>
+          <div class="form-item-wrap">
+            <label class="input ">
+              <p class="input__label">Электронный адрес</p>
+              <input
+                type="email"
+                name="email"
+                aria-label="Ввести электронный адрес"
+                required
+                class="input__input"
+              />
+              <p class="input__err-msg">Введите корректные данные!</p>
+            </label>
+          </div>
+          <div class="form-item-wrap">
+            <label class="input ">
+              <select
+                name="gift-list"
+                aria-label="Выбрать из списка подарок"
+                required
+                class="input__input"
+              >
+                <option
+                  value="none"
+                  label="Выберите подарок"
+                  disabled
+                  selected
+                ></option>
+                <option value="3rd-ticket-free">Бесплатный 3ий билет</option>
+                <option value="double-popcorn">Удвоим попкорн</option>
+                <option value="10%-discount-couples">Скидка 10% для пар</option>
+              </select>
+              <p class="input__err-msg">Введите корректные данные!</p>
+            </label>
+          </div>
+          <div class="form-item-wrap">
+            <label class="checkbox ">
+              <input
+                type="checkbox"
+                name="gift-to-every-one-popup-pers_data_proc_agree"
+                required
+                class="input__input"
+              />
+              Я согласен на обработку своих персональных данных
+              <svg class="svg-checkmark svg">
+                <use xlink:href="#ico-check-mark"></use>
+              </svg>
+              <p class="input__err-msg">Введите корректные данные!</p></label
+            >
+          </div>
+          <div class="form-item-wrap">
+            <button
+              id="gift-to-every-one-popup-submit-btn"
+              type="button"
+              name="gift-to-every-one-popup-submit-btn"
+              title="Отправить форму выбора подарка"
+              aria-label="Отправить форму выбора подарка"
+              class=""
+            >
+              Отправить
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

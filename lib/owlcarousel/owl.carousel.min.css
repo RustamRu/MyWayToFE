@@ -73,19 +73,26 @@
 }
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev,
-.owl-carousel button.owl-dot {  
+.owl-carousel button.owl-dot {
   background: 0 0;
   /* color: inherit; */
   border: none;
   padding: 0 !important;
   font: inherit;
-   /* Чужой стиль { */
+  /* Чужой стиль { */
   font-size: 2.5rem;
-  margin: auto 11.8vw;
   position: relative;
-  bottom: 29.8vw;
+  bottom: 16.75rem;
   /* } */
 }
+/* Чужой стиль { */
+.owl-carousel .owl-nav button.owl-next {
+  margin-left: 6.65rem;
+}
+.owl-carousel .owl-nav button.owl-prev {
+  margin-right: 6.65rem;
+}
+/* } */
 .owl-carousel.owl-loading {
   opacity: 0;
   display: block;
