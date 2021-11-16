@@ -9,10 +9,10 @@ npm install @babel/core @babel/cli @babel/preset-env
 
 ## Запуск Babel
 shell``
-npm babel js -d target
+npx babel js -d target
 ``
 
 ## Запуск Babel с автоматической пересборкой
 shell``
-npm babel js -d target --watch
+npx babel js -d target --watch
 ``
