@@ -20,29 +20,42 @@ const getFilmDetails = (id) => {
 
 const renderFilmBlock = (film, filmData) => {
   const filmDescId = `movies-item-desc-${film.filmId}`;
-  return `
-            <div class="movies-item movies__movies-item">
-              <a
-                href="${filmData.webUrl}"
-                target="_blank"
-                title="${film.nameRu}"
-              >
-                <img
-                  src="${film.posterUrlPreview}"
-                  alt='Постер фильма "${film.nameRu}"'
-                  class="movies-img movies__movies-img"
-                />
-                <div class="movies-item-cover movies__movies-item-cover"></div>
-                <div class="movies-item-desc movies__movies-item-desc" id="${filmDescId}">
-                  <h3 class="movies-item-desc-h3 movies__movies-item-desc-h3">
-                  ${film.nameRu}
-                  </h3>
-                  <p class="movies-item-desc-p">${filmData.description}
-                  </p>
-                </div>
-              </a>
-            </div>
-            `;
+
+  const movieItem = document.createElement('div');
+  movieItem.classList.add('movies-item', 'movies__movies-item');
+
+  const webLink = document.createElement('a');
+  webLink.href = filmData.webUrl;
+  webLink.target = '_blank';
+  webLink.title = film.nameRu;
+  movieItem.append(webLink);
+
+  const moviePoster = document.createElement('img');
+  moviePoster.src = film.posterUrlPreview;
+  moviePoster.alt = `Постер фильма "${film.nameRu}"`;
+  moviePoster.classList.add('movies-img', 'movies__movies-img');
+  webLink.append(moviePoster);
+
+  const movieCover = document.createElement('div');
+  movieCover.classList.add('movies-item-cover', 'movies__movies-item-cover');
+  webLink.append(movieCover);
+
+  const movieDesc = document.createElement('div');
+  movieDesc.classList.add('movies-item-desc', 'movies__movies-item-desc');
+  movieDesc.id = filmDescId;
+  webLink.append(movieDesc);
+
+  const movieHeader = document.createElement('h3');
+  movieHeader.classList.add('movies-item-desc-h3', 'movies__movies-item-desc-h3');
+  movieHeader.innerText = film.nameRu;
+  movieDesc.append(movieHeader);
+
+  const movieText = document.createElement('p');
+  movieText.classList.add('movies-item-desc-p');
+  movieText.innerText = filmData.description;
+  movieDesc.append(movieText);
+
+  return movieItem.outerHTML;
 }
 
 const getBlockFilmsData = async () => {
@@ -67,7 +80,7 @@ const getBlockFilmsData = async () => {
       let i = 0;
       let moviesContainerHTML = '';
 
-      for (const [,filmLayout] of filmsLayout) {
+      for (const [, filmLayout] of filmsLayout) {
         moviesContainerHTML += filmLayout;
 
         i++;
