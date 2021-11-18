@@ -56,8 +56,8 @@ body {
 .header__iu-logo {
   /* Позиционирование */
   position: absolute;
-  top: 4.45vw;
-  left: 7.9vw;
+  top: 2.5rem;
+  left: 4.45rem;
   z-index: 1;
 }
 .header-title-div {
@@ -613,8 +613,8 @@ body {
 .header__header-nav-contacts {
   /* Позиционирование */
   position: absolute;
-  top: 3.5vw;
-  left: 21.65vw;
+  top: 2rem;
+  left: 12.2rem;
 }
 .header-nav-menu {
   /* Блочная модель */
@@ -623,8 +623,8 @@ body {
 .header__header-nav-menu {
   /* Позиционирование */
   position: absolute;
-  top: 6.6vw;
-  left: 18.9vw;
+  top: 3.7rem;
+  left: 10.6rem;
 }
 .header__header-nav-lang {
   /* Позиционирование */
@@ -658,7 +658,7 @@ body {
   vertical-align: middle;
   /* Блочная модель */
   display: inline-block;
-  margin: auto 0 auto 3.85rem;
+  margin: auto 0 auto 6.9vw;
 }
 .header-nav-contacts__request-call {
   /* Позиционирование */
