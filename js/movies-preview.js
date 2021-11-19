@@ -64,17 +64,17 @@ const getBlockFilmsData = async () => {
     const data = await answer.json();
     const filmsLayout = new Map();
 
-    const delay = (ms = 1) => new Promise(r => setTimeout(r, ms));
-
-    const getDataSeries = async moviesfunc => {
-
+    const getDataSeries = async () => {
       for (let film of data.films) {
-        await delay();
-        const answer = await getFilmDetails(film.filmId);
-        const filmData = await answer.json();
+        try {
+          const answer = await getFilmDetails(film.filmId);
+          const filmData = await answer.json();
 
-        const filmBlock = renderFilmBlock(film, filmData);
-        filmsLayout.set(film.filmId, filmBlock);
+          const filmBlock = renderFilmBlock(film, filmData);
+          filmsLayout.set(film.filmId, filmBlock);
+        } catch (error) {
+          console.error(error);
+        }
       }
 
       let i = 0;
@@ -89,7 +89,7 @@ const getBlockFilmsData = async () => {
 
       moviesContainer.innerHTML = moviesContainerHTML;
     }
-    getDataSeries()
+    await getDataSeries();
   } catch (error) {
     console.error(error);
   }
