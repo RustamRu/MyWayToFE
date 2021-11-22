@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Продажа билетов в кино в Иннополисе</title>
+    <title>Информация о фильме</title>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/abstracts.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
@@ -12,17 +12,15 @@
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/lib/owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/lib/owlcarousel/owl.theme.default.min.css" />
     <link rel="stylesheet" href="/css/mediarules.css" />
     <link rel="stylesheet" href="/css/single.css" />
-<<<<<<< HEAD
+    <script defer src="/lib/jquery/jquery.min.js"></script>
+    <script defer src="/lib/owlcarousel/owl.carousel.min.js"></script>
     <script defer src="/js/utils.js"></script>
     <script defer src="/js/main.js"></script>
-    <script defer src="/js/popup.js"></script>
-=======
-    <script defer src="js/utils.js"></script>
-    <script defer src="js/main.js"></script>
-    <script defer src="js/popup.js"></script>
->>>>>>> 58db8d8fc21ad9f1dcb404fe2a9989a6ba2174a4
+    <script defer src="/js/single.js"></script>
   </head>
   <body>
     <header class="header">
@@ -173,34 +171,38 @@
           <div class="preview-container movie-info-section__preview-container">
             <img
               class="preview-container__img"
-              src="/images/movies/poster-zhivoe.png"
-              alt=""
+              src=""
+              alt="Загрузка постера фильма..."
+              id="movie-poster"
             />
           </div>
           <div class="movie-info">
-            <h1 class="movie-info__header">Живое</h1>
+            <h1 class="movie-info__header" id="movie-header">Загрузка...</h1>
             <div class="rank-score-wrapper">
               <div class="rank">
-                <svg class="svg rank__svg">
+                <svg data-rating-value="1" class="svg rank__svg">
                   <use xlink:href="#ico-star"></use>
                 </svg>
-                <svg class="svg rank__svg">
+                <svg data-rating-value="2" class="svg rank__svg">
                   <use xlink:href="#ico-star"></use>
                 </svg>
-                <svg class="svg rank__svg">
+                <svg data-rating-value="3" class="svg rank__svg">
                   <use xlink:href="#ico-star"></use>
                 </svg>
-                <svg class="svg rank__svg">
+                <svg data-rating-value="4" class="svg rank__svg">
                   <use xlink:href="#ico-star"></use>
                 </svg>
-                <svg class="svg rank__svg">
+                <svg data-rating-value="5" class="svg rank__svg">
                   <use xlink:href="#ico-star"></use>
                 </svg>
-                <span class="rank__value">5.0</span>
+                <span class="rank__value" id="rank">Загрузка...</span>
               </div>
               <div class="score">
-                <span class="score__value">9/10</span
-                ><span class="score__source">Rotten Tomatoes</span>
+                <span class="score__value" id="movie-score-value"
+                  >Загрузка...</span
+                ><span class="score__source" id="movie-score-source"
+                  >Загрузка...</span
+                >
               </div>
             </div>
             <div class="date-views-likes-wrapper">
@@ -208,30 +210,30 @@
                 <svg class="svg release-date__svg">
                   <use xlink:href="#ico-calendar"></use>
                 </svg>
-                <span class="release-date__value">25 Ноябрь 2019</span>
+                <span class="release-date__value" id="movie-release-date"
+                  >Загрузка...</span
+                >
               </div>
               <div class="views-counter">
                 <svg class="svg views-counter__svg">
                   <use xlink:href="#ico-eye"></use>
                 </svg>
-                <span class="views-counter__value">2.5K Views</span>
+                <span class="views-counter__value" id="views-counter"
+                  >Загрузка...</span
+                >
               </div>
+
               <div class="likes-counter">
-                <svg class="svg release-date__svg">
+                <svg class="svg likes-counter__svg" id="likes-counter-svg">
                   <use xlink:href="#ico-heart"></use>
                 </svg>
-                <span class="likes-counter__value">200 Likes</span>
+                <span class="likes-counter__value" id="likes-counter"
+                  >Загрузка...</span
+                >
               </div>
             </div>
-            <div class="movie-info__movie-desc">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-              </p>
+            <div class="movie-info__movie-desc" id="movie-desc">
+              <p>Загрузка...</p>
             </div>
             <div
               class="
@@ -240,32 +242,54 @@
               "
             >
               <div class="movie-props-grid-container__key">Страна</div>
-              <div class="movie-props-grid-container__value">Дания</div>
+              <div class="movie-props-grid-container__value" id="movie-country">
+                ...
+              </div>
               <div class="movie-props-grid-container__key">Режиссер</div>
-              <div class="movie-props-grid-container__value">Михаэль Ноер</div>
+              <div
+                class="movie-props-grid-container__value"
+                id="movie-directors"
+              >
+                Загрузка...
+              </div>
               <div class="movie-props-grid-container__key">Сценарий</div>
-              <div class="movie-props-grid-container__value">
-                Джеспер Финк, Михаэль Ноер
+              <div class="movie-props-grid-container__value" id="movie-writers">
+                Загрузка...
               </div>
               <div class="movie-props-grid-container__key">Продюсер</div>
-              <div class="movie-props-grid-container__value">
-                Матильда Аппелин, Рене Эзра, Томас Радур, ...
+              <div
+                class="movie-props-grid-container__value"
+                id="movie-producers"
+              >
+                Загрузка...
               </div>
               <div class="movie-props-grid-container__key">Оператор</div>
-              <div class="movie-props-grid-container__value">
-                Стурла Брандт Грёвлен
+              <div
+                class="movie-props-grid-container__value"
+                id="movie-operators"
+              >
+                Загрузка...
               </div>
               <div class="movie-props-grid-container__key">Композитор</div>
-              <div class="movie-props-grid-container__value">
-                Руне Тонсгор Сёренсен
+              <div
+                class="movie-props-grid-container__value"
+                id="movie-composers"
+              >
+                Загрузка...
               </div>
               <div class="movie-props-grid-container__key">Художник</div>
-              <div class="movie-props-grid-container__value">
-                Сорен Шварцберг, Луиз Ниссен
+              <div
+                class="movie-props-grid-container__value"
+                id="movie-designers"
+              >
+                Загрузка...
               </div>
               <div class="movie-props-grid-container__key">Время</div>
-              <div class="movie-props-grid-container__value">
-                <strong>104 мин. / 01:44</strong>
+              <div
+                class="movie-props-grid-container__value"
+                id="movie-duration"
+              >
+                <strong>Загрузка...</strong>
               </div>
             </div>
           </div>
@@ -281,73 +305,84 @@
               <div class="jenre-movies-info__header"><h3>Экшн</h3></div>
               <div class="jenre-movies-info__page-counter">1/30</div>
             </div>
-            <div class="jenre-movies-slider jenre-movies-info__jenre-movies-slider">
-              <div class="jenre-movies-slider__nav-prev">
-                <svg class="svg nav__svg">
-                  <use xlink:href="#ico-circled-bracket-left"></use>
-                </svg>
+            <div
+              class="jenre-movies-slider jenre-movies-info__jenre-movies-slider"
+            >
+              <div
+                class="
+                  jenre-movies-slider__items-container
+                  owl-carousel owl-theme
+                "
+                id="jenre-movies-slider__items-container1"
+              >
+                <div class="jenre-movies-slider-item">
+                  <div class="jenre-movies-slider-item__img">
+                    <img src="/images/movies/poster-lyod.png" alt="" />
+                  </div>
+                  <div class="jenre-movies-slider-item__title">Лёд</div>
+                  <div class="jenre-movies-slider-item__info">
+                    2018, фильм Ивана Иванова
+                  </div>
+                </div>
+                <div class="jenre-movies-slider-item">
+                  <div class="jenre-movies-slider-item__img">
+                    <img src="/images/movies/poster-lyod.png" alt="" />
+                  </div>
+                  <div class="jenre-movies-slider-item__title">Лёд</div>
+                  <div class="jenre-movies-slider-item__info">
+                    2018, фильм Ивана Иванова
+                  </div>
+                </div>
+                <div class="jenre-movies-slider-item">
+                  <div class="jenre-movies-slider-item__img">
+                    <img src="/images/movies/poster-lyod.png" alt="" />
+                  </div>
+                  <div class="jenre-movies-slider-item__title">Лёд</div>
+                  <div class="jenre-movies-slider-item__info">
+                    2018, фильм Ивана Иванова
+                  </div>
+                </div>
+                <div class="jenre-movies-slider-item">
+                  <div class="jenre-movies-slider-item__img">
+                    <img src="/images/movies/poster-lyod.png" alt="" />
+                  </div>
+                  <div class="jenre-movies-slider-item__title">Лёд</div>
+                  <div class="jenre-movies-slider-item__info">
+                    2018, фильм Ивана Иванова
+                  </div>
+                </div>
+                <div class="jenre-movies-slider-item">
+                  <div class="jenre-movies-slider-item__img">
+                    <img src="/images/movies/poster-lyod.png" alt="" />
+                  </div>
+                  <div class="jenre-movies-slider-item__title">Лёд</div>
+                  <div class="jenre-movies-slider-item__info">
+                    2018, фильм Ивана Иванова
+                  </div>
+                </div>
+                <div class="jenre-movies-slider-item">
+                  <div class="jenre-movies-slider-item__img">
+                    <img src="/images/movies/poster-lyod.png" alt="" />
+                  </div>
+                  <div class="jenre-movies-slider-item__title">Лёд</div>
+                  <div class="jenre-movies-slider-item__info">
+                    2018, фильм Ивана Иванова
+                  </div>
+                </div>
+                <div class="jenre-movies-slider-item">
+                  <div class="jenre-movies-slider-item__img">
+                    <img src="/images/movies/poster-lyod.png" alt="" />
+                  </div>
+                  <div class="jenre-movies-slider-item__title">Лёд</div>
+                  <div class="jenre-movies-slider-item__info">
+                    2018, фильм Ивана Иванова
+                  </div>
+                </div>
               </div>
-              <div class="jenre-movies-slider__items-container">
-                <div class="jenre-movies-slider-item">
-                  <div class="jenre-movies-slider-item__img">
-                    <img src="/images/movies/poster-lyod.png" alt="" />
-                  </div>
-                  <div class="jenre-movies-slider-item__title">Лёд</div>
-                  <div class="jenre-movies-slider-item__info">
-                    2018, фильм Ивана Иванова
-                  </div>
-                </div>
-                <div class="jenre-movies-slider-item">
-                  <div class="jenre-movies-slider-item__img">
-                    <img src="/images/movies/poster-lyod.png" alt="" />
-                  </div>
-                  <div class="jenre-movies-slider-item__title">Лёд</div>
-                  <div class="jenre-movies-slider-item__info">
-                    2018, фильм Ивана Иванова
-                  </div>
-                </div>
-                <div class="jenre-movies-slider-item">
-                  <div class="jenre-movies-slider-item__img">
-                    <img src="/images/movies/poster-lyod.png" alt="" />
-                  </div>
-                  <div class="jenre-movies-slider-item__title">Лёд</div>
-                  <div class="jenre-movies-slider-item__info">
-                    2018, фильм Ивана Иванова
-                  </div>
-                </div>
-                <div class="jenre-movies-slider-item">
-                  <div class="jenre-movies-slider-item__img">
-                    <img src="/images/movies/poster-lyod.png" alt="" />
-                  </div>
-                  <div class="jenre-movies-slider-item__title">Лёд</div>
-                  <div class="jenre-movies-slider-item__info">
-                    2018, фильм Ивана Иванова
-                  </div>
-                </div>
-                <div class="jenre-movies-slider-item">
-                  <div class="jenre-movies-slider-item__img">
-                    <img src="/images/movies/poster-lyod.png" alt="" />
-                  </div>
-                  <div class="jenre-movies-slider-item__title">Лёд</div>
-                  <div class="jenre-movies-slider-item__info">
-                    2018, фильм Ивана Иванова
-                  </div>
-                </div>
-                <div class="jenre-movies-slider-item">
-                  <div class="jenre-movies-slider-item__img">
-                    <img src="/images/movies/poster-lyod.png" alt="" />
-                  </div>
-                  <div class="jenre-movies-slider-item__title">Лёд</div>
-                  <div class="jenre-movies-slider-item__info">
-                    2018, фильм Ивана Иванова
-                  </div>
-                </div>
-              </div>
-              <div class="jenre-movies-slider__nav-next">
-                <svg class="svg nav__svg">
-                  <use xlink:href="#ico-circled-bracket-right"></use>
-                </svg>
-              </div>
+              <div
+                class="jenre-movies-slider__nav"
+                id="jenre-movies-slider__nav1"
+              ></div>
             </div>
           </div>
           <div class="jenre-movies-info">
@@ -355,13 +390,16 @@
               <div class="jenre-movies-info__header"><h3>Драма</h3></div>
               <div class="jenre-movies-info__page-counter">1/30</div>
             </div>
-            <div class="jenre-movies-slider jenre-movies-info__jenre-movies-slider">
-              <div class="jenre-movies-slider__nav-prev">
-                <svg class="svg nav__svg">
-                  <use xlink:href="#ico-circled-bracket-left"></use>
-                </svg>
-              </div>
-              <div class="jenre-movies-slider__items-container">
+            <div
+              class="jenre-movies-slider jenre-movies-info__jenre-movies-slider"
+            >
+              <div
+                class="
+                  jenre-movies-slider__items-container
+                  owl-carousel owl-theme
+                "
+                id="jenre-movies-slider__items-container2"
+              >
                 <div class="jenre-movies-slider-item">
                   <div class="jenre-movies-slider-item__img">
                     <img src="/images/movies/poster-lyod.png" alt="" />
@@ -417,11 +455,10 @@
                   </div>
                 </div>
               </div>
-              <div class="jenre-movies-slider__nav-next">
-                <svg class="svg nav__svg">
-                  <use xlink:href="#ico-circled-bracket-right"></use>
-                </svg>
-              </div>
+              <div
+                class="jenre-movies-slider__nav"
+                id="jenre-movies-slider__nav2"
+              ></div>
             </div>
           </div>
         </section>
