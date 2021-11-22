@@ -1,5 +1,3 @@
-moviesContainer.innerHTML = 'Загрузка превью фильмов ...';
-
 const renderFilmBlock = (film, filmData) => {
   const filmDescId = `movies-item-desc-${film.filmId}`;
 
@@ -57,7 +55,7 @@ const getBlockFilmsData = async () => {
           const filmBlock = renderFilmBlock(film, filmData);
           filmsLayout.set(film.filmId, filmBlock);
           resolve(filmsLayout);
-        }, requests.length * 40);
+        }, requests.length * 100);
       });
 
       requests.push(getFilmData);

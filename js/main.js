@@ -55,3 +55,13 @@ const getFilmDistrDetails = (id) => {
 const getFilmStaffDetails = (id) => {
   return getKinopoiskAPIData(`https://kinopoiskapiunofficial.tech/api/v1/staff?filmId=${id}`);
 }
+
+$(function () {
+  $('.scrollup').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 1000);
+  })
+})
+
+$(window).scroll(() => { $(this).scrollTop() > 200 ? $('.scrollup').fadeIn() : $('.scrollup').fadeOut() });

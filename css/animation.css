@@ -82,3 +82,48 @@
 .gift-to-every-one-popup-close-cross:hover .svg {
   fill: var(--basic-green);
 }
+
+@keyframes shine-avatar {
+  from {
+    background-color: var(--light-light-gray);
+  }
+  
+  40% {
+    background-color: var(--transparent-green);
+  }
+  
+  to {
+    background-color: var(--light-light-gray);
+  }
+}
+
+.skeleton-box {
+  animation: shine-avatar 1.6s infinite ease-in-out;
+}
+.skeleton-box:nth-child(1) {
+  animation-delay: -.9s;
+}
+.skeleton-box:nth-child(2) {
+  animation-delay: -.8s;
+}
+.skeleton-box:nth-child(3) {
+  animation-delay: -.7s;
+}
+.skeleton-box:nth-child(4) {
+  animation-delay: -.2s;
+}
+.skeleton-box:nth-child(5) {
+  animation-delay: -.1s;
+}
+.skeleton-box:nth-child(6) {
+  animation-delay: -.6s;
+}
+.skeleton-box:nth-child(7) {
+  animation-delay: -.3s;
+}
+.skeleton-box:nth-child(8) {
+  animation-delay: -.4s;
+}
+.skeleton-box:nth-child(9) {
+  animation-delay: -.5s;
+}

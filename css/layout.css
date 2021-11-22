@@ -358,6 +358,12 @@ body {
   /* Блочная модель */
   padding: 0.85em 1.15rem;
 }
+.skeleton-box {
+  width: 98%;
+  height: 98%;
+  border-radius: 15%;
+  margin: 1%;
+}
 
 /* ==================== Секция "Товары" ==================== */
 .main-container__goods {
