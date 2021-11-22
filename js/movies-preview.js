@@ -47,7 +47,8 @@ const getBlockFilmsData = async () => {
     const requests = [];
     const filmsLayout = new Map();
 
-    for (let film of data.films) {
+    for (let i = 0; i < 9; i++) {
+      let film = data.films[i];
       const getFilmData = new Promise((resolve) => {
         setTimeout(async () => {
           const answer = await getFilmDetails(film.filmId);
@@ -60,8 +61,6 @@ const getBlockFilmsData = async () => {
       });
 
       requests.push(getFilmData);
-
-      if (requests.length == 9) { break; }
     }
 
     await Promise.all(requests);
