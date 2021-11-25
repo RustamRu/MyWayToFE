@@ -11,7 +11,7 @@ const gifttoeveryonePopup_emailField = initFormItem(gifttoeveryonePopup_emailFie
 const gifttoeveryonePopup_giftListField = initFormItem(gifttoeveryonePopup_giftListFieldWrapper, 'select', 'input_filled', 'input_error');
 const gifttoeveryonePopup_agreeMarkField = initFormItem(gifttoeveryonePopup_agreeMarkFieldWrapper, 'checkbox', 'checkbox_filled', 'checkbox_error');
 
-gifttoeveryonePopup_submitButton.addEventListener('click', function (event) {
+gifttoeveryonePopup_submitButton.addEventListener('submit', function (event) {
     event.preventDefault();
     const gifttoeveryonePopup_nameValue = gifttoeveryonePopup_nameField.getValue();
     const gifttoeveryonePopup_emailValue = gifttoeveryonePopup_emailField.getValue();
@@ -55,16 +55,18 @@ gifttoeveryonePopup_submitButton.addEventListener('click', function (event) {
 const feedback_form = document.querySelector('#feedback-form');
 const feedback_submitButton = document.querySelector('#feedback-submit-btn');
 const feedback_nameFieldWrapper = document.querySelector('#feedback-form input[name="name"]').parentNode;
-const feedback_seatNumberFieldWrapper = document.querySelector('#feedback-form select[name="seat-number"]').parentNode;
-const feedback_feedbackTextFieldWrapper = document.querySelector('#feedback-form textarea[name="feedbackText"]').parentNode;
-const feedback_agreeMarkFieldWrapper = document.querySelector('#feedback-form input[name="feedback-pers_data_proc_agree"]').parentNode;
+const feedback_emailFieldWrapper = document.querySelector('#feedback-form input[name="email"]').parentNode;
+const feedback_seatNumberFieldWrapper = document.querySelector('#feedback-form select[name="place"]').parentNode;
+// const feedback_feedbackTextFieldWrapper = document.querySelector('#feedback-form textarea[name="feedbackText"]').parentNode;
+const feedback_agreeMarkFieldWrapper = document.querySelector('#feedback-form input[name="agree"]').parentNode;
 
 const feedback_nameField = initFormItem(feedback_nameFieldWrapper, 'input', 'input_filled', 'input_error');
+const feedback_emailField = initFormItem(feedback_emailFieldWrapper, 'input', 'input_filled', 'input_error');
 const feedback_seatNumberField = initFormItem(feedback_seatNumberFieldWrapper, 'select', 'input_filled', 'input_error');
-const feedback_feedbackTextField = initFormItem(feedback_feedbackTextFieldWrapper, 'input', 'input_filled', 'input_error');
+// const feedback_feedbackTextField = initFormItem(feedback_feedbackTextFieldWrapper, 'input', 'input_filled', 'input_error');
 const feedback_agreeMarkField = initFormItem(feedback_agreeMarkFieldWrapper, 'checkbox', 'checkbox_filled', 'checkbox_error');
 
-feedback_submitButton.addEventListener('click', function (event) {
+/* feedback_form.addEventListener('submit', function (event) {
     event.preventDefault();
     const feedback_nameValue = feedback_nameField.getValue();
     const feedback_seatNumberValue = feedback_seatNumberField.getValue();
@@ -102,7 +104,7 @@ feedback_submitButton.addEventListener('click', function (event) {
     const url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
     url.search = new URLSearchParams(data).toString();
     fetch(url.toString());
-});
+}); */
 
 
 /* ========== Функции ========== */

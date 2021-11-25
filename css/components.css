@@ -72,11 +72,14 @@ input[type="radio"] + label:hover::before,
   display: none;
   position: absolute;
   padding: 0 0.5rem;
-  bottom: 0;
+  /* bottom: 0; */
+  bottom: 0.15rem;
   left: 0.95em;
   /* Типографика */
-  font-size: 0.6rem;
-  line-height: 1.3em;
+  /* font-size: 0.6rem; */
+  font-size: 0.5rem;
+  /* line-height: 1.3em; */
+  line-height: 0.8em;
   color: var(--transparent-red);
 }
 .input_error,
@@ -85,6 +88,7 @@ input[type="radio"] + label:hover::before,
   box-shadow: 0 0 0 0.25rem var(--transparent-red);
 }
 .input_error .input__err-msg,
+.checkbox_error .input__err-msg,
 .select_error .select__err-msg,
 .textarea_error .textarea__err-msg {
   display: block;
@@ -109,6 +113,7 @@ input[type="radio"] + label,
   /* Позиционирование */
   position: relative;
   /* Блочная модель */
+  display: block;
   padding-top: 0.67em;
   padding-bottom: 1.5em;
   padding-left: 1.15rem;

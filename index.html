@@ -28,6 +28,7 @@
     <script defer src="/js/forms.js"></script>
     <script defer src="/js/movies-preview.js"></script>
     <script defer src="/js/city.js"></script>
+    <script defer src="/js/order.js"></script>
   </head>
   <body>
     <header class="header">
@@ -604,10 +605,11 @@
                 Обратная связь
               </h2>
               <form
-                action="/order"
                 id="feedback-form"
                 class="form feedback__form"
+                novalidate
               >
+              <input type="hidden" name="api_key" value="J7bOU7XHDiLX6czdSzbL">
                 <div class="form-item-wrap">
                   <label class="input input_filled input_error">
                     <input
@@ -623,8 +625,21 @@
                 </div>
                 <div class="form-item-wrap">
                   <label class="input input_filled input_error">
+                    <input
+                      type="email"
+                      name="email"
+                      aria-label="Ввести email"
+                      required
+                      class="input__input"
+                    />
+                    <p class="input__label">Электронный адрес</p>
+                    <p class="input__err-msg">Введите корректные данные!</p>
+                  </label>
+                </div>
+                <div class="form-item-wrap">
+                  <label class="input input_filled input_error">
                     <select
-                      name="seat-number"
+                      name="place"
                       aria-label="Выбрать из списка номер места"
                       required
                       class="input__input"
@@ -651,7 +666,7 @@
                     </p></label
                   >
                 </div>
-                <div class="form-item-wrap">
+                <!-- <div class="form-item-wrap">
                   <label class="input input_filled input_error">
                     <p class="input__label">Напишите свой отзыв</p>
                     <textarea
@@ -663,12 +678,12 @@
                     ></textarea>
                     <p class="input__err-msg">Введите корректные данные!</p>
                   </label>
-                </div>
+                </div>-->
                 <div class="form-item-wrap">
                   <label class="checkbox checkbox_filled checkbox_error">
                     <input
                       type="checkbox"
-                      name="feedback-pers_data_proc_agree"
+                      name="agree"
                       required
                       class="input__input"
                     />
@@ -680,11 +695,11 @@
                       Введите корректные данные!
                     </p></label
                   >
-                </div>
+                </div> 
                 <div class="form-item-wrap">
                   <button
                     id="feedback-submit-btn"
-                    type="button"
+                    type="submit"
                     name="feedback-submit-btn"
                     title="Отправить форму обратной связи"
                     aria-label="Отправить форму обратной связи"
@@ -1154,7 +1169,7 @@
           <div class="form-item-wrap">
             <button
               id="gift-to-every-one-popup-submit-btn"
-              type="button"
+              type="submit"
               name="gift-to-every-one-popup-submit-btn"
               title="Отправить форму выбора подарка"
               aria-label="Отправить форму выбора подарка"
