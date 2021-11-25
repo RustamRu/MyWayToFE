@@ -1,8 +1,9 @@
 const info = new URLSearchParams(location.search);
-const filmId = info.get('id');
+const filmId = Number(info.get('id'));
 
 const getFilmData = async () => {
-    const filmData = await getFilmDetails(filmId).then(d => d.json());
+    const response = await getFilmDetails(filmId);
+    const filmData = await response.json();
 
     const header = document.getElementById('movie-header');
     header.textContent = filmData.nameRu;
@@ -47,7 +48,7 @@ const getFilmMetaInfo = async () => {
 
 
     const rank = document.getElementById('rank');
-    const rankAvg = filmInfo.ratings.reduce((a, b) => +a + +b, 0) / filmInfo.ratings.length;
+    const rankAvg = filmInfo.ratings.reduce((acc, item) => acc + +item, 0) / filmInfo.ratings.length;
     const rankValue = Math.round(rankAvg * 10) / 10;
     const rankString = String(rankValue).padEnd(3, '.0');
     rank.textContent = rankString;
@@ -181,7 +182,7 @@ const getOtherFilmsData = async () => {
                 }, i * 150);
             })
             .then((directorName)=>{
-                film.genres.every(x => {
+                film.genres.every(x => { // for
                     isActionFilm = x.genre === "боевик";
                     isDramaFilm = x.genre === "драма";
     

@@ -775,6 +775,55 @@ body {
 }
 
 /* ==================== МОДАЛЬНЫЕ ОКНА ==================== */
+.choose-city-popup {
+  /* Блочная модель */
+  /* Оформление */
+  background: var(--transparent-gray);
+}
+.header__choose-city-popup {
+  /* Позиционирование */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+.choose-city-popup__wrapper {
+  /* Позиционирование */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Блочная модель */
+  padding: 2rem;
+  /* Оформление */
+  background: var(--white);
+  border-radius: 2rem;
+}
+.choose-city-popup__close-cross {
+  margin-left: auto;
+}
+.choose-city-popup__delivery_price {
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--basic-green);
+}
+.choose-city-popup__city-input {
+  margin-bottom: 0.5rem;
+}
+.choose-city-popup__search-result li {
+  padding: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--light-gray);
+  cursor: pointer;
+}
+.choose-city-popup__search-result li:hover {
+  background-color: var(--light-light-gray);
+  color: var(--black);
+}
+
 .gift-to-every-one-popup {
   /* Блочная модель */
   /* Оформление */

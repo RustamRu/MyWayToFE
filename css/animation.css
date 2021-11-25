@@ -75,11 +75,13 @@
   visibility: visible;
 }
 
-.gift-to-every-one-popup-close-cross:hover {
+.gift-to-every-one-popup-close-cross:hover,
+.choose-city-popup__close-cross:hover {
   /* Оформление */
   background-color: var(--white);
 }
-.gift-to-every-one-popup-close-cross:hover .svg {
+.gift-to-every-one-popup-close-cross:hover .svg,
+.choose-city-popup__close-cross:hover .svg {
   fill: var(--basic-green);
 }
 

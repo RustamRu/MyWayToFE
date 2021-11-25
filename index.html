@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/mediarules.css" />
+
     <link rel="stylesheet" href="/lib/owlcarousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="/lib/owlcarousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="/css/mediarules.css" />
-    <script defer src="/lib/jquery/jquery.min.js"></script>
+
+    <script defer src="/lib/jquery/jquery-3.6.0.min.js"></script>
     <script defer src="/lib/owlcarousel/owl.carousel.min.js"></script>
+
     <script defer src="/js/utils.js"></script>
     <script defer src="/js/main.js"></script>
     <script defer src="/js/film.js"></script>
@@ -24,6 +27,7 @@
     <script defer src="/js/popup.js"></script>
     <script defer src="/js/forms.js"></script>
     <script defer src="/js/movies-preview.js"></script>
+    <script defer src="/js/city.js"></script>
   </head>
   <body>
     <header class="header">
@@ -136,8 +140,8 @@
                   header-nav-contacts__header-nav-contacts-li
                 "
               >
-                <a href="#how-to-get" class="header__link"
-                  >ул. Спортивная, д. 1</a
+                <a href="#" class="header__link" id="city-link"
+                  >Определение населенного пункта ...</a
                 >
               </li>
               <li
@@ -409,7 +413,10 @@
               pulvinar etiam non quam.
             </p>
           </div>
-          <div class="movies-container movies__movies-container" id="movies-container">
+          <div
+            class="movies-container movies__movies-container"
+            id="movies-container"
+          >
             <div class="skeleton-box"></div>
             <div class="skeleton-box"></div>
             <div class="skeleton-box"></div>
@@ -596,7 +603,11 @@
               <h2 class="feedback-h2 _text-centered feedback__feedback-h2">
                 Обратная связь
               </h2>
-              <form action="/order" id="feedback-form" class="form feedback__form">
+              <form
+                action="/order"
+                id="feedback-form"
+                class="form feedback__form"
+              >
                 <div class="form-item-wrap">
                   <label class="input input_filled input_error">
                     <input
@@ -1156,5 +1167,28 @@
       </div>
     </div>
     <div class="scrollup body__scrollup">^</div>
+    <div
+      id="choose-city-popup"
+      class="choose-city-popup header__choose-city-popup hidden"
+    >
+      <div class="choose-city-popup__wrapper">
+        <div class="close-cross choose-city-popup__close-cross">
+          <a id="choose-city-popup-close">
+            <svg class="svg svg-close-cross">
+              <use xlink:href="#ico-close-cross"></use>
+            </svg>
+          </a>
+        </div>
+        <h3>Выбор города</h3>
+        <div id="delivery_price" class="choose-city-popup__delivery_price"></div>
+        <input
+          type="text"
+          autocomplete="off"
+          id="city_input"
+          class="choose-city-popup__city-input"
+        />
+        <div id="search_result" class="choose-city-popup__search-result"></div>
+      </div>
+    </div>
   </body>
 </html>

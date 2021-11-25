@@ -42,12 +42,10 @@ const getBlockFilmsData = async () => {
   try {
     const answer = await getTopFilms();
     const data = await answer.json();
-    const requests = [];
-    const filmsLayout = new Map();
-
-    for (let i = 0; i < 9; i++) {
-      let film = data.films[i];
-      const getFilmData = new Promise((resolve) => {
+    
+    const requests = Array.from({ length: 9 }, (_v, i) => {
+      const film = data.films[i];
+      return new Promise((resolve) => {
         setTimeout(async () => {
           const answer = await getFilmDetails(film.filmId);
           const filmData = await answer.json();
@@ -55,11 +53,11 @@ const getBlockFilmsData = async () => {
           const filmBlock = renderFilmBlock(film, filmData);
           filmsLayout.set(film.filmId, filmBlock);
           resolve(filmsLayout);
-        }, requests.length * 100);
+        }, i * 200);
       });
+    });
 
-      requests.push(getFilmData);
-    }
+    const filmsLayout = new Map();
 
     await Promise.all(requests);
 

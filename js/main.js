@@ -58,7 +58,7 @@ const getFilmStaffDetails = (id) => {
 
 $(function () {
   $('.scrollup').click(function () {
-    $("html, body").animate({
+    $("html").animate({
       scrollTop: 0
     }, 1000);
   })

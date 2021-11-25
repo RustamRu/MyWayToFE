@@ -265,7 +265,8 @@ input[type="file"] {
   line-height: 1.3em;
 }
 
-.gift-to-every-one-popup-close-cross {
+.gift-to-every-one-popup-close-cross,
+.choose-city-popup__close-cross {
   /* Блочная модель */
   /* visibility: hidden; */
   width: fit-content;
