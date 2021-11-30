@@ -81,18 +81,18 @@
   font: inherit;
 }
 /* Чужой стиль { */
-  .reviews-container.owl-carousel .owl-nav button.owl-next,
-  .reviews-container.owl-carousel .owl-nav button.owl-prev,
-  .reviews-container.owl-carousel button.owl-dot {
+  .reviews-gallery.owl-carousel .owl-nav button.owl-next,
+  .reviews-gallery.owl-carousel .owl-nav button.owl-prev,
+  .reviews-gallery.owl-carousel button.owl-dot {
   color: var(--basic-green);
   font-size: 2.5rem;
   position: relative;
   bottom: 16.75rem;
 }
-.reviews-container.owl-carousel .owl-nav button.owl-prev {
+.reviews-gallery.owl-carousel .owl-nav button.owl-prev {
   margin-right: 6.65rem;
 }
-.reviews-container.owl-carousel .owl-nav button.owl-next {
+.reviews-gallery.owl-carousel .owl-nav button.owl-next {
   margin-left: 6.65rem;
 }
 .jenre-movies-slider__nav .owl-prev,

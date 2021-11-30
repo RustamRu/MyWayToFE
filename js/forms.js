@@ -1,54 +1,59 @@
 /* ========== Получи подарок ========== */
-const gifttoeveryonePopup_form = document.querySelector('#gift-to-every-one-popup-form');
-const gifttoeveryonePopup_submitButton = document.querySelector('#gift-to-every-one-popup-submit-btn');
-const gifttoeveryonePopup_nameFieldWrapper = document.querySelector('#gift-to-every-one-popup input[name="name"]').parentNode;
-const gifttoeveryonePopup_emailFieldWrapper = document.querySelector('#gift-to-every-one-popup input[name="email"]').parentNode;
-const gifttoeveryonePopup_giftListFieldWrapper = document.querySelector('#gift-to-every-one-popup select[name="gift-list"]').parentNode;
-const gifttoeveryonePopup_agreeMarkFieldWrapper = document.querySelector('#gift-to-every-one-popup input[name="gift-to-every-one-popup-pers_data_proc_agree"]').parentNode;
+const getGiftPopup_form = document.querySelector('#get-gift-popup-form');
+const getGiftPopup_submitButton = document.querySelector('#get-gift-popup-submit-btn');
+const getGiftPopup_nameFieldWrapper = document.querySelector('#get-gift-popup input[name="name"]').parentNode;
+const getGiftPopup_emailFieldWrapper = document.querySelector('#get-gift-popup input[name="email"]').parentNode;
+const getGiftPopup_giftListFieldWrapper = document.querySelector('#get-gift-popup select[name="gift-list"]').parentNode;
+const getGiftPopup_agreeMarkFieldWrapper = document.querySelector('#get-gift-popup input[name="get-gift-agree"]').parentNode;
+const getGiftPopup_successSubmitMsg = document.querySelector('#get-gift-popup-form .success-submit-msg');
 
-const gifttoeveryonePopup_nameField = initFormItem(gifttoeveryonePopup_nameFieldWrapper, 'input', 'input_filled', 'input_error');
-const gifttoeveryonePopup_emailField = initFormItem(gifttoeveryonePopup_emailFieldWrapper, 'input', 'input_filled', 'input_error');
-const gifttoeveryonePopup_giftListField = initFormItem(gifttoeveryonePopup_giftListFieldWrapper, 'select', 'input_filled', 'input_error');
-const gifttoeveryonePopup_agreeMarkField = initFormItem(gifttoeveryonePopup_agreeMarkFieldWrapper, 'checkbox', 'checkbox_filled', 'checkbox_error');
+const getGiftPopup_nameField = initFormItem(getGiftPopup_nameFieldWrapper, 'input', 'input_filled', 'input_error');
+const getGiftPopup_emailField = initFormItem(getGiftPopup_emailFieldWrapper, 'input', 'input_filled', 'input_error');
+const getGiftPopup_giftListField = initFormItem(getGiftPopup_giftListFieldWrapper, 'select', 'input_filled', 'input_error');
+const getGiftPopup_agreeMarkField = initFormItem(getGiftPopup_agreeMarkFieldWrapper, 'checkbox', 'checkbox_filled', 'checkbox_error');
 
-gifttoeveryonePopup_submitButton.addEventListener('submit', function (event) {
+getGiftPopup_form.addEventListener('submit', function (event) {
     event.preventDefault();
-    const gifttoeveryonePopup_nameValue = gifttoeveryonePopup_nameField.getValue();
-    const gifttoeveryonePopup_emailValue = gifttoeveryonePopup_emailField.getValue();
-    const gifttoeveryonePopup_giftListValue = gifttoeveryonePopup_giftListField.getValue();
-    const gifttoeveryonePopup_agreeMarkValue = gifttoeveryonePopup_agreeMarkField.getValue();
+    const getGiftPopup_nameValue = getGiftPopup_nameField.getValue();
+    const getGiftPopup_emailValue = getGiftPopup_emailField.getValue();
+    const getGiftPopup_giftListValue = getGiftPopup_giftListField.getValue();
+    const getGiftPopup_agreeMarkValue = getGiftPopup_agreeMarkField.getValue();
 
-    if (!gifttoeveryonePopup_nameValue) {
-        gifttoeveryonePopup_nameField.setError('Поле обязательно для заполнения');
-        gifttoeveryonePopup_nameField.focus();
+    if (!getGiftPopup_nameValue) {
+        getGiftPopup_nameField.setError('Поле обязательно для заполнения');
+        getGiftPopup_nameField.focus();
         return;
     }
-    if (!gifttoeveryonePopup_emailValue) {
-        gifttoeveryonePopup_emailField.setError('Поле обязательно для заполнения');
-        gifttoeveryonePopup_emailField.focus();
+    if (!getGiftPopup_emailValue) {
+        getGiftPopup_emailField.setError('Поле обязательно для заполнения');
+        getGiftPopup_emailField.focus();
         return;
     }
-    if (gifttoeveryonePopup_giftListValue === 'none') {
-        gifttoeveryonePopup_giftListField.setError('Поле обязательно для заполнения');
-        gifttoeveryonePopup_giftListField.focus();
+    if (getGiftPopup_giftListValue === 'none') {
+        getGiftPopup_giftListField.setError('Поле обязательно для заполнения');
+        getGiftPopup_giftListField.focus();
         return;
     }
 
-    if (!gifttoeveryonePopup_agreeMarkValue) {
-        gifttoeveryonePopup_agreeMarkField.setError('Поле обязательно для заполнения');
-        gifttoeveryonePopup_agreeMarkField.focus();
+    if (!getGiftPopup_agreeMarkValue) {
+        getGiftPopup_agreeMarkField.setError('Поле обязательно для заполнения');
+        getGiftPopup_agreeMarkField.focus();
         return;
     }
     const data = {
-        name: gifttoeveryonePopup_nameValue,
-        email: gifttoeveryonePopup_emailValue,
-        gift: gifttoeveryonePopup_giftListValue,
-        agree: gifttoeveryonePopup_agreeMarkValue,
+        name: getGiftPopup_nameValue,
+        email: getGiftPopup_emailValue,
+        gift: getGiftPopup_giftListValue,
+        agree: getGiftPopup_agreeMarkValue,
     }
+
+    getGiftPopup_form.disabled = true;
 
     const url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
     url.search = new URLSearchParams(data).toString();
     fetch(url.toString());
+
+    getGiftPopup_successSubmitMsg.classList.toggle('hidden');
 });
 
 /* ========== Обратная связь ========== */
@@ -57,18 +62,20 @@ const feedback_submitButton = document.querySelector('#feedback-submit-btn');
 const feedback_nameFieldWrapper = document.querySelector('#feedback-form input[name="name"]').parentNode;
 const feedback_emailFieldWrapper = document.querySelector('#feedback-form input[name="email"]').parentNode;
 const feedback_seatNumberFieldWrapper = document.querySelector('#feedback-form select[name="place"]').parentNode;
-// const feedback_feedbackTextFieldWrapper = document.querySelector('#feedback-form textarea[name="feedbackText"]').parentNode;
+const feedback_feedbackTextFieldWrapper = document.querySelector('#feedback-form textarea[name="feedbackText"]').parentNode;
 const feedback_agreeMarkFieldWrapper = document.querySelector('#feedback-form input[name="agree"]').parentNode;
+const feedback_successSubmitMsg = document.querySelector('#feedback-form .success-submit-msg');
 
 const feedback_nameField = initFormItem(feedback_nameFieldWrapper, 'input', 'input_filled', 'input_error');
 const feedback_emailField = initFormItem(feedback_emailFieldWrapper, 'input', 'input_filled', 'input_error');
 const feedback_seatNumberField = initFormItem(feedback_seatNumberFieldWrapper, 'select', 'input_filled', 'input_error');
-// const feedback_feedbackTextField = initFormItem(feedback_feedbackTextFieldWrapper, 'input', 'input_filled', 'input_error');
+const feedback_feedbackTextField = initFormItem(feedback_feedbackTextFieldWrapper, 'input', 'input_filled', 'input_error');
 const feedback_agreeMarkField = initFormItem(feedback_agreeMarkFieldWrapper, 'checkbox', 'checkbox_filled', 'checkbox_error');
 
-/* feedback_form.addEventListener('submit', function (event) {
+feedback_form.addEventListener('submit', function (event) {
     event.preventDefault();
     const feedback_nameValue = feedback_nameField.getValue();
+    const feedback_emailValue = feedback_emailField.getValue();
     const feedback_seatNumberValue = feedback_seatNumberField.getValue();
     const feedback_feedbackTextValue = feedback_feedbackTextField.getValue();
     const feedback_agreeMarkValue = feedback_agreeMarkField.getValue();
@@ -76,6 +83,11 @@ const feedback_agreeMarkField = initFormItem(feedback_agreeMarkFieldWrapper, 'ch
     if (!feedback_nameValue) {
         feedback_nameField.setError('Поле обязательно для заполнения');
         feedback_nameField.focus();
+        return;
+    }
+    if (!feedback_emailValue) {
+        feedback_emailField.setError('Поле обязательно для заполнения');
+        feedback_emailField.focus();
         return;
     }
     if (feedback_seatNumberValue === 'none') {
@@ -96,15 +108,37 @@ const feedback_agreeMarkField = initFormItem(feedback_agreeMarkFieldWrapper, 'ch
     }
     const data = {
         name: feedback_nameValue,
+        email: feedback_emailValue,
         feedbackText: feedback_feedbackTextValue,
         gift: feedback_seatNumberValue,
         agree: feedback_agreeMarkValue,
     }
 
+    feedback_submitButton.disabled = true;
+
     const url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
     url.search = new URLSearchParams(data).toString();
     fetch(url.toString());
-}); */
+
+    let data_post = new FormData(document.querySelector(feedbackFormId));
+
+    $.ajax({
+        url: 'http://study.xeol.ru/api/new_order',
+        type: 'post',
+        data: data_post,
+        dataType: 'json',
+        success: (...args) => {
+            feedback_successSubmitMsg.classList.toggle('hidden');
+            clearFormFields(feedbackFormId);
+        },
+        error: function (msg) {
+            showErrors(msg);
+        },
+        cache: false,
+        contentType: false,
+        processData: false,
+    });
+});
 
 
 /* ========== Функции ========== */
@@ -129,7 +163,14 @@ function initFormItem(field, type, filled_class, error_class) {
         field.classList.add(filled_class);
     });
     // отслеживание манипуляций с элементом
-    fieldItem.addEventListener('change', clearError);
+    fieldItem.addEventListener('change', function () {
+        clearError();
+    });
+    fieldItem.addEventListener('keyup', function () {
+        if ((this.type == 'text' || this.type == 'email' || this.type == 'textarea') && this.value.length > 0) {
+            clearError();
+        }
+    });
     // отслеживание потери фокуса на элементе
     fieldItem.addEventListener('blur', function () {
         const isBlurred = (type === 'checkbox' && fieldItem.checked) || (type === 'select' && fieldItem.value !== 'none') || (type === 'input' && !fieldItem.value)

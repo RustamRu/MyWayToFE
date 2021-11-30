@@ -1,6 +1,6 @@
 const feedbackFormId = '#feedback-form';
 
-$(document).ready(function () {
+/* $(document).ready(function () {
     $(feedbackFormId).on('submit', function (e) {
         e.preventDefault();
         let data = new FormData(document.querySelector(feedbackFormId));
@@ -10,7 +10,8 @@ $(document).ready(function () {
             type: 'post',
             data: data,
             dataType: 'json',
-            success: function () {
+            success: (...args) => {
+                console.log(args);
                 alert('Форма успешно отправлена!');
                 clearFormFields(feedbackFormId);
             },
@@ -27,7 +28,7 @@ $(document).ready(function () {
         $(this).parent().removeClass('input_error');
     });
 
-});
+}); */
 
 function showErrors(msg) {
     if (msg.status != 403) {

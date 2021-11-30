@@ -170,43 +170,36 @@ const getOtherFilmsData = async () => {
 
     films.forEach(film => {
         if (film.filmId != filmId) {
-            let isActionFilm = false;
-            let isDramaFilm = false;
-
             i++;
             const getDirectorName = new Promise((resolve) => {
                 setTimeout(async () => {
                     const filmStaffData = await getFilmStaffDetails(film.filmId).then(d => d.json());
                     const directorName = filmStaffData.find(staff => staff.professionKey === 'DIRECTOR').nameRu;
                     resolve(directorName);
-                }, i * 150);
+                }, i * 200);
             })
-            .then((directorName)=>{
-                film.genres.every(x => { // for
-                    isActionFilm = x.genre === "боевик";
-                    isDramaFilm = x.genre === "драма";
-    
-                    if (isActionFilm) {
-                        actionFilms.push({
-                            filmId: film.filmId,
-                            nameRu: film.nameRu,
-                            posterUrlPreview: film.posterUrlPreview,
-                            year: film.year,
-                            director: directorName,
-                        });
+                .then((directorName) => {
+                    for ({ genre } of film.genres) {
+                        if (genre === "боевик") {
+                            actionFilms.push({
+                                filmId: film.filmId,
+                                nameRu: film.nameRu,
+                                posterUrlPreview: film.posterUrlPreview,
+                                year: film.year,
+                                director: directorName,
+                            });
+                        }
+                        if (genre === "драма") {
+                            dramaFilms.push({
+                                filmId: film.filmId,
+                                nameRu: film.nameRu,
+                                posterUrlPreview: film.posterUrlPreview,
+                                year: film.year,
+                                director: directorName,
+                            });
+                        }
                     }
-                    if (isDramaFilm) {
-                        dramaFilms.push({
-                            filmId: film.filmId,
-                            nameRu: film.nameRu,
-                            posterUrlPreview: film.posterUrlPreview,
-                            year: film.year,
-                            director: directorName,
-                        });
-                    }
-                    return !isActionFilm || !isDramaFilm;
                 });
-            });
 
             requests.push(getDirectorName);
         }
@@ -251,17 +244,7 @@ const getOtherFilmsData = async () => {
             filmsContainerItem.append(filmInfo);
         });
 
-        $(document).ready(function () {
-            $(`#${containerId}`).owlCarousel({
-                loop: true,
-                nav: true,
-                dots: false,
-                navElement: 'div',
-                navContainer: `#${navId}`,
-                items: genreFilms.length >= 6 ? 6 : genreFilms.length,
-                margin: 0,
-            });
-        });
+        renderOwlCarousel(`#${containerId}`, genreFilms.length >= 6 ? 6 : genreFilms.length, `#${navId}`, 'div');
     }
 }
 
@@ -269,4 +252,9 @@ getFilmData();
 getFilmDistrData();
 getFilmMetaInfo();
 getFilmStaff();
+
+renderOwlCarousel('#jenre-movies-slider__items-container1', 6, '#jenre-movies-slider__nav1', 'div');
+renderOwlCarousel('#jenre-movies-slider__items-container2', 6, '#jenre-movies-slider__nav2', 'div');
 getOtherFilmsData();
+updateOwlCarousel('#jenre-movies-slider__items-container1', { w320: 1, w550: 2, w768: 3, wdefault: 6 }, '#jenre-movies-slider__nav1', 'div');
+updateOwlCarousel('#jenre-movies-slider__items-container2', { w320: 1, w550: 2, w768: 3, wdefault: 6 }, '#jenre-movies-slider__nav2', 'div');

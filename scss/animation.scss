@@ -1,0 +1,98 @@
+/* Animation */
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* ==================== Секция "Фильмы" ==================== */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* ==================== ИЗОБРАЖЕНИЯ ==================== */
+@keyframes scaleDown_107pc {
+  0% {
+    transform: scale(107%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes scaleUp_107pc {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(107%);
+  }
+}
+
+@keyframes scaleDown_117pc {
+  0% {
+    transform: scale(117%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes scaleUp_117pc {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(117%);
+  }
+}
+
+@keyframes shine-avatar {
+  from {
+    background-color: var(--light-light-gray);
+  }
+  
+  40% {
+    background-color: var(--transparent-green);
+  }
+  
+  to {
+    background-color: var(--light-light-gray);
+  }
+}

@@ -1,37 +1,41 @@
+const MOVIES_GALLERY_ID = 'movies-gallery';
+const moviesContainer = document.getElementById(MOVIES_GALLERY_ID);
+const MOVIES_GALLERY_CLASSNAME = 'movies-gallery';
+const MOVIES_ITEM_CLASSNAME = 'movies-item';
+
 const renderFilmBlock = (film, filmData) => {
-  const filmDescId = `movies-item-desc-${film.filmId}`;
+  const filmDescId = `${MOVIES_ITEM_CLASSNAME}__desc-${film.filmId}`;
 
   const movieItem = document.createElement('div');
-  movieItem.classList.add('movies-item', 'movies__movies-item');
+  movieItem.classList.add(MOVIES_ITEM_CLASSNAME, `${MOVIES_GALLERY_CLASSNAME}__${MOVIES_ITEM_CLASSNAME}`);
 
   const webLink = document.createElement('a');
   webLink.href = `/single/?id=${film.filmId}`;
-  webLink.target = '_blank';
+  webLink.target = '_self';
   webLink.title = film.nameRu;
   movieItem.append(webLink);
 
   const moviePoster = document.createElement('img');
   moviePoster.src = film.posterUrlPreview;
   moviePoster.alt = `Постер фильма "${film.nameRu}"`;
-  moviePoster.classList.add('movies-img', 'movies__movies-img');
+  moviePoster.classList.add(`${MOVIES_ITEM_CLASSNAME}__img`);
   webLink.append(moviePoster);
 
   const movieCover = document.createElement('div');
-  movieCover.classList.add('movies-item-cover', 'movies__movies-item-cover');
+  movieCover.classList.add(`${MOVIES_ITEM_CLASSNAME}__cover`);
   webLink.append(movieCover);
 
   const movieDesc = document.createElement('div');
-  movieDesc.classList.add('movies-item-desc', 'movies__movies-item-desc');
+  movieDesc.classList.add(`${MOVIES_ITEM_CLASSNAME}__desc`);
   movieDesc.id = filmDescId;
   webLink.append(movieDesc);
 
   const movieHeader = document.createElement('h3');
-  movieHeader.classList.add('movies-item-desc-h3', 'movies__movies-item-desc-h3');
+  movieHeader.classList.add(`${MOVIES_ITEM_CLASSNAME}__title`);
   movieHeader.innerText = film.nameRu;
   movieDesc.append(movieHeader);
 
   const movieText = document.createElement('p');
-  movieText.classList.add('movies-item-desc-p');
   movieText.innerText = filmData.description;
   movieDesc.append(movieText);
 
@@ -53,7 +57,7 @@ const getBlockFilmsData = async () => {
           const filmBlock = renderFilmBlock(film, filmData);
           filmsLayout.set(film.filmId, filmBlock);
           resolve(filmsLayout);
-        }, i * 200);
+        }, i * 300);
       });
     });
 

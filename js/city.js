@@ -3,7 +3,9 @@ const SYPEX_URL = 'http://api.sypexgeo.net/json/92.255.196.137'; //Казань
 const GLAVPUNKT_URL = 'https://glavpunkt.ru/api/get_rf_cities';
 const GLAVPUNKT_DELIVERY_TARIF_URL = 'https://glavpunkt.ru/api/get_tarif';
 
-let city = localStorage.getItem('user-city'), cities, tarif;
+let city = localStorage.getItem('user-city');
+let cities;
+let tarif;
 
 async function getRequest(request_obj) {
     await $.ajax({
@@ -22,7 +24,7 @@ async function getRequest(request_obj) {
 
 function setCity() {
     city = this.city.name_ru;
-    $('#city-link').html(city);
+    $('#choose-city-popup-open').html(city);
 }
 function getCity() {
     $('#choose-city-popup').removeClass('hidden');
@@ -34,9 +36,10 @@ function getCity() {
 }
 
 async function showCitiesList(string) {
-    let html = '<ul>', counter = 0;
+    let html = '<ul>';
+    let counter = 0;
 
-    const matches = cities.filter(item => item.name.toLowerCase().indexOf(string.toLowerCase()) > -1);
+    const matches = cities.filter(item => item.name.toLowerCase().includes(string.toLowerCase()));
 
     for (let i in matches) {
         if (matches.length > 0 && counter < 5) {
@@ -67,8 +70,8 @@ async function getDeliveryTarif(city) {
             weight: 1,
             price: 5000
         }, success_callback: showDeliveryTarif
-    });    
-    $('#delivery_price').html('Доставим билет в город ' + city + ' за ' + tarif + ' руб.!');
+    });
+    $('#delivery_price').html('Доставим билет в ваш город за ' + tarif + ' руб.!');
 }
 
 function showDeliveryTarif() {
@@ -79,11 +82,11 @@ $(document).ready(async function () {
     if (!city) {
         await getRequest({ url: SYPEX_URL, success_callback: setCity, error_callback: getCity });
     } else {
-        $('#city-link').html(city);
+        $('#choose-city-popup-open').html(city);
     }
     await getDeliveryTarif(city);
 
-    $('#city-link').on('click', function () {
+    $('#choose-city-popup-open').on('click', function () {
         $('#choose-city-popup').removeClass('hidden');
         $('#delivery_price').html('Доставим билет в город ' + city + ' за ' + tarif + ' руб.!');
         $('#city_input').focus();
@@ -92,7 +95,7 @@ $(document).ready(async function () {
         $('#choose-city-popup').addClass('hidden');
     });
 
-    $('#city-link').on('click', function () {
+    $('#choose-city-popup-open').on('click', function () {
         if (!cities) {
             getRequest({ url: GLAVPUNKT_URL, success_callback: setCities });
         }
@@ -104,10 +107,11 @@ $(document).ready(async function () {
 
     $(document).on('click', '#search_result li', function () {
         const city = $(this).html();
-        $('#city-link').html(city);
+        $('#choose-city-popup-open').html(city);
         $('#search_result').html('');
         $('#city_input').val('');
         $('#choose-city-popup').addClass('hidden');
+        document.body.style.overflowY = "visible";
         localStorage.setItem('user-city', city);
     });
 });
