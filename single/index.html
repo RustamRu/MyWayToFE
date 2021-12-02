@@ -3,35 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Продажа билетов в кино в Иннополисе</title>
+    <title>Информация о фильме</title>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/abstracts.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/animation.css" />
-    <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/lib/owlcarousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="/lib/owlcarousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="/css/mediarules.css" />
+    <link rel="stylesheet" href="/css/single.css" />
 
     <script defer src="/lib/jquery/jquery-3.6.0.min.js"></script>
     <script defer src="/lib/owlcarousel/owl.carousel.min.js"></script>
-
     <script defer src="/js/utils.js"></script>
     <script defer src="/js/main.js"></script>
-
-    <script defer src="/js/film.js"></script>
-    <script defer src="/js/films-table.js"></script>
-    <script defer src="/js/popup.js"></script>
+    <script defer src="/js/single.js"></script>
     <script defer src="/js/header-menu.js"></script>
-    <script defer src="/js/forms.js"></script>
-    <script defer src="/js/movies-preview.js"></script>
-    <script defer src="/js/city.js"></script>
-    <script defer src="/js/order.js"></script>
   </head>
   <body>
-    <header class="header section-with-background section_framed-bottom">
+    <header class="header">
       <div class="header-menu">
         <a
           class="logo header__logo"
@@ -63,8 +55,8 @@
                 >
               </li>
               <li>
-                <a href="#" class="nav-bar__item" id="choose-city-popup-open"
-                  >Определяем ваш город ... </a
+                <a href="#" class="nav-bar__item" id="city-link"
+                  >ул. Спортивная, д. 1<!-- Определение населенного пункта ... --></a
                 >
               </li>
               <li>
@@ -91,19 +83,19 @@
           >
             <ul>
               <li>
-                <a href="#why-we" class="nav-bar__item">Почему мы?</a>
+                <a href="../index.html#why-we" class="nav-bar__item">Почему мы?</a>
               </li>
               <li>
-                <a href="#choose-movie" class="nav-bar__item">Выберите фильм</a>
+                <a href="../index.html#choose-movie" class="nav-bar__item">Выберите фильм</a>
               </li>
               <li>
-                <a href="#movies" class="nav-bar__item">Фильмы</a>
+                <a href="../index.html#movies" class="nav-bar__item">Фильмы</a>
               </li>
               <li>
-                <a href="#goods" class="nav-bar__item">Товары</a>
+                <a href="../index.html#goods" class="nav-bar__item">Товары</a>
               </li>
               <li>
-                <a href="#reviews" class="nav-bar__item">Отзывы</a>
+                <a href="../index.html#reviews" class="nav-bar__item">Отзывы</a>
               </li>
             </ul>
           </nav>
@@ -141,513 +133,188 @@
           </svg>
         </button>
       </div>
-      <h1 class="header__title-div">
-        <div class="header__title">Закажите билет в кино</div>
-        <div class="header__subtitle">Всем покупателям подарок!</div>
-      </h1>
     </header>
     <main class="main">
-      <section class="section welcome main__welcome">
-        <h2 class="welcome__title">Добро пожаловать!</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt.
-        </p>
-      </section>
-      <section class="section why-we main__why-we" id="why-we">
-        <h2 class="why-we__title">Почему мы?</h2>
-        <div class="why-we-container why-we__why-we-container">
-          <div class="why-we-item">
-            <img
-              src="/images/why-we-large-screens.png"
-              alt="Большой киноэкран"
-              class="why-we-item__img"
-            />
-            <h3 class="why-we-item__title">Большие экраны</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-          <div class="why-we-item">
-            <img
-              src="/images/why-we-surround-sound.png"
-              alt="Колонки по периметру кинозала, создающие объёмное звучание"
-              class="why-we-item__img"
-            />
-            <h3 class="why-we-item__title">Объёмный звук</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-          <div class="why-we-item">
-            <img
-              src="/images/why-we-comfortable-chairs.png"
-              alt="Пустой кинозал с большими мягкими креслами"
-              class="why-we-item__img"
-            />
-            <h3 class="why-we-item__title">Удобные кресла</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-          <div class="why-we-item">
-            <img
-              src="/images/why-we-cozy-atmosphere.png"
-              alt="Небольшой кинозал с мягкими диваном, ковром, игрушками и подушками и светильником"
-              class="why-we-item__img"
-            />
-            <h3 class="why-we-item__title">Уютная атмосфера</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-          <div class="why-we-item">
-            <img
-              src="/images/why-we-full-immersion.png"
-              alt="Люди в специальных очках вскинули руки от радости"
-              class="why-we-item__img"
-            />
-            <h3 class="why-we-item__title">Полное погружение</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-          <div class="why-we-item">
-            <img
-              src="/images/why-we-back-row-kisses.png"
-              alt="Парень целует девушку"
-              class="why-we-item__img"
-            />
-            <h3 class="why-we-item__title">Поцелуи на заднем ряду</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
+      <section class="movie-info-section main__movie-info-section">
+        <div class="preview-container movie-info-section__preview-container">
+          <img
+            class="preview-container__img"
+            src=""
+            alt="Загрузка постера фильма..."
+            id="movie-poster"
+          />
         </div>
-      </section>
-      <section
-        class="section choose-movie main__choose-movie"
-        id="choose-movie"
-      >
-        <h2 class="choose-movie__title">Выберите фильм</h2>
-        <div class="choose-movie__wrapper">
-          <table class="choose-movie-table choose-movie__choose-movie-table">
-            <thead>
-              <tr>
-                <th
-                  class="choose-movie-table__th choose-movie-table__th_narrow"
-                  aria-label="Столбец галочек"
-                >
-                  <span class="sr-only">Галочка</span>
-                </th>
-                <th class="choose-movie-table__th choose-movie-table__th_wide">
-                  <div class="choose-movie-table__th-inner">
-                    Начало сеанса
-                    <div class="ico-solid-arrow">
-                      <svg>
-                        <use xlink:href="#ico-solid-arrow-up"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </th>
-                <th class="choose-movie-table__th choose-movie-table__th_wide">
-                  <div class="choose-movie-table__th-inner">
-                    Название фильма
-                    <div class="ico-solid-arrow">
-                      <svg>
-                        <use xlink:href="#ico-solid-arrow-up"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </th>
-                <th class="choose-movie-table__th">
-                  <div class="choose-movie-table__th-inner">
-                    Жанр
-                    <div class="ico-solid-arrow">
-                      <svg>
-                        <use xlink:href="#ico-solid-arrow-up"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody id="movies_output"></tbody>
-          </table>
-        </div>
-        <div class="choose-movie__text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
-          </p>
-        </div>
-      </section>
-      <section
-        class="
-          section section-with-background section_framed-top-bottom
-          gift-to-everyone
-          main__gift-to-everyone
-        "
-      >
-        <img
-          src="/images/present.png"
-          alt="Подарок"
-          class="gift-to-everyone__present"
-        />
-        <h2 class="gift-to-everyone__title">Подарок каждому!</h2>
-        <div class="gift-to-everyone__inner">
-          <div class="gift-to-everyone__text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
-              mauris cursus mattis molestie a iaculis at. Vel quam elementum
-              pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam
-              maecenas.&nbsp;
-            </p>
-            <p>
-              Nunc vel risus commodo viverra maecenas accumsan. Morbi enim nunc
-              faucibus a. Mauris commodo quis imperdiet massa.Sed elementum
-              tempus egestas sed sed risus pretium quam vulputate. Aliquam
-              vestibulum morbi blandit cursus risus at ultrices mi tempus.&nbsp;
-            </p>
-            <p>
-              Nibh mauris cursus mattis molestie a iaculis at. Vel quam
-              elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id
-              diam maecenas. Sed elementum tempus egestas sed sed risus pretium
-              quam vulputate. Aliquam vestibulum morbi blandit cursus risus at
-              ultrices mi tempus. Facilisi cras fermentum odio eu feugiat
-              pretium nibh. Eu nisl nunc mi ipsum. Nibh sit amet commodo nulla
-              facilisi nullam vehicula ipsum.
-            </p>
+        <div class="movie-info">
+          <h1 class="movie-info__header" id="movie-header">Загрузка...</h1>
+          <div class="rank-score-wrapper">
+            <div class="rank">
+              <svg data-rating-value="1" class="svg rank__svg">
+                <use xlink:href="#ico-star"></use>
+              </svg>
+              <svg data-rating-value="2" class="svg rank__svg">
+                <use xlink:href="#ico-star"></use>
+              </svg>
+              <svg data-rating-value="3" class="svg rank__svg">
+                <use xlink:href="#ico-star"></use>
+              </svg>
+              <svg data-rating-value="4" class="svg rank__svg">
+                <use xlink:href="#ico-star"></use>
+              </svg>
+              <svg data-rating-value="5" class="svg rank__svg">
+                <use xlink:href="#ico-star"></use>
+              </svg>
+              <span class="rank__value" id="rank">Загрузка...</span>
+            </div>
+            <div class="score">
+              <span class="score__value" id="movie-score-value"
+                >Загрузка...</span
+              ><span class="score__source" id="movie-score-source"
+                >Загрузка...</span
+              >
+            </div>
           </div>
-          <button
-            id="get-gift-popup-open"
+          <div class="date-views-likes-wrapper">
+            <div class="release-date">
+              <svg class="svg release-date__svg">
+                <use xlink:href="#ico-calendar"></use>
+              </svg>
+              <span class="release-date__value" id="movie-release-date"
+                >Загрузка...</span
+              >
+            </div>
+            <div class="views-counter">
+              <svg class="svg views-counter__svg">
+                <use xlink:href="#ico-eye"></use>
+              </svg>
+              <span class="views-counter__value" id="views-counter"
+                >Загрузка...</span
+              >
+            </div>
+
+            <div class="likes-counter">
+              <svg class="svg likes-counter__svg" id="likes-counter-svg">
+                <use xlink:href="#ico-heart"></use>
+              </svg>
+              <span class="likes-counter__value" id="likes-counter"
+                >Загрузка...</span
+              >
+            </div>
+          </div>
+          <div class="movie-info__movie-desc" id="movie-desc">
+            <p>Загрузка...</p>
+          </div>
+          <div
             class="
-              gift-to-everyone-button
-              gift-to-everyone__gift-to-everyone-button
+              movie-props-grid-container
             "
           >
-            Получить подарок
-          </button>
-        </div>
-      </section>
-      <section class="section movies main__movies" id="movies">
-        <h2 class="movies__title">Фильмы</h2>
-        <div class="movies__text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
-            mauris cursus mattis molestie a iaculis at. Vel quam elementum
-            pulvinar etiam non quam.
-          </p>
-        </div>
-        <div class="movies-gallery movies__movies-gallery" id="movies-gallery">
-          <div class="movies-gallery__item-holder"></div>
-          <div class="movies-gallery__item-holder"></div>
-          <div class="movies-gallery__item-holder"></div>
-          <div class="movies-gallery__item-holder"></div>
-          <div class="movies-gallery__item-holder"></div>
-          <div class="movies-gallery__item-holder"></div>
-          <div class="movies-gallery__item-holder"></div>
-          <div class="movies-gallery__item-holder"></div>
-          <div class="movies-gallery__item-holder"></div>
-        </div>
-      </section>
-      <section class="section goods main__goods" id="goods">
-        <h2 class="goods__title">Товары</h2>
-        <div class="goods__text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
-            mauris cursus mattis molestie a iaculis at. Vel quam elementum
-            pulvinar etiam non quam.
-          </p>
-        </div>
-        <div class="goods-gallery goods__goods-gallery">
-          <div class="goods-item goods-gallery__goods-item">
-            <img
-              src="/images/goods-cocacola.png"
-              alt="Напиток Coca-cola"
-              class="goods-item__img"
-            />
-            <div class="trapezoid goods__cover"></div>
-            <div class="goods-item__desc">
-              <p>Coca-cola</p>
+            <div class="movie-props-grid-container__key">Страна</div>
+            <div class="movie-props-grid-container__value" id="movie-country">
+              ...
             </div>
-          </div>
-          <div class="goods-item goods-gallery__goods-item">
-            <img
-              src="/images/goods-keychain-iron-man.png"
-              alt="3 брелка в виде головы Железного человека"
-              class="goods-item__img"
-            />
-            <div class="trapezoid goods__cover"></div>
-            <div class="goods-item__desc">
-              <p>
-                Брелок<br />
-                "Железный<br />человек"
-              </p>
+            <div class="movie-props-grid-container__key">Режиссер</div>
+            <div class="movie-props-grid-container__value" id="movie-directors">
+              Загрузка...
             </div>
-          </div>
-          <div class="goods-item goods-gallery__goods-item">
-            <img
-              src="/images/goods-poster-avengers.png"
-              alt="Постер с изображением мстителей"
-              class="goods-item__img"
-            />
-            <div class="trapezoid goods__cover"></div>
-            <div class="goods-item__desc">
-              <p>
-                Постер<br />
-                "Мстители"
-              </p>
+            <div class="movie-props-grid-container__key">Сценарий</div>
+            <div class="movie-props-grid-container__value" id="movie-writers">
+              Загрузка...
+            </div>
+            <div class="movie-props-grid-container__key">Продюсер</div>
+            <div class="movie-props-grid-container__value" id="movie-producers">
+              Загрузка...
+            </div>
+            <div class="movie-props-grid-container__key">Оператор</div>
+            <div class="movie-props-grid-container__value" id="movie-operators">
+              Загрузка...
+            </div>
+            <div class="movie-props-grid-container__key">Композитор</div>
+            <div class="movie-props-grid-container__value" id="movie-composers">
+              Загрузка...
+            </div>
+            <div class="movie-props-grid-container__key">Художник</div>
+            <div class="movie-props-grid-container__value" id="movie-designers">
+              Загрузка...
+            </div>
+            <div class="movie-props-grid-container__key">Время</div>
+            <div class="movie-props-grid-container__value" id="movie-duration">
+              <strong>Загрузка...</strong>
             </div>
           </div>
         </div>
       </section>
       <section
-        class="
-          section section-with-background section_framed-top-bottom
-          reviews
-          main__reviews
-        "
-        id="reviews"
+        class="other-movies-section main__other-movies-section"
       >
-        <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
-            mauris cursus mattis molestie a iaculis at. Vel quam elementum
-            pulvinar etiam non quam.
-          </p>
-        </div>
-        <div
-          class="
-            reviews-gallery reviews__reviews-gallery
-            owl-carousel owl-theme
-          "
-          id="reviews-gallery"
-        >
-          <div class="reviews-item reviews-gallery__reviews-item">
-            <img
-              src="/images/reviews-elenova-elena.png"
-              alt="Елена Еленова"
-              class="reviews-item__img"
-            />
-            <div class="reviews-item__text">
-              <h3 class="reviews-item__title">Елена Еленова</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <p class="reviews-item__date">13.12.2020</p>
-            </div>
+          <h2 class="other-movies-section__header">Другие фильмы</h2>
+        <div class="jenre-movies-info other-movies-section__jenre-movies-info">
+          <div class="jenre-movies-info__header-wrapper">
+            <h3 class="jenre-movies-info__header">Экшн</h3>
+            <div class="jenre-movies-info__page-counter">1/30</div>
           </div>
-          <div class="reviews-item reviews-gallery__reviews-item">
-            <img
-              src="/images/reviews-borisov-boris.png"
-              alt="Борис Борисов"
-              class="reviews-item__img"
-            />
-            <div class="reviews-item__text">
-              <h3 class="reviews-item__title">Борис Борисов</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <p class="reviews-item__date">13.12.2020</p>
+          <div
+            class="jenre-movies-slider jenre-movies-info__jenre-movies-slider"
+          >
+            <div
+              class="
+                jenre-movies-slider__items-container
+                owl-carousel owl-theme movies-gallery
+              "
+              id="jenre-movies-slider__items-container1"
+            >
+              <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+              </div>
+              <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+              </div>
+              <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+              </div>
+              <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+              </div>
+              <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+              </div>
+              <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+              </div>
             </div>
-          </div>
-          <div class="reviews-item reviews-gallery__reviews-item">
-            <img
-              src="/images/reviews-dikaprio-leonardo.png"
-              alt="Леонардо ДиКаприо"
-              class="reviews-item__img"
-            />
-            <div class="reviews-item__text">
-              <h3 class="reviews-item__title">Леонардо ДиКаприо</h3>
-              <p class="reviews-item-p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <p class="reviews-item__date">13.12.2020</p>
-            </div>
-          </div>
-          <div class="reviews-item reviews-gallery__reviews-item">
-            <img
-              src="/images/reviews-dikaprio-leonardo.png"
-              alt="Леонардо ДиКаприо"
-              class="reviews-item__img"
-            />
-            <div class="reviews-item__text">
-              <h3 class="reviews-item__title">Леонардо ДиКаприо</h3>
-              <p class="reviews-item-p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <p class="reviews-item__date">13.12.2020</p>
-            </div>
-          </div>
-          <div class="reviews-item reviews-gallery__reviews-item">
-            <img
-              src="/images/reviews-dikaprio-leonardo.png"
-              alt="Леонардо ДиКаприо"
-              class="reviews-item__img"
-            />
-            <div class="reviews-item__text">
-              <h3 class="reviews-item__title">Леонардо ДиКаприо</h3>
-              <p class="reviews-item-p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <p class="reviews-item__date">13.12.2020</p>
-            </div>
+            <div
+              class="jenre-movies-slider__nav"
+              id="jenre-movies-slider__nav1"
+            ></div>
           </div>
         </div>
-      </section>
-      <section
-        class="section section-with-background feedback main__feedback"
-        id="feedback"
-      >
-        <div class="feedback__inner">
-          <div class="feedback__form-inner">
-            <h2 class="feedback__title">Обратная связь</h2>
-            <form id="feedback-form" class="form feedback__form" novalidate>
-              <input
-                type="hidden"
-                name="api_key"
-                value="J7bOU7XHDiLX6czdSzbL"
-              />
-              <div class="form-item-wrap">
-                <label class="input input_filled input_error">
-                  <input
-                    type="text"
-                    name="name"
-                    aria-label="Ввести полное имя"
-                    required
-                    class="input__input"
-                  />
-                  <p class="input__label">Полное имя</p>
-                  <p class="input__err-msg">Введите корректные данные!</p>
-                </label>
-              </div>
-              <div class="form-item-wrap">
-                <label class="input input_filled input_error">
-                  <input
-                    type="email"
-                    name="email"
-                    aria-label="Ввести email"
-                    required
-                    class="input__input"
-                  />
-                  <p class="input__label">Электронный адрес</p>
-                  <p class="input__err-msg">Введите корректные данные!</p>
-                </label>
-              </div>
-              <div class="form-item-wrap">
-                <label class="input input_filled input_error">
-                  <select
-                    name="place"
-                    aria-label="Выбрать из списка номер места"
-                    required
-                    class="input__input"
-                  >
-                    <option
-                      value="none"
-                      label="Выберите место"
-                      disabled
-                      selected
-                    ></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                  <p class="input__err-msg">
-                    Введите корректные данные!
-                  </p></label
-                >
-              </div>
-              <div class="form-item-wrap">
-                <label class="input input_filled input_error">
-                  <textarea
-                    name="feedbackText"
-                    cols="30"
-                    rows="10"
-                    aria-label="Ввести свой отзыв"
-                    class="input__input"
-                  ></textarea>
-                  <p class="input__label">Напишите свой отзыв</p>
-                  <p class="input__err-msg">Введите корректные данные!</p>
-                </label>
-              </div>
-              <div class="form-item-wrap">
-                <label class="checkbox checkbox_filled checkbox_error">
-                  <input
-                    type="checkbox"
-                    name="agree"
-                    required
-                    class="input__input"
-                  />
-                  Я согласен на обработку своих персональных данных
-                  <svg class="ico-checkmark">
-                    <use xlink:href="#ico-check-mark"></use>
-                  </svg>
-                  <p class="input__err-msg">
-                    Введите корректные данные!
-                  </p></label
-                >
-              </div>
-              <div class="form-item-wrap">
-                <button
-                  id="feedback-submit-btn"
-                  type="submit"
-                  name="feedback-submit-btn"
-                  title="Отправить форму обратной связи"
-                  aria-label="Отправить форму обратной связи"
-                  class="
-                    feedback-form-item
-                    feedback__feedback-form-item
-                    feedback-form-submit
-                    feedback__feedback-form-submit
-                  "
-                >
-                  Заказать
-                </button>
-              </div>
-              <div class="success-submit-msg hidden">Ваши данные отправлены!</div>
-            </form>
+        <div class="jenre-movies-info">
+          <div class="jenre-movies-info__header-wrapper">
+            <h3 class="jenre-movies-info__header">Драма</h3>
+            <div class="jenre-movies-info__page-counter">1/30</div>
+          </div>
+          <div
+            class="jenre-movies-slider jenre-movies-info__jenre-movies-slider"
+          >
+            <div
+              class="
+                jenre-movies-slider__items-container
+                owl-carousel owl-theme movies-gallery
+              "
+              id="jenre-movies-slider__items-container2"
+            >
+            <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+            </div>
+            <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+            </div>
+            <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+            </div>
+            <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+            </div>
+            <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+            </div>
+            <div class="jenre-movies-slider-item movies-gallery__item-holder">Загрузка ...
+            </div>
+            </div>
+            <div
+              class="jenre-movies-slider__nav"
+              id="jenre-movies-slider__nav2"
+            ></div>
           </div>
         </div>
-      </section>
-      <section class="section how-to-get main__how-to-get" id="how-to-get">
-        <img src="/images/map_2.png" alt="Карта" class="how-to-get__map" />
       </section>
     </main>
     <footer class="footer">
@@ -727,22 +394,22 @@
         <h3 class="footer-nav-menu__title">Меню</h3>
         <ul>
           <li>
-            <a href="#why-we">Почему мы?</a>
+            <a href="../index.html#why-we">Почему мы?</a>
           </li>
           <li>
-            <a href="#choose-movie">Выберите фильм</a>
+            <a href="../index.html#choose-movie">Выберите фильм</a>
           </li>
           <li>
-            <a href="#movies">Фильмы</a>
+            <a href="../index.html#movies">Фильмы</a>
           </li>
           <li>
-            <a href="#goods">Товары</a>
+            <a href="../index.html#goods">Товары</a>
           </li>
           <li>
-            <a href="#reviews">Отзывы</a>
+            <a href="../index.html#reviews">Отзывы</a>
           </li>
           <li>
-            <a href="#feedback">Обратная связь</a>
+            <a href="../index.html#feedback">Обратная связь</a>
           </li>
         </ul>
       </nav>
@@ -762,7 +429,7 @@
             <a href="">420500, г. Иннополис<br />ул.Университетская, д.1</a>
           </li>
           <li>
-            <a href="#how-to-get">Как добраться</a>
+            <a href="../index.html#how-to-get">Как добраться</a>
           </li>
           <li>
             <a href="">Все контакты</a>
@@ -843,20 +510,6 @@
     <svg style="display: none">
       <symbol
         fill="currentColor"
-        id="ico-arrow"
-        viewBox="0 0 9 5"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z"
-        />
-      </symbol>
-    </svg>
-    <svg style="display: none">
-      <symbol
-        fill="currentColor"
         id="ico-phone"
         viewBox="0 0 10 10"
         xmlns="http://www.w3.org/2000/svg"
@@ -869,7 +522,7 @@
     <svg style="display: none">
       <symbol
         fill="currentColor"
-        id="ico-solid-arrow-up"
+        id="ico-arrow-up"
         viewBox="0 0 9 5"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -879,7 +532,7 @@
     <svg style="display: none">
       <symbol
         fill="currentColor"
-        id="ico-solid-arrow-down"
+        id="ico-arrow-down"
         viewBox="0 0 9 5"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -987,148 +640,79 @@
         />
       </symbol>
     </svg>
-
-    <div id="get-gift-popup" class="popup get-gift-popup hidden">
-      <div class="popup__wrapper get-gift-popup__wrapper">
-        <h2 class="popup__title get-gift-popup__title">Получи подарок!</h2>
-        <button class="close-btn svg svg_round" id="get-gift-popup-close">
-          <svg class="ico-cross">
-            <use xlink:href="#ico-close-btn"></use>
-          </svg>
-        </button>
-        <form
-          id="get-gift-popup-form"
-          class="get-gift-popup-form get-gift-popup__get-gift-popup-form"
-          novalidate
-        >
-          <div class="form-item-wrap">
-            <label class="input input_filled input_error">
-              <p class="input__label">Полное имя</p>
-              <input
-                type="text"
-                name="name"
-                aria-label="Ввести полное имя"
-                required
-                class="input__input"
-              />
-              <p class="input__err-msg">Введите корректные данные!</p>
-            </label>
-          </div>
-          <div class="form-item-wrap">
-            <label class="input input_filled input_error">
-              <p class="input__label">Электронный адрес</p>
-              <input
-                type="email"
-                name="email"
-                aria-label="Ввести электронный адрес"
-                required
-                class="input__input"
-              />
-              <p class="input__err-msg">Введите корректные данные!</p>
-            </label>
-          </div>
-          <div class="form-item-wrap">
-            <label class="input input_filled input_error">
-              <select
-                name="gift-list"
-                aria-label="Выбрать из списка подарок"
-                required
-                class="input__input"
-              >
-                <option
-                  value="none"
-                  label="Выберите подарок"
-                  disabled
-                  selected
-                ></option>
-                <option value="3rd-ticket-free">Бесплатный 3ий билет</option>
-                <option value="double-popcorn">Удвоим попкорн</option>
-                <option value="10%-discount-couples">Скидка 10% для пар</option>
-              </select>
-              <p class="input__err-msg">Введите корректные данные!</p>
-            </label>
-          </div>
-          <div class="form-item-wrap">
-            <label class="checkbox checkbox_filled checkbox_error">
-              <input
-                type="checkbox"
-                name="get-gift-agree"
-                required
-                class="input__input"
-              />
-              Я согласен на обработку своих персональных данных
-              <svg class="ico-checkmark">
-                <use xlink:href="#ico-check-mark"></use>
-              </svg>
-              <p class="input__err-msg">Введите корректные данные!</p>
-            </label>
-          </div>
-          <div class="form-item-wrap">
-            <button
-              id="get-gift-popup-submit-btn"
-              type="submit"
-              name="get-gift-popup-submit-btn"
-              title="Отправить форму выбора подарка"
-              aria-label="Отправить форму выбора подарка"
-              class="get-gift-popup-form-submit"
-            >
-              Отправить
-            </button>
-          </div>
-          <div class="success-submit-msg hidden">Ваши данные отправлены!</div>
-        </form>
-      </div>
-    </div>
-
-    <div class="scrollup">^</div>
-
-    <div id="choose-city-popup" class="popup choose-city-popup hidden">
-      <div class="popup__wrapper">
-        <h2 class="popup__title">Выбор города</h2>
-        <button class="close-btn svg svg_round" id="choose-city-popup-close">
-          <svg class="ico-cross">
-            <use xlink:href="#ico-close-btn"></use>
-          </svg>
-        </button>
-        <div
-          id="delivery_price"
-          class="choose-city-popup__delivery_price"
-        ></div>
-        <input
-          type="text"
-          autocomplete="off"
-          id="city_input"
-          class="choose-city-popup__city-input"
+    <svg style="display: none">
+      <symbol
+        fill="currentColor"
+        id="ico-star"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z"
         />
-        <div id="search_result" class="choose-city-popup__search-result"></div>
-      </div>
-      <div><!--Здесь будет мозаика фильмов--></div>
-    </div>
-    <div>
-      <h3>Товары</h3>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe,
-        molestias recusandae amet laudantium quisquam non quo dolorem debitis,
-        eum iure sequi suscipit, est officia esse accusantium magnam omnis
-        quidem ullam.
-      </div>
-      <div><!--Здесь будет галерея товаров--></div>
-    </div>
-    <div>
-      <h3>Отзывы</h3>
-      <div>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore omnis
-        esse dolor similique harum officiis repudiandae porro ut, cumque hic
-        placeat asperiores consectetur voluptatibus nemo ducimus mollitia, iure
-        accusamus aperiam?
-      </div>
-      <div><!--Здесь будет галерея отзывов--></div>
-    </div>
-    <div>
-      <h3>Обратная связь</h3>
-      <!--Здесь будет форма обратной связи-->
-    </div>
-
+      </symbol>
+    </svg>
+    <svg style="display: none">
+      <symbol
+        fill="currentColor"
+        id="ico-calendar"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3.5 4.5H2.5V5.5H3.5V4.5ZM5.5 4.5H4.5V5.5H5.5V4.5ZM7.5 4.5H6.5V5.5H7.5V4.5ZM8.5 1H8V0H7V1H3V0H2V1H1.5C0.945 1 0.505 1.45 0.505 2L0.5 9C0.5 9.55 0.945 10 1.5 10H8.5C9.05 10 9.5 9.55 9.5 9V2C9.5 1.45 9.05 1 8.5 1ZM8.5 9H1.5V3.5H8.5V9Z"
+        />
+      </symbol>
+    </svg>
+    <svg style="display: none">
+      <symbol
+        fill="currentColor"
+        id="ico-eye"
+        viewBox="0 0 12 8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 0.25C3.5 0.25 1.365 1.805 0.5 4C1.365 6.195 3.5 7.75 6 7.75C8.5 7.75 10.635 6.195 11.5 4C10.635 1.805 8.5 0.25 6 0.25ZM6 6.5C4.62 6.5 3.5 5.38 3.5 4C3.5 2.62 4.62 1.5 6 1.5C7.38 1.5 8.5 2.62 8.5 4C8.5 5.38 7.38 6.5 6 6.5ZM6 2.5C5.17 2.5 4.5 3.17 4.5 4C4.5 4.83 5.17 5.5 6 5.5C6.83 5.5 7.5 4.83 7.5 4C7.5 3.17 6.83 2.5 6 2.5Z"
+        />
+      </symbol>
+    </svg>
+    <svg style="display: none">
+      <symbol
+        fill="currentColor"
+        id="ico-heart"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 9.675L4.275 9.015C1.7 6.68 0 5.14 0 3.25C0 1.71 1.21 0.5 2.75 0.5C3.62 0.5 4.455 0.905 5 1.545C5.545 0.905 6.38 0.5 7.25 0.5C8.79 0.5 10 1.71 10 3.25C10 5.14 8.3 6.68 5.725 9.02L5 9.675Z"
+        />
+      </symbol>
+    </svg>
+    <svg style="display: none">
+      <symbol
+        fill="currentColor"
+        id="ico-circled-bracket-left"
+        viewBox="0 0 5 8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 0.715152L4.24164 0L0 4L4.24164 8L5 7.28485L1.51671 4L5 0.715152Z"
+        />
+      </symbol>
+    </svg>
+    <svg style="display: none">
+      <symbol
+        fill="currentColor"
+        id="ico-circled-bracket-right"
+        viewBox="0 0 6 9"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.307768 8.17974L1.12446 8.90723L5.69238 4.83825L1.12446 0.769268L0.307768 1.49675L4.059 4.83825L0.307768 8.17974Z"
+        />
+      </symbol>
+    </svg>
+    <div class="scrollup">^</div>
     <div class="viewport-cover" id="viewport-cover"></div>
   </body>
 </html>

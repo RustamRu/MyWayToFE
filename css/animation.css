@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* Animation */
+@-webkit-keyframes slideFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideToRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ==================== Секция "Фильмы" ==================== */
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+/* ==================== ИЗОБРАЖЕНИЯ ==================== */
+@-webkit-keyframes scaleDown_107pc {
+  0% {
+    -webkit-transform: scale(107%);
+            transform: scale(107%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+@keyframes scaleDown_107pc {
+  0% {
+    -webkit-transform: scale(107%);
+            transform: scale(107%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@-webkit-keyframes scaleUp_107pc {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(107%);
+            transform: scale(107%);
+  }
+}
+
+@keyframes scaleUp_107pc {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(107%);
+            transform: scale(107%);
+  }
+}
+
+@-webkit-keyframes scaleDown_117pc {
+  0% {
+    -webkit-transform: scale(117%);
+            transform: scale(117%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@keyframes scaleDown_117pc {
+  0% {
+    -webkit-transform: scale(117%);
+            transform: scale(117%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@-webkit-keyframes scaleUp_117pc {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(117%);
+            transform: scale(117%);
+  }
+}
+
+@keyframes scaleUp_117pc {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(117%);
+            transform: scale(117%);
+  }
+}
+
+@-webkit-keyframes shine-avatar {
+  from {
+    background-color: var(--light-light-gray);
+  }
+  40% {
+    background-color: var(--transparent-green);
+  }
+  to {
+    background-color: var(--light-light-gray);
+  }
+}
+
+@keyframes shine-avatar {
+  from {
+    background-color: var(--light-light-gray);
+  }
+  40% {
+    background-color: var(--transparent-green);
+  }
+  to {
+    background-color: var(--light-light-gray);
+  }
+}

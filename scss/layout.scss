@@ -1,0 +1,498 @@
+/* The layout/ folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar…), the grid system or even CSS styles for all the forms. */
+$layer-section-bg: -100;
+$layer-foreground-section: 100;
+$layer-popup-bg: 900;
+$layer-popup-form: 1000;
+
+/* ========== GENERAL ========== */
+body {
+  min-width: var(--min-vw);
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+%container-template {
+  position: relative;
+  margin: 0;
+}
+
+%section-template {
+  position: relative;
+  padding: 0 12.1vw;
+}
+
+.section {
+  @extend %section-template;
+
+  color: var(--black);
+  background-color: var(--white);
+
+  &_framed {
+    $frame-height: 6.4rem;
+    $frames: (
+      top-bottom:
+        polygon(
+          0% 0%,
+          0% 100%,
+          0 100%,
+          0 $frame-height,
+          100% 0,
+          100% calc(100% - #{$frame-height}),
+          0 100%,
+          100% 100%,
+          100% 0%
+        ),
+      bottom: polygon(100% 100%, 100% calc(100% - #{$frame-height}), 0% 100%),
+    );
+
+    @each $type, $frame in $frames {
+      &-#{$type} {
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: var(--white);
+          clip-path: $frame;
+        }
+      }
+    }
+  }
+
+  &-with-background {
+    color: var(--white);
+    background-color: var(--transparent-black);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: $layer-section-bg;
+      background: {
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+      }
+      content: "";
+    }
+  }
+}
+
+/* ========== HEADER ========== */
+.header {
+  @extend %container-template;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &::after {
+    background-image: url(/images/header-bg.png);
+  }
+
+  &__logo {
+    grid-area: header__logo;
+  }
+
+  &__burger-menu-btn {
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+
+  &__title-div {
+    margin-bottom: 14.15rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__subtitle {
+    margin-top: 0.44em;
+    font-size: 2.05rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    color: inherit;
+  }
+}
+
+.header-menu {
+  display: grid;
+  grid-template-columns: 0.18fr min-content 0.07fr auto 0.18fr;
+  grid-template-areas: "header__margin1 header__logo header__margin2 header__nav header__margin3";
+  padding: 2.15rem 0 0;
+  margin-bottom: 6.35rem;
+}
+
+.nav-wrapper {
+  grid-area: header__nav;
+  display: grid;
+  grid-template-columns: minmax(22.8rem, auto) 0.3fr min-content;
+  grid-template-areas:
+    "header__nav-contacts header__nav-margin header__nav-lang"
+    "header__nav-menu header__nav-margin empty";
+
+  &__nav-contacts {
+    grid-area: header__nav-contacts;
+    margin-bottom: 0.45rem;
+  }
+
+  &__nav-menu {
+    grid-area: header__nav-menu;
+  }
+
+  &__nav-lang {
+    grid-area: header__nav-lang;
+  }
+
+  &__close-btn {
+    display: none;
+    position: absolute;
+    top: 1.9rem;
+    right: 1.9rem;
+  }
+}
+
+/* ========== MAIN ========== */
+.main {
+  @extend %container-template;
+
+  &__welcome {
+    position: absolute;
+    top: -7.15rem;
+    right: 11.3vw;
+    z-index: $layer-foreground-section;
+    padding: 2.83em 2.35rem;
+  }
+
+  &__why-we {
+    padding-top: 1.45em;
+    padding-bottom: 1.45em;
+  }
+
+  &__choose-movie {
+    padding-top: 5.75em;
+    padding-bottom: 4.7em; /* ? */
+  }
+
+  &__gift-to-everyone {
+    padding-top: 5.9em;
+    padding-bottom: 7em;
+  }
+
+  &__movies {
+    padding-top: 3.0em;
+    padding-bottom: 1.55em;
+  }
+
+  &__goods {
+    padding-top: 2.4em;
+    padding-bottom: 2.4em; /* ? */
+  }
+
+  &__reviews {
+    padding-top: 6.2em;
+    padding-bottom: 0.9em;
+  }
+
+  &__feedback {
+    margin: 1.1rem auto 0.8rem;
+    clear: both;
+  }
+
+  &__how-to-get {
+    margin: 0 auto;
+    padding: 2.5rem 3.75rem 0;
+  }
+}
+
+/* ===== SECTION WELCOME ===== */
+.welcome {
+  width: 37.9vw;
+  font-size: 0.55rem;
+  line-height: 1.3em;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.4rem 2rem var(--shadow-green);
+
+  &__title {
+    margin-bottom: 0.65em;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: inherit;
+  }
+}
+
+/* ===== SECTION WHY-WE ===== */
+.why-we {
+  &__title {
+    margin-bottom: 1.2em;
+  }
+
+  &__why-we-container {
+    margin: 0 -2.1vw 0;
+  }
+}
+
+.why-we-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ===== SECTION CHOOSE-MOVIE ===== */
+.choose-movie {
+  &__title {
+    margin-bottom: 4.1rem;
+  }
+
+  &__wrapper {
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    max-width: 26.95rem;
+    margin: 0 auto;
+    padding: 0 0 0.77rem;
+    text-align: center;
+  }
+}
+
+/* ===== SECTION GIFT-TO-EVERYONE ===== */
+.gift-to-everyone {
+  &::after {
+    top: 1.5rem;
+    background-image: url(/images/present-bg.png);
+  }
+
+  &__title {
+    margin-bottom: 1.9rem;
+    text-align: right;
+    color: inherit;
+  }
+
+  &__present {
+    width: 24.6vw;
+    height: 24.6vw;
+    max-width: 15.1rem;
+    max-height: 15.1rem;
+    position: absolute;
+    top: -2.25rem;
+    margin-right: 0.5rem;
+  }
+
+  &__inner {
+    max-width: 27.4rem;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  &__text {
+    margin-bottom: 1.4em;
+
+    p {
+      margin-bottom: 1.3em;
+    }
+  }
+}
+
+/* ===== SECTION MOVIES ===== */
+.movies {
+  &__text {
+    max-width: 27.4rem;
+    margin-top: 1.35em;
+  }
+
+  &__movies-gallery {
+    margin: 3.2em 0 0;
+  }
+}
+
+.movies-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(190px, 1fr));
+  grid-template-rows: repeat(3, minmax(190px, 1fr));
+
+  &::before {
+    content: "";
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+  }
+
+  & > *:first-child {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+  }
+
+  &__movies-item {
+    position: relative;
+  }
+}
+
+/* ===== SECTION GOODS ===== */
+.goods {
+  &__text {
+    max-width: 27.4rem;
+    margin-top: 1.35em;
+  }
+}
+
+.goods-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  grid-gap: 2.75rem;
+
+  &__goods-item {
+    position: relative;
+    margin-top: 2.85em;
+  }
+}
+
+/* ===== SECTION REVIEWS ===== */
+.reviews {
+  &::after {
+    background-image: url(/images/reviews-bg.png);
+  }
+
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__text {
+    max-width: 27.4rem;
+  }
+
+  &__reviews-gallery {
+    position: relative;
+  }
+}
+
+.reviews-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  &__reviews-item {
+    margin: 5rem 0;
+  }
+}
+
+/* ===== SECTION FEEDBACK ===== */
+.feedback {
+  width: 90%;
+  max-width: 38.35rem;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0.45rem 0.5rem 2rem var(--shadow-light-gray);
+  background-color: unset;
+
+  &::after {
+    background: {
+      image: url(/images/feedback.png);
+      position: left;
+      size: contain;
+    }
+  }
+
+  &__inner {
+    max-width: 21.4rem;
+    margin-left: auto;
+    padding: 1.5rem 2.1rem;
+    background-color: var(--white);
+
+    &::before {
+      width: 90%;
+      position: absolute;
+      top: 0;
+      right: 21.4rem;
+      bottom: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 60%, white);
+      content: "";
+    }
+
+    &__form {
+      margin-top: 5px;
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
+.form-item-wrap {
+  margin: 1em auto 0;
+}
+
+/* ===== SECTION HOW-TO-GET ===== */
+.how-to-get {
+  &__map {
+    width: 100%;
+    margin-top: -3px;
+  }
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  @extend %container-template;
+
+  display: grid;
+  grid-template-areas:
+    "footer__logo footer__margin footer__nav-menu footer__nav-contacts"
+    "footer__text footer__margin footer__nav-menu footer__nav-contacts"
+    "footer__smm-bar footer__margin footer__nav-menu footer__nav-contacts"
+    "footer__copyright footer__copyright footer__copyright footer__copyright";
+  grid-template-columns: 29fr 16fr 22fr 33fr;
+  grid-template-rows: repeat(4, min-content);
+  padding: 4.2em 7.1vw 0 7.1vw;
+  overflow: hidden;
+  color: var(--white);
+  background-color: var(--basic-green);
+
+  &__logo {
+    grid-area: footer__logo;
+    margin: -0.4rem 0 0 -0.4rem;
+  }
+
+  &__text {
+    grid-area: footer__text;
+    position: static;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
+  &__smm-bar {
+    grid-area: footer__smm-bar;
+    margin-bottom: 1.7rem;
+  }
+
+  &__nav-menu {
+    grid-area: footer__nav-menu;
+    margin-bottom: 1.2rem;
+  }
+
+  &__nav-contacts {
+    grid-area: footer__nav-contacts;
+    margin-bottom: 1.2rem;
+  }
+
+  &__copyright {
+    grid-area: footer__copyright;
+    margin-bottom: 1.5rem;
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+}

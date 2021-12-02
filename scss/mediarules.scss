@@ -1,0 +1,217 @@
+$min-click-area: 48px;
+
+$layer-section-bg: -100;
+$layer-foreground-section: 100;
+$layer-popup-bg: 900;
+$layer-popup-form: 1000;
+
+@media screen and (max-width: 768px) {
+  .header__burger-menu-btn {
+    display: block;
+  }
+
+  .viewport-cover {
+    display: none;
+  }
+
+  .nav {
+    &-wrapper {
+      display: none;
+      grid-template-columns: min-content;
+      grid-template-rows: repeat(3, min-content) auto;
+      grid-template-areas:
+        "header__nav-lang"
+        "header__nav-menu"
+        "header__nav-contacts"
+        "margin";
+      height: 100vh;
+      padding: 1.9rem 4.45rem 0 2.2rem;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      z-index: $layer-popup-form;
+      background: var(--white);
+      box-shadow: -0.35rem 0 2rem var(--transparent-black);
+      animation: slideFromRight 0.5s;
+
+      &__close-btn {
+        display: inherit;
+      }
+    }
+
+    &-bar {
+      & ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &__item {
+        font-size: 1rem;
+        min-width: $min-click-area;
+        min-height: $min-click-area;
+
+        &:hover {
+          color: var(--basic-green);
+        }
+      }
+    }
+
+    &-lang {
+      margin: 0 2.35rem 0.2rem 0;
+      justify-content: flex-start;
+
+      & .lang-select {
+        color: var(--white);
+        background-color: var(--basic-green);
+        font-size: 0.6rem;
+        border-radius: 0.5em;
+
+        &:hover {
+          color: var(--basic-green);
+          background-color: var(--white);
+          box-shadow: 0 2px 9px var(--transparent-darkgreen);
+        }
+
+        &__select {
+          min-width: $min-click-area;
+          min-height: $min-click-area;
+        }
+      }
+    }
+
+    &-menu {
+      margin-bottom: 2.6rem;
+      & .nav-bar__item {
+        margin: 0 0 0.4rem 0;
+        color: var(--black);
+      }
+    }
+
+    &-contacts {
+      & .nav-bar__item {
+        margin: 0 0 0.14rem 0;
+        color: var(--light-gray);
+      }
+
+      & .request-call-btn {
+        margin-top: 2.05rem;
+        padding: 0.34em 1.37rem 0.44em 1.17rem;
+        color: var(--white);
+        background-color: var(--basic-green);
+
+        &:hover {
+          color: var(--basic-green);
+          background-color: var(--white);
+          border-color: var(--transparent-green);
+          box-shadow: 0 2px 9px var(--transparent-darkgreen);
+        }
+
+        & .ico-phone {
+          width: 0.8em;
+          height: 0.8em;
+        }
+        &__ico-phone {
+          margin-right: 1.25em;
+        }
+
+        &-label {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .welcome {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 90%;
+    padding-left: 12.1vw;
+    padding-right: 12.1vw;
+  }
+
+  .movies-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(5, minmax(200px, 1fr));
+  }
+
+  .movies-item__desc {
+    transform: none;
+  }
+  
+  .reviews-gallery.owl-carousel .owl-nav button.owl-next {
+    margin-left: 13.05rem;
+  }
+
+  .reviews-gallery.owl-carousel .owl-nav button.owl-prev {
+    margin-right: 13.05rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .nav {
+    &-wrapper {
+      display: none;
+    }
+
+    &-bar__item {
+      font-size: 0.85rem;
+    }
+  }
+
+  .movies-gallery {
+    grid-template-columns: minmax(200px, 1fr);
+    grid-template-rows: repeat(9, minmax(200px, 1fr));
+  }
+
+  .footer {
+    grid-template-areas:
+      "footer__logo footer__logo"
+      "footer__text footer__text"
+      "footer__smm-bar footer__smm-bar"
+      "footer__nav-menu footer__nav-contacts"
+      "footer__copyright footer__copyright";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .smm-bar {
+    justify-content: space-around;
+  }
+
+  .reviews-gallery.owl-carousel .owl-nav button.owl-next {
+    margin-left: 8.05rem;
+  }
+
+  .reviews-gallery.owl-carousel .owl-nav button.owl-prev {
+    margin-right: 8.05rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  button,
+  .filebutton {
+    padding: 0.1rem;
+  }
+
+  .main__how-to-get {
+    padding-left: 12.1vw;
+    padding-right: 12.1vw;
+  }
+
+  .reviews-gallery.owl-carousel .owl-nav button.owl-next {
+    margin-left: 5.05rem;
+    bottom: 11rem;
+  }
+
+  .reviews-gallery.owl-carousel .owl-nav button.owl-prev {
+    margin-right: 5.05rem;
+    bottom: 11rem;
+  }
+
+  .popup__header {
+    flex-direction: column-reverse;
+  }
+}
