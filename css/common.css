@@ -196,17 +196,13 @@ textarea,
 
 .input:hover, input[type="textarea"]:hover,
 textarea:hover,
-.textarea:hover, .select:hover, .input_filled,
-.select_filled,
-.textarea_filled {
+.textarea:hover, .select:hover, .form-item_filled {
   background-color: var(--white);
   -webkit-box-shadow: 0 0 0 0.25rem var(--transparent-green);
           box-shadow: 0 0 0 0.25rem var(--transparent-green);
 }
 
-.input_error,
-.select_error,
-.textarea_error, .checkbox_error::before {
+.form-item_error, .form-item_error.checkbox::before {
   -webkit-box-shadow: 0 0 0 0.25rem var(--transparent-red);
           box-shadow: 0 0 0 0.25rem var(--transparent-red);
 }
@@ -226,7 +222,6 @@ textarea,
   border: none;
   outline: none;
   color: inherit;
-  background-color: inherit;
   cursor: pointer;
 }
 
@@ -234,9 +229,7 @@ textarea,
   font-size: 0.75rem;
 }
 
-.input__label,
-.select__label,
-.textarea__label {
+.form-item__label {
   position: absolute;
   padding: 0 0.5rem;
   top: 0.5rem;
@@ -248,9 +241,7 @@ textarea,
   cursor: text;
 }
 
-.input__err-msg,
-.select__err-msg,
-.textarea__err-msg {
+.form-item__err-msg {
   display: none;
   position: absolute;
   padding: 0 0.5rem;
@@ -261,19 +252,7 @@ textarea,
   color: var(--transparent-red);
 }
 
-.input_filled .input__label,
-.select_filled .input__label,
-.textarea_filled .input__label, .input_filled
-.select__label,
-.select_filled
-.select__label,
-.textarea_filled
-.select__label, .input_filled
-.textarea__label,
-.select_filled
-.textarea__label,
-.textarea_filled
-.textarea__label {
+.form-item_filled .form-item__label {
   top: -0.7rem;
   left: 0.05rem;
   padding: 0 0.5rem;
@@ -282,25 +261,20 @@ textarea,
   transition: inherit;
 }
 
-.input_error .input__err-msg,
-.select_error .input__err-msg,
-.textarea_error .input__err-msg, .input_error
-.select__err-msg,
-.select_error
-.select__err-msg,
-.textarea_error
-.select__err-msg, .input_error
-.textarea__err-msg,
-.select_error
-.textarea__err-msg,
-.textarea_error
-.textarea__err-msg {
+.form-item_error.checkbox {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-item_error.checkbox::before {
+  border-color: var(--white);
+}
+
+.form-item_error .form-item__err-msg {
   display: block;
 }
 
-.input__input,
-.select__select,
-.textarea__textarea {
+.form-item__field {
   display: block;
   width: 100%;
   padding: 0.325em 0.55rem;
@@ -349,14 +323,6 @@ input[type="checkbox"] {
 .checkbox:hover::before {
   -webkit-box-shadow: 0 0 0 0.25rem var(--transparent-green);
           box-shadow: 0 0 0 0.25rem var(--transparent-green);
-}
-
-.checkbox_error::before {
-  border-color: var(--white);
-}
-
-.checkbox_error .input__err-msg {
-  display: block;
 }
 
 .checkbox > input[type="checkbox"]:checked + .ico-checkmark {
