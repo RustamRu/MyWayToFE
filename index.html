@@ -28,7 +28,6 @@
     <script defer src="/js/forms.js"></script>
     <script defer src="/js/movies-preview.js"></script>
     <script defer src="/js/city.js"></script>
-    <script defer src="/js/order.js"></script>
   </head>
   <body>
     <header class="header section-with-background section_framed-bottom">
@@ -539,38 +538,38 @@
                 value="J7bOU7XHDiLX6czdSzbL"
               />
               <div class="form-item-wrap">
-                <label class="input input_filled input_error">
+                <label class="input form-item form-item_filled form-item_error">
                   <input
                     type="text"
                     name="name"
                     aria-label="Ввести полное имя"
                     required
-                    class="input__input"
+                    class="form-item__field"
                   />
-                  <p class="input__label">Полное имя</p>
-                  <p class="input__err-msg">Введите корректные данные!</p>
+                  <p class="form-item__label">Полное имя</p>
+                  <p class="form-item__err-msg">Введите корректные данные!</p>
                 </label>
               </div>
               <div class="form-item-wrap">
-                <label class="input input_filled input_error">
+                <label class="input form-item form-item_filled form-item_error">
                   <input
                     type="email"
                     name="email"
                     aria-label="Ввести email"
                     required
-                    class="input__input"
+                    class="form-item__field"
                   />
-                  <p class="input__label">Электронный адрес</p>
-                  <p class="input__err-msg">Введите корректные данные!</p>
+                  <p class="form-item__label">Электронный адрес</p>
+                  <p class="form-item__err-msg">Введите корректные данные!</p>
                 </label>
               </div>
               <div class="form-item-wrap">
-                <label class="input input_filled input_error">
+                <label class="select form-item form-item_filled form-item_error">
                   <select
                     name="place"
                     aria-label="Выбрать из списка номер места"
                     required
-                    class="input__input"
+                    class="form-item__field"
                   >
                     <option
                       value="none"
@@ -578,48 +577,48 @@
                       disabled
                       selected
                     ></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
+                    <option value="11">1</option>
+                    <option value="12">2</option>
+                    <option value="13">3</option>
+                    <option value="14">4</option>
+                    <option value="15">5</option>
+                    <option value="16">6</option>
+                    <option value="17">7</option>
+                    <option value="18">8</option>
+                    <option value="19">9</option>
+                    <option value="20">10</option>
                   </select>
-                  <p class="input__err-msg">
+                  <p class="form-item__err-msg">
                     Введите корректные данные!
                   </p></label
                 >
               </div>
               <div class="form-item-wrap">
-                <label class="input input_filled input_error">
+                <label class="input form-item form-item_filled form-item_error">
                   <textarea
                     name="feedbackText"
                     cols="30"
                     rows="10"
                     aria-label="Ввести свой отзыв"
-                    class="input__input"
+                    class="form-item__field"
                   ></textarea>
-                  <p class="input__label">Напишите свой отзыв</p>
-                  <p class="input__err-msg">Введите корректные данные!</p>
+                  <p class="form-item__label">Напишите свой отзыв</p>
+                  <p class="form-item__err-msg">Введите корректные данные!</p>
                 </label>
               </div>
               <div class="form-item-wrap">
-                <label class="checkbox checkbox_filled checkbox_error">
+                <label class="checkbox form-item form-item_filled form-item_error">
                   <input
                     type="checkbox"
                     name="agree"
                     required
-                    class="input__input"
+                    class="form-item__field"
                   />
                   Я согласен на обработку своих персональных данных
                   <svg class="ico-checkmark">
                     <use xlink:href="#ico-check-mark"></use>
                   </svg>
-                  <p class="input__err-msg">
+                  <p class="form-item__err-msg">
                     Введите корректные данные!
                   </p></label
                 >
@@ -1002,38 +1001,38 @@
           novalidate
         >
           <div class="form-item-wrap">
-            <label class="input input_filled input_error">
-              <p class="input__label">Полное имя</p>
+            <label class="input form-item form-item_filled form-item_error">
               <input
-                type="text"
-                name="name"
-                aria-label="Ввести полное имя"
-                required
-                class="input__input"
+              type="text"
+              name="name"
+              aria-label="Ввести полное имя"
+              required
+              class="form-item__field"
               />
-              <p class="input__err-msg">Введите корректные данные!</p>
+              <p class="form-item__label">Полное имя</p>
+              <p class="form-item__err-msg">Введите корректные данные!</p>
             </label>
           </div>
           <div class="form-item-wrap">
-            <label class="input input_filled input_error">
-              <p class="input__label">Электронный адрес</p>
+            <label class="input form-item form-item_filled form-item_error">
               <input
-                type="email"
-                name="email"
-                aria-label="Ввести электронный адрес"
-                required
-                class="input__input"
+              type="email"
+              name="email"
+              aria-label="Ввести электронный адрес"
+              required
+              class="form-item__field"
               />
-              <p class="input__err-msg">Введите корректные данные!</p>
+              <p class="form-item__label">Электронный адрес</p>
+              <p class="form-item__err-msg">Введите корректные данные!</p>
             </label>
           </div>
           <div class="form-item-wrap">
-            <label class="input input_filled input_error">
+            <label class="select form-item form-item_filled form-item_error">
               <select
-                name="gift-list"
+                name="gift"
                 aria-label="Выбрать из списка подарок"
                 required
-                class="input__input"
+                class="form-item__field"
               >
                 <option
                   value="none"
@@ -1045,29 +1044,29 @@
                 <option value="double-popcorn">Удвоим попкорн</option>
                 <option value="10%-discount-couples">Скидка 10% для пар</option>
               </select>
-              <p class="input__err-msg">Введите корректные данные!</p>
+              <p class="form-item__err-msg">Введите корректные данные!</p>
             </label>
           </div>
           <div class="form-item-wrap">
-            <label class="checkbox checkbox_filled checkbox_error">
+            <label class="checkbox form-item form-item_filled form-item_error">
               <input
                 type="checkbox"
-                name="get-gift-agree"
+                name="agree"
                 required
-                class="input__input"
+                class="form-item__field"
               />
               Я согласен на обработку своих персональных данных
               <svg class="ico-checkmark">
                 <use xlink:href="#ico-check-mark"></use>
               </svg>
-              <p class="input__err-msg">Введите корректные данные!</p>
+              <p class="form-item__err-msg">Введите корректные данные!</p>
             </label>
           </div>
           <div class="form-item-wrap">
             <button
-              id="get-gift-popup-submit-btn"
+              id="get-gift-popup-form-submit-btn"
               type="submit"
-              name="get-gift-popup-submit-btn"
+              name="get-gift-popup-form-submit-btn"
               title="Отправить форму выбора подарка"
               aria-label="Отправить форму выбора подарка"
               class="get-gift-popup-form-submit"

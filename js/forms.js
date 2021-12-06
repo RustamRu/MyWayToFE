@@ -1,199 +1,228 @@
-/* ========== Получи подарок ========== */
-const getGiftPopup_form = document.querySelector('#get-gift-popup-form');
-const getGiftPopup_submitButton = document.querySelector('#get-gift-popup-submit-btn');
-const getGiftPopup_nameFieldWrapper = document.querySelector('#get-gift-popup input[name="name"]').parentNode;
-const getGiftPopup_emailFieldWrapper = document.querySelector('#get-gift-popup input[name="email"]').parentNode;
-const getGiftPopup_giftListFieldWrapper = document.querySelector('#get-gift-popup select[name="gift-list"]').parentNode;
-const getGiftPopup_agreeMarkFieldWrapper = document.querySelector('#get-gift-popup input[name="get-gift-agree"]').parentNode;
-const getGiftPopup_successSubmitMsg = document.querySelector('#get-gift-popup-form .success-submit-msg');
 
-const getGiftPopup_nameField = initFormItem(getGiftPopup_nameFieldWrapper, 'input', 'input_filled', 'input_error');
-const getGiftPopup_emailField = initFormItem(getGiftPopup_emailFieldWrapper, 'input', 'input_filled', 'input_error');
-const getGiftPopup_giftListField = initFormItem(getGiftPopup_giftListFieldWrapper, 'select', 'input_filled', 'input_error');
-const getGiftPopup_agreeMarkField = initFormItem(getGiftPopup_agreeMarkFieldWrapper, 'checkbox', 'checkbox_filled', 'checkbox_error');
-
-getGiftPopup_form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const getGiftPopup_nameValue = getGiftPopup_nameField.getValue();
-    const getGiftPopup_emailValue = getGiftPopup_emailField.getValue();
-    const getGiftPopup_giftListValue = getGiftPopup_giftListField.getValue();
-    const getGiftPopup_agreeMarkValue = getGiftPopup_agreeMarkField.getValue();
-
-    if (!getGiftPopup_nameValue) {
-        getGiftPopup_nameField.setError('Поле обязательно для заполнения');
-        getGiftPopup_nameField.focus();
-        return;
-    }
-    if (!getGiftPopup_emailValue) {
-        getGiftPopup_emailField.setError('Поле обязательно для заполнения');
-        getGiftPopup_emailField.focus();
-        return;
-    }
-    if (getGiftPopup_giftListValue === 'none') {
-        getGiftPopup_giftListField.setError('Поле обязательно для заполнения');
-        getGiftPopup_giftListField.focus();
-        return;
+const FILLED_CLASS = 'form-item_filled';
+const ERROR_CLASS = 'form-item_error';
+class FormField {
+    constructor(formField) {
+        this.name = formField.name;
+        this.formField = formField;
+        this.tagName = this.formField.tagName.toLowerCase();
+        this.type = this.formField.type;
+        this.fieldContainer = this.formField.closest('.form-item');
+        this.errorTextContainer = this.fieldContainer.querySelector('.form-item__err-msg');
     }
 
-    if (!getGiftPopup_agreeMarkValue) {
-        getGiftPopup_agreeMarkField.setError('Поле обязательно для заполнения');
-        getGiftPopup_agreeMarkField.focus();
-        return;
-    }
-    const data = {
-        name: getGiftPopup_nameValue,
-        email: getGiftPopup_emailValue,
-        gift: getGiftPopup_giftListValue,
-        agree: getGiftPopup_agreeMarkValue,
+    clearErrorState() {
+        this.fieldContainer.classList.remove(ERROR_CLASS);
+        this.errorTextContainer.innerText = '';
     }
 
-    getGiftPopup_form.disabled = true;
-
-    const url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
-    url.search = new URLSearchParams(data).toString();
-    fetch(url.toString());
-
-    getGiftPopup_successSubmitMsg.classList.toggle('hidden');
-});
-
-/* ========== Обратная связь ========== */
-const feedback_form = document.querySelector('#feedback-form');
-const feedback_submitButton = document.querySelector('#feedback-submit-btn');
-const feedback_nameFieldWrapper = document.querySelector('#feedback-form input[name="name"]').parentNode;
-const feedback_emailFieldWrapper = document.querySelector('#feedback-form input[name="email"]').parentNode;
-const feedback_seatNumberFieldWrapper = document.querySelector('#feedback-form select[name="place"]').parentNode;
-const feedback_feedbackTextFieldWrapper = document.querySelector('#feedback-form textarea[name="feedbackText"]').parentNode;
-const feedback_agreeMarkFieldWrapper = document.querySelector('#feedback-form input[name="agree"]').parentNode;
-const feedback_successSubmitMsg = document.querySelector('#feedback-form .success-submit-msg');
-
-const feedback_nameField = initFormItem(feedback_nameFieldWrapper, 'input', 'input_filled', 'input_error');
-const feedback_emailField = initFormItem(feedback_emailFieldWrapper, 'input', 'input_filled', 'input_error');
-const feedback_seatNumberField = initFormItem(feedback_seatNumberFieldWrapper, 'select', 'input_filled', 'input_error');
-const feedback_feedbackTextField = initFormItem(feedback_feedbackTextFieldWrapper, 'input', 'input_filled', 'input_error');
-const feedback_agreeMarkField = initFormItem(feedback_agreeMarkFieldWrapper, 'checkbox', 'checkbox_filled', 'checkbox_error');
-
-feedback_form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const feedback_nameValue = feedback_nameField.getValue();
-    const feedback_emailValue = feedback_emailField.getValue();
-    const feedback_seatNumberValue = feedback_seatNumberField.getValue();
-    const feedback_feedbackTextValue = feedback_feedbackTextField.getValue();
-    const feedback_agreeMarkValue = feedback_agreeMarkField.getValue();
-
-    if (!feedback_nameValue) {
-        feedback_nameField.setError('Поле обязательно для заполнения');
-        feedback_nameField.focus();
-        return;
-    }
-    if (!feedback_emailValue) {
-        feedback_emailField.setError('Поле обязательно для заполнения');
-        feedback_emailField.focus();
-        return;
-    }
-    if (feedback_seatNumberValue === 'none') {
-        feedback_seatNumberField.setError('Поле обязательно для заполнения');
-        feedback_seatNumberField.focus();
-        return;
-    }
-    if (!feedback_feedbackTextValue) {
-        feedback_feedbackTextField.setError('Поле обязательно для заполнения');
-        feedback_feedbackTextField.focus();
-        return;
+    clearFilledState() {
+        this.fieldContainer.classList.remove(FILLED_CLASS);
     }
 
-    if (!feedback_agreeMarkValue) {
-        feedback_agreeMarkField.setError('Поле обязательно для заполнения');
-        feedback_agreeMarkField.focus();
-        return;
-    }
-    const data = {
-        name: feedback_nameValue,
-        email: feedback_emailValue,
-        feedbackText: feedback_feedbackTextValue,
-        gift: feedback_seatNumberValue,
-        agree: feedback_agreeMarkValue,
+    clearValue() {
+        this.formField.value = '';
     }
 
-    feedback_submitButton.disabled = true;
-
-    const url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
-    url.search = new URLSearchParams(data).toString();
-    fetch(url.toString());
-
-    let data_post = new FormData(document.querySelector(feedbackFormId));
-
-    $.ajax({
-        url: 'http://study.xeol.ru/api/new_order',
-        type: 'post',
-        data: data_post,
-        dataType: 'json',
-        success: (...args) => {
-            feedback_successSubmitMsg.classList.toggle('hidden');
-            clearFormFields(feedbackFormId);
-        },
-        error: function (msg) {
-            showErrors(msg);
-        },
-        cache: false,
-        contentType: false,
-        processData: false,
-    });
-});
-
-
-/* ========== Функции ========== */
-function initFormItem(field, type, filled_class, error_class) {
-    const fieldItem = field.querySelector('.input__input');
-    const errorText = field.querySelector('.input__err-msg');
-
-    // удаление классов, сигнализирющих об ошибке
-    clearError();
-    // удаление классов, сигнализирющих о наличии фокуса на элементе; сброс к исходным значениям
-    field.classList.remove(filled_class);
-    if (type === 'checkbox') {
-        fieldItem.checked = false;
-    }
-    else if (type === 'select') {
-        fieldItem.value = 'none';
-    } else {
-        fieldItem.value = '';
-    }
-    // отслеживание появления фокуса на элементе
-    fieldItem.addEventListener('focus', function () {
-        field.classList.add(filled_class);
-    });
-    // отслеживание манипуляций с элементом
-    fieldItem.addEventListener('change', function () {
-        clearError();
-    });
-    fieldItem.addEventListener('keyup', function () {
-        if ((this.type == 'text' || this.type == 'email' || this.type == 'textarea') && this.value.length > 0) {
-            clearError();
-        }
-    });
-    // отслеживание потери фокуса на элементе
-    fieldItem.addEventListener('blur', function () {
-        const isBlurred = (type === 'checkbox' && fieldItem.checked) || (type === 'select' && fieldItem.value !== 'none') || (type === 'input' && !fieldItem.value)
-        if (isBlurred) {
-            field.classList.remove(filled_class);
-        };
-    });
-
-    return {
-        focus() {
-            fieldItem.focus();
-        },
-        getValue() {
-            return type === 'checkbox' ? fieldItem.checked : fieldItem.value;
-        },
-        setError(error) {
-            errorText.innerText = error;
-            field.classList.add(error_class);
-        }
+    getValue() {
+        return this.formField.value;
     }
 
-    function clearError() {
-        field.classList.remove(error_class);
-        errorText.innerText = '';
+    hasInvalidValue() {
+        return !this.getValue();
+    }
+
+    setError(error) {
+        this.errorTextContainer.innerText = error;
+        this.fieldContainer.classList.add(ERROR_CLASS);
+    }
+
+    addFocusListener() {
+        this.formField.addEventListener('focus', function () {
+            this.fieldContainer.classList.add(FILLED_CLASS);
+        }.bind(this));
+    }
+
+    addChangeListener() {
+        this.formField.addEventListener('input', function () {
+            if (this.formField.value.length > 0) {
+                this.clearErrorState();
+            }
+        }.bind(this));
+    }
+
+    addBlurListener() {
+        this.formField.addEventListener('blur', function () {
+            if (!this.formField.value) {
+                this.fieldContainer.classList.remove(FILLED_CLASS);
+            }
+        }.bind(this));
     }
 }
+
+class SelectField extends FormField {
+    clearValue() {
+        this.formField.value = 'none';
+    }
+
+    hasInvalidValue() {
+        return this.getValue() === 'none';
+    }
+
+    addChangeListener() {
+        this.formField.addEventListener('change', function () {
+            if (this.formField.value !== 'none') {
+                this.clearErrorState();
+            }
+        }.bind(this));
+    }
+
+    addBlurListener() {
+        this.formField.addEventListener('blur', function () {
+            if (this.formField.value === 'none') {
+                this.fieldContainer.classList.remove(FILLED_CLASS);
+            };
+        }.bind(this));
+    }
+}
+
+class CheckboxField extends FormField {
+    clearValue() {
+        this.formField.checked = false;
+    }
+
+    getValue() {
+        return this.formField.checked;
+    }
+
+    addBlurListener() {
+        this.formField.addEventListener('blur', function () {
+            if (this.formField.checked) {
+                this.fieldContainer.classList.remove(FILLED_CLASS);
+            }
+        }.bind(this));
+    }
+}
+class Form {
+    constructor(id, serverUrl) {
+        this.id = id;
+        this.form = document.getElementById(this.id);
+        this.submitBtn = this.form.querySelector('[type="submit"]');
+        this.successSubmitTextContainer = this.form.querySelector(`.success-submit-msg`);
+        this.serverUrl = serverUrl;
+
+        this._initFormField = function (htmlFormField) {
+            let formField;
+            if (htmlFormField.tagName === 'SELECT') {
+                formField = new SelectField(htmlFormField);
+            } else if (htmlFormField.type === 'checkbox') {
+                formField = new CheckboxField(htmlFormField);
+            } else {
+                formField = new FormField(htmlFormField);
+            }
+
+            formField.clearErrorState();
+            formField.clearFilledState();
+            formField.addFocusListener();
+            formField.addChangeListener();
+            formField.addBlurListener();
+
+            return formField;
+        }
+
+        this.formFields = [...this.form.querySelectorAll('.form-item__field')].map(htmlFormField =>
+            this._initFormField.call(this, htmlFormField));
+
+        this._getFormData = function () {
+            this.form.disabled = true;
+
+            let data = {};
+            for (let formField of this.formFields) {
+                data[formField.name] = formField.getValue();
+            }
+
+            return data;
+        };
+
+        this._processSuccessMsg = function () {
+            this.successSubmitTextContainer.classList.toggle('hidden');
+        };
+
+        this._processErrorMsg = function (msg) {
+            console.log("Ошибка HTTP: " + msg); // прописать пользовательские сценарии для различных сообщений об ошибке
+        };
+
+        this._sendData = async function (data) {
+            let response = await fetch(this.serverUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(data)
+            });
+
+            response.ok ? this._processSuccessMsg() : this._processErrorMsg(response.status);
+        };
+
+        this._validateForm = function (event) {
+            event.preventDefault();
+
+            for (let formField of this.formFields) {
+                if (formField.hasInvalidValue()) {
+                    formField.setError('Поле обязательно для заполнения');
+                    formField.formField.focus();
+                    return;
+                }
+            };
+
+            this._sendData(this._getFormData());
+        }
+
+        this.form.addEventListener('submit', this._validateForm.bind(this));
+    }
+}
+
+class FeedbackForm extends Form {
+    constructor(id, serverUrl) {
+        super(id, serverUrl);
+
+        this._getFormData = function () {
+            return new FormData(document.getElementById(this.id));
+        };
+
+        this._processErrorMsg = function (msg) {
+            switch (msg) {
+                case 403:
+                    alert("Возникла ошибка, повторите попытку позже!");
+                    break;
+
+                case 422:
+                    for (let item in errors) {
+                        const htmlFormField = this.form.querySelector(`[name="${item}"]`);
+                        htmlFormField.setError(errors[item]);
+                    }
+                    break;
+            }
+        }
+
+        this._sendData = async function () {
+            const data = this._getFormData();
+
+            $.ajax({
+                url: this.serverUrl,
+                type: 'post',
+                data: data,
+                dataType: 'json',
+                success: () => this._processSuccessMsg(),
+                error: (msg) => this._processErrorMsg(msg.status),
+                cache: false,
+                contentType: false,
+                processData: false,
+            });
+        }
+    }
+
+}
+
+const giftPopupForm = new Form('get-gift-popup-form', 'http://inno-ijl.ru/multystub/stc-21-03/feedback');
+const feedbackForm = new FeedbackForm('feedback-form', 'http://study.xeol.ru/api/new_order');

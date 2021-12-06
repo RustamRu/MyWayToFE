@@ -243,7 +243,6 @@ textarea,
   border: none;
   outline: none;
   color: inherit;
-  background-color: inherit;
   cursor: pointer;
 
   &:hover {
@@ -251,9 +250,7 @@ textarea,
   }
 }
 
-.input,
-.select,
-.textarea {
+.form-item {
   &__label {
     position: absolute;
     padding: 0 0.5rem;
@@ -291,24 +288,31 @@ textarea,
 
   &_error {
     @extend %input-element__error;
+
+    &.checkbox {
+      box-shadow: none;
+
+      &::before {
+        border-color: var(--white);
+        @extend %input-element__error;
+      }
+    }
   }
 
   &_error &__err-msg {
     display: block;
   }
-}
 
-.input__input,
-.select__select,
-.textarea__textarea {
-  display: block;
-  width: 100%;
-  padding: 0.325em 0.55rem;
-  background-color: transparent;
-  box-shadow: none;
-  border: 0;
-  border-radius: inherit;
-  color: var(--light-gray);
+  &__field {
+    display: block;
+    width: 100%;
+    padding: 0.325em 0.55rem;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    border-radius: inherit;
+    color: var(--light-gray);
+  }
 }
 
 input[type="checkbox"] {
@@ -344,17 +348,6 @@ input[type="checkbox"] {
 
   &:hover::before {
     box-shadow: 0 0 0 0.25rem var(--transparent-green);
-  }
-
-  &_error {
-    &::before {
-      border-color: var(--white);
-      @extend %input-element__error;
-    }
-
-    & .input__err-msg {
-      display: block;
-    }
   }
 
   > input[type="checkbox"]:checked + .ico-checkmark {
